@@ -28,7 +28,7 @@
 </main>
 
 <style>
-  @import '../styles.css';
+  @import '../lib/assets/styles/styles.css';
 
   /* Hero Section */
   .hero {

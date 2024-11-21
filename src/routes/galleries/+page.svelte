@@ -3,7 +3,9 @@
     import Footer from '../../lib/components/Footer.svelte';
     import Bear from "./../../lib/assets/galleries/bear.jpg";
     import Tide from "./../../lib/assets/galleries/tide.jpg";
+    import Cascadia from "./../../lib/assets/galleries/cascadia.jpg";
     import headerUrl from '../../lib/assets/galleries/gallery_header.jpg';
+    import Bay from "./../../lib/assets/galleries/bay.jpg";
     
     let pageName = "Galleries";
     let galleries = [
@@ -21,6 +23,21 @@
           url: Bear
         }
       },
+      {
+        name: "Cascadia",
+        description: "Description for gallery two.",
+        image: {
+          url: Cascadia
+        }
+      },
+      {
+        name: "Central Bay",
+        description: "Description for gallery two.",
+        image: {
+          url: Bay
+        }
+      },
+      
     ];
   </script>
   
@@ -48,7 +65,7 @@
   <Footer />
 
   <style>
-    @import '../../styles.css';
+    @import '../../lib/assets/styles/styles.css';
   .gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
