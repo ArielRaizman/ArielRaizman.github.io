@@ -3,6 +3,7 @@
   import Header from '../../../lib/components/Header.svelte';
   import Gallery from '../../../lib/components/Gallery.svelte';
   import Footer from '../../../lib/components/Footer.svelte';
+  import Banner from '../../../lib/components/Banner.svelte';
   import headerUrl from '../../../lib/assets/galleries/tide.jpg';
 
   let pageName = "Low Tide";
@@ -18,6 +19,7 @@
     });
 </script>
 
-<Header {pageName} {headerUrl} />
+<Header />
+<Banner {pageName} {headerUrl} />
 <Gallery {images} {quote} {quote_author} />
 <Footer />

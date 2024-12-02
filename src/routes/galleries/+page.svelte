@@ -1,11 +1,14 @@
 <script>
     import Header from '../../lib/components/Header.svelte';
     import Footer from '../../lib/components/Footer.svelte';
+    import Banner from '../../lib/components/Banner.svelte';
     import Bear from "./../../lib/assets/galleries/bear.jpg";
     import Tide from "./../../lib/assets/galleries/tide.jpg";
     import Cascadia from "./../../lib/assets/galleries/cascadia.jpg";
     import headerUrl from '../../lib/assets/galleries/gallery_header.jpg';
     import Bay from "./../../lib/assets/galleries/bay.jpg";
+    import Southwest from "./../../lib/assets/galleries/southwest.jpg";
+    import Valley from "./../../lib/assets/galleries/valley.jpg";
     
     let pageName = "Galleries";
     let galleries = [
@@ -24,24 +27,38 @@
         }
       },
       {
-        name: "Cascadia",
+        name: "The Central Valley",
         description: "Description for gallery two.",
         image: {
-          url: Cascadia
+          url: Valley
         }
       },
-      {
-        name: "Central Bay",
-        description: "Description for gallery two.",
-        image: {
-          url: Bay
-        }
-      },
-      
+      // {
+      //   name: "Cascadia",
+      //   description: "Description for gallery two.",
+      //   image: {
+      //     url: Cascadia
+      //   }
+      // },
+      // {
+      //   name: "Central Bay",
+      //   description: "Description for gallery two.",
+      //   image: {
+      //     url: Bay
+      //   }
+      // },
+      // {
+      //   name: "American Southwest",
+      //   description: "Description for gallery two.",
+      //   image: {
+      //     url: Southwest
+      //   }
+      // },
     ];
   </script>
   
-  <Header {pageName} {headerUrl}/>
+  <Header />
+  <Banner {pageName} {headerUrl} />
 
   <!-- <section class="description">
     <div>

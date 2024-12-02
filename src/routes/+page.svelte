@@ -1,19 +1,10 @@
 <script>
   import Footer from '../lib/components/Footer.svelte';
+  import Header from '../lib/components/Header.svelte';
 </script>
 
 <main>
-  <header class="nav-list">
-    <div class="logo"><a href="/">Ariel Raizman</a></div>
-    <nav>
-      <ul>
-        <li><a href="/about">About</a></li>
-        <li><a href="/galleries">Galleries</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>  
-  </header>
+  <Header />
 
   <section class="hero">
     <div class="overlay">
@@ -30,9 +21,15 @@
 <style>
   @import '../lib/assets/styles/styles.css';
 
+  main {
+    margin: 0;
+    padding: 0;
+  }
+
   /* Hero Section */
   .hero {
     position: relative;
+    width: 100%;
     height: 100vh;
     background: url('../lib/assets/home/home_img.jpg') no-repeat center center/cover;
     background-color: rgba(0, 0, 0, 0.25);
@@ -43,7 +40,7 @@
     .hero {
       background: url('../lib/assets/home/home_img_mobile.jpg') no-repeat center center/cover;
       background-color: rgba(0, 0, 0, 0.25);
-    background-blend-mode: darken;
+      background-blend-mode: darken;
     }
   }
 
@@ -54,7 +51,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
     font-family: 'Georgia', serif;
-    color:white;
+    color: white;
   }
 
   .overlay h1 {
@@ -66,5 +63,4 @@
     font-size: 2rem;
     font-weight: normal;
   }
-  
 </style>

@@ -1,97 +1,166 @@
 <script>
-    let links = ["About", "Galleries", "Blog", "Contact"];
-    export let pageName = "Home"; // Define and export pageName
-    export let headerUrl = "../assets/galleries/gallery_header.jpg";
-    // const updateHeaderUrl = () => {
-    //     if (window.innerWidth < 768) {
-    //         headerUrl = "../assets/galleries/gallery_header_mobile.jpg";
-    //     } else {
-    //         headerUrl = "../assets/galleries/gallery_header.jpg";
-    //     }
-    // };
-  </script>
+  import instagram from '../assets/icons/Instagram_Glyph_White.svg';
+  let links = ["About", "Galleries", "Blog", "Contact"];
+  let isMenuOpen = false;
 
-  
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+  }
+</script>
+
 <header class="nav-list">
-    <div class="logo"><a href="/">Ariel Raizman</a></div>
-    <nav>
-      <ul>
-        {#each links as link}
-          <li><a href={`/${link.toLowerCase()}`}>{link}</a></li>
-        {/each}
-      </ul>
-    </nav>  
-  </header>
-  
-<section style="
-    background: url({headerUrl}) no-repeat center center/cover; 
-    position: relative;
-    height: 60vh;
-    background-color: rgba(0, 0, 0, 0.20);
-    background-blend-mode: darken;">
+  <div class="logo"><a href="/">Ariel Raizman</a></div>
+  <button class="menu-toggle" on:click={toggleMenu} aria-label="Toggle Menu">
+    {#if isMenuOpen}
+      ✕ <!-- Close icon -->
+    {:else}
+      ☰ <!-- Hamburger icon -->
+    {/if}
+  </button>
+  <nav class:is-open={isMenuOpen}>
+    <button class="menu-close" on:click={toggleMenu} aria-label="Close Menu">✕</button>
+    <ul>
+      {#each links as link}
+        <li><a href={`/${link.toLowerCase()}`}>{link}</a></li>
+      {/each}
+      <li class="instagram-link">
+        <a href="https://www.instagram.com/arl.takes.pics/" target="_blank">
+          <img src={instagram} alt="Instagram">
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-    <div class="overlay">
-      <h1>{pageName}</h1>
-    </div>
-  </section>
-  
-  <style>
-    @import '../assets/styles/styles.css';
-  
-  .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: 'Georgia', serif;
-    color:white;
-    font-size: 2rem;  
+<style>
+  @import '../assets/styles/styles.css';
+
+  header.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    z-index: 1000;
   }
 
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+  }
+
+  nav ul .instagram-link a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+
+  nav ul .instagram-link img {
+    width: 24px;
+    height: 24px;
+  }
+  .menu-close {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Mobile responsiveness */
   @media screen and (max-width: 768px) {
-        header.nav-list {
-            flex-direction: column;
-            align-items:flex-start;
-            gap: 0.5rem; /* Add this to reduce the vertical gap between elements */
-        /* padding: 0.5rem 1rem; Reduce padding for smaller screens */
-        }
-
-        nav ul {
-            flex-direction: row;
-            gap: 0.5rem;
-            width: 100%;
-        }
-
-        nav ul li {
-            text-align: left;
-        }
-
-        section {
-            height: 50vh; 
-        }
-
-        .overlay {
-            font-size: 1.5rem; 
-        }
-        .logo {
-          padding-left: 0.8rem;
-          padding-bottom: -2;
-        }
+    .menu-toggle {
+      display: block;
     }
 
-    @media screen and (max-width: 480px) {
-        .overlay {
-            font-size: 1.2rem; 
-            padding: 0 1rem;
-        }
-
-        nav ul {
-            gap: 0.5rem;
-        }
-
-        nav ul li a {
-            font-size: 0.9rem;
-        }
+    nav {
+      display: none; /* Initially hide the navigation */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
     }
-    </style>
+
+    nav.is-open {
+      display: flex; /* Show nav when open */
+    }
+
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    nav ul .instagram-link a {
+      width: 32px;
+      height: 32px;
+    }
+
+    nav ul .instagram-link img {
+      width: 32px;
+      height: 32px;
+    }
+    .menu-close {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
+  }
+    
+
+  @media screen and (max-width: 480px) {
+    nav ul li a {
+      font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+      font-size: 1.2rem;
+    }
+  }
+</style>
