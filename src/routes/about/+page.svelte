@@ -15,15 +15,15 @@
   <div class="content">
     <h1>Ariel Raizman</h1>
     <p>
-      Hello! I'm Ariel Raizman, a wildlife and landscape photographer raised in western Washington. I've loved outdoors and little critters for as long as I remember. One of my earliest memories is going to my local pond and collecting 13 bullfrog tadpoles and raising them in a plastic tub until they grew legs in early winter, much to my parents' dismay.
+      Hello! I'm Ariel Raizman, a wildlife and landscape photographer raised in western Washington, always surrounded by nature and the critters that call it home. One of my earliest memories is going to my local pond, collecting 13 bullfrog tadpoles, and raising them in a plastic tub until they grew legs—much to my parents' dismay.
     </p>
     <p>
-      My parents took our family on many road trips and trips abroad as I grew up, allowing me to experience the incredible diversity on this planet from a young age, which I am forever grateful for. We still travel quite a bit, especially on the road with my dad.
+      My parents took our family on many road trips and trips abroad as I grew up, allowing me to experience the incredible diversity on this planet from a young age, which I am forever grateful for. I still travel today, especially on the road with my dad.
     </p>
   </div>
   <img class="profile-image" src={profileImage} alt="Ariel Raizman" />
   <p>
-    I go to school at UCSC, and within the dense redwoods and spanning chaparral on campus is where I really began finding my love for wildlife photography, and I haven't been able to stop since.
+    I am currently at UC Santa Cruz, where the redwoods and chaparral on campus really sparked my passion for nature photography, and I haven't been able to stop since.
   </p>
 </section>
 
@@ -62,7 +62,7 @@
 
   .profile-image {
     max-width: 400px;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-top: 50px;
   }
 

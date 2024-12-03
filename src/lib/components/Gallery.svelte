@@ -13,6 +13,11 @@
   let maxColWidth = 1600; 
   
   let width = 0; 
+
+  function navigateTo(destination) {
+    // Implement navigation logic here
+    console.log(`Navigating to ${destination}`);
+  }
 </script>
   
 <section class="description">
@@ -45,6 +50,13 @@
   </div>
 {/if}
   
+<div></div>
+<div class="navigation-buttons">
+  <button on:click={() => navigateTo('previous')}>Previous Gallery</button>
+  <button on:click={() => navigateTo('galleries')}>Back to Galleries</button>
+  <button on:click={() => navigateTo('next')}>Next Gallery</button>
+</div>
+
 <style>
   @import '../assets/styles/styles.css';
   .description {
@@ -115,5 +127,27 @@
   .lightbox img {
     max-width: 90%;
     max-height: 90%;
+  }
+  .navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .navigation-buttons button {
+    padding: 10px 20px;
+    padding-bottom: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .navigation-buttons button:hover {
+    background-color: #555;
   }
 </style>

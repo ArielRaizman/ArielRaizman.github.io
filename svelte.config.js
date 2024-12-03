@@ -12,6 +12,11 @@ const config = {
 		paths: {
 			base: ''
 		}
+    },
+    server: {
+        watch: {
+            usePolling: true
+        }
     }
 };
 

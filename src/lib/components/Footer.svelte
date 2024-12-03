@@ -5,9 +5,9 @@
 <style>
     footer {
         padding: 20px;
-      background-color: rgba(0, 0, 0, 0.2);
-      text-align: right;
-      color: black;
-      font-family: 'Arial', sans-serif; 
+        background: rgba(30, 30, 30, 1);
+        text-align: right;
+        color: white;
+        font-family: 'Arial', sans-serif; 
     }
 </style>
