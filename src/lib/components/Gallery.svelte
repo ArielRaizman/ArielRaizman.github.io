@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import Masonry from 'svelte-bricks';
+  import { page } from '$app/stores';
 
   export let images = [];
   export let quote = "quote";
@@ -13,10 +14,17 @@
   let maxColWidth = 1600; 
   
   let width = 0; 
+  let galleries = ["galleries/low-tide", "galleries/the-great-bear-valley", "galleries/the-central-valley"];
+  let currentGallery = $page.url.pathname.split('/').pop();
+  let currentGalleryIndex = galleries.findIndex(gallery => gallery.includes(currentGallery));
+  console.log(currentGalleryIndex);
+  // let prevGallery = galleries[(currentGalleryIndex - 1 + galleries.length) % galleries.length];
+  let nextGallery = galleries[(currentGalleryIndex + 1) % galleries.length];
+  let prevGallery = galleries[(currentGalleryIndex + 2  ) % galleries.length];
+  
 
   function navigateTo(destination) {
-    // Implement navigation logic here
-    console.log(`Navigating to ${destination}`);
+    goto(destination);
   }
 </script>
   
@@ -52,9 +60,9 @@
   
 <div></div>
 <div class="navigation-buttons">
-  <button on:click={() => navigateTo('previous')}>Previous Gallery</button>
-  <button on:click={() => navigateTo('galleries')}>Back to Galleries</button>
-  <button on:click={() => navigateTo('next')}>Next Gallery</button>
+  <a href="/{prevGallery}"><button>Previous</button></a>
+  <a href="/galleries"><button>Galleries</button></a>
+  <a href="/{nextGallery}"><button>Next</button></a>
 </div>
 
 <style>
@@ -131,8 +139,14 @@
   .navigation-buttons {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .navigation-buttons button {
+    flex: 1;
+    text-align: center;
+    max-width: 200px;
   }
 
   .navigation-buttons button {
@@ -145,9 +159,24 @@
     color: white;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    min-width: 200px;
   }
 
   .navigation-buttons button:hover {
     background-color: #555;
+  }
+
+  @media (max-width: 600px) {
+    .navigation-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navigation-buttons button {
+      max-width: 30px;
+      width: 50%;
+      max-width: none;
+    }
   }
 </style>
