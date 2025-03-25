@@ -80,3 +80,8 @@ a {
     font-family: 'Arial', sans-serif; 
     height: 80px; 
   }
+  .link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }

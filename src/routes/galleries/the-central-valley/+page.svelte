@@ -5,6 +5,7 @@
   import Gallery from '../../../lib/components/Gallery.svelte';
   import Banner from '../../../lib/components/Banner.svelte';
   import Footer from '../../../lib/components/Footer.svelte';
+  import metadata from '../../../lib/assets/galleries/valley/valley.json';
 
   import headerUrl from '../../../lib/assets/galleries/valley.jpg';
 
@@ -16,7 +17,9 @@
       const imageFiles = import.meta.glob('/src/lib/assets/galleries/valley/*.{jpg,png}');
       for (const path in imageFiles) {
         const image = await imageFiles[path]();
-        images = [...images, { src: image.default }];
+        const imageName = path.split('/').pop();
+        const imageMetadata = metadata.find(meta => meta.filename === imageName);
+        images = [...images, { src: image.default, ...imageMetadata }];
       }
     });
 </script>

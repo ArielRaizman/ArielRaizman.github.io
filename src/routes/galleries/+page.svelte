@@ -33,27 +33,27 @@
       url: Valley
     }
     },
-    // {
-    //   name: "Cascadia",
-    //   description: "Description for gallery two.",
-    //   image: {
-    //     url: Cascadia
-    //   }
-    // },
-    // {
-    //   name: "Central Bay",
-    //   description: "Description for gallery two.",
-    //   image: {
-    //     url: Bay
-    //   }
-    // },
-    // {
-    //   name: "American Southwest",
-    //   description: "Description for gallery two.",
-    //   image: {
-    //     url: Southwest
-    //   }
-    // },
+    {
+      name: "Cascadia",
+      description: "Description for gallery two.",
+      image: {
+        url: Cascadia
+      }
+    },
+    {
+      name: "Central Bay",
+      description: "Description for gallery two.",
+      image: {
+        url: Bay
+      }
+    },
+    {
+      name: "American Southwest",
+      description: "Description for gallery two.",
+      image: {
+        url: Southwest
+      }
+    },
   ];
   </script>
   

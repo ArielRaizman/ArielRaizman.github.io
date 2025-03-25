@@ -3,6 +3,7 @@
   import Masonry from 'svelte-bricks';
 
   export let images = [];
+
   export let quote = "quote";
   export let quote_author = "quote_author";
   
@@ -14,9 +15,16 @@
   
   let width = 0; 
 
+  let lightboxImage;
+  let imageTitle;
+
   function navigateTo(destination) {
     // Implement navigation logic here
     console.log(`Navigating to ${destination}`);
+  }
+
+  $: if (selectedImage && lightboxImage && imageTitle) {
+    imageTitle.style.width = `${lightboxImage.clientWidth}px`;
   }
 </script>
   
@@ -40,13 +48,19 @@
   >
     <div class="gallery-item" on:click={() => (selectedImage = item)}>
     <img src={item.src} alt="Gallery" on:contextmenu={e => e.preventDefault()} />
-    </div>
+    <!-- <p>{item.title}</p> -->
+  </div>
   </Masonry>
 </section>
   
 {#if selectedImage}
   <div class="lightbox" on:click={() => (selectedImage = null)}>
-    <img src={selectedImage.src} on:contextmenu={e => e.preventDefault()} />
+    <!-- <div class="lightbox-content"> -->
+      <img src={selectedImage.src} on:contextmenu={e => e.preventDefault()} bind:this={lightboxImage}/>
+      {#if selectedImage.title}
+        <div class="image-title" on:click={() => window.location.href = `/blog/${selectedImage.link}`} bind:this={imageTitle}>{selectedImage.title}</div>
+      {/if}
+    <!-- </div> -->
   </div>
 {/if}
   
@@ -97,7 +111,26 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+    }
+
+    .image-title {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    /* width: 100%; */
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: left;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    }
+
+    .image-title:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    }
   
   .gallery-item {
     transition: transform 0.3s ease;
@@ -105,10 +138,23 @@
     width: 100%;
     overflow: hidden;
   }
+
+  /* .gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+  } */
   
   .gallery-item:hover {
     transform: scale(1.02);
     transition: transform 0.3s ease;
+  }
+  
+  .lightbox img:hover + .image-title {
+    opacity: 1;
+  }
+  .image-title:hover {
+    opacity: 1;
   }
   
   .lightbox {
@@ -123,11 +169,32 @@
     justify-content: center;
     z-index: 1000;
   }
+  /* .lightbox-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
   
   .lightbox img {
+    /* width: auto;
+    height: auto; */
     max-width: 90%;
     max-height: 90%;
   }
+
+  .lightbox .image-title {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* transform: translateY(-10%); */
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: left;
+    padding: 10px;
+  }
+
   .navigation-buttons {
     display: flex;
     justify-content: center;

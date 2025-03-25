@@ -9,11 +9,12 @@
 <Header />
 <Banner {pageName} {headerUrl} />
 <section>
-  <p>working on it :)</p>
+  <p class="link" on:click={() => window.location.href = `/blog/central-coast-tidepooling`}>Tidepooling in California's Central Coast</p>
 </section>
 <Footer />
 
 <style>
+  @import '../../lib/assets/styles/styles.css';
   section {
     display: flex;
     justify-content: center;
