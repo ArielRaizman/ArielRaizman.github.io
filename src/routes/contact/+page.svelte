@@ -25,6 +25,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    text-align: center;
+    height: 50vh;
   }
 
   h2 {
