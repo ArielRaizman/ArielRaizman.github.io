@@ -40,20 +40,20 @@
         url: Cascadia
       }
     },
-    {
-      name: "Central Bay",
-      description: "Description for gallery two.",
-      image: {
-        url: Bay
-      }
-    },
-    {
-      name: "American Southwest",
-      description: "Description for gallery two.",
-      image: {
-        url: Southwest
-      }
-    },
+    // {
+    //   name: "Central Bay",
+    //   description: "Description for gallery two.",
+    //   image: {
+    //     url: Bay
+    //   }
+    // },
+    // {
+    //   name: "American Southwest",
+    //   description: "Description for gallery two.",
+    //   image: {
+    //     url: Southwest
+    //   }
+    // },
   ];
   </script>
   

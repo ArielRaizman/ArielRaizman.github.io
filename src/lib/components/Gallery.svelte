@@ -15,13 +15,13 @@
   let maxColWidth = 1600; 
   
   let width = 0; 
-  let galleries = ["galleries/low-tide", "galleries/the-great-bear-valley", "galleries/the-central-valley"];
+  let galleries = ["galleries/low-tide", "galleries/the-great-bear-valley", "galleries/the-central-valley", "galleries/cascadia"];
   let currentGallery = $page.url.pathname.split('/').pop();
   let currentGalleryIndex = galleries.findIndex(gallery => gallery.includes(currentGallery));
-  console.log(currentGalleryIndex);
-  // let prevGallery = galleries[(currentGalleryIndex - 1 + galleries.length) % galleries.length];
+  // console.log(currentGalleryIndex);
+  let prevGallery = galleries[(currentGalleryIndex - 1 + galleries.length) % galleries.length];
   let nextGallery = galleries[(currentGalleryIndex + 1) % galleries.length];
-  let prevGallery = galleries[(currentGalleryIndex + 2  ) % galleries.length];
+  // let prevGallery = galleries[(currentGalleryIndex + 2  ) % galleries.length];
   
 
   let lightboxImage;
@@ -65,13 +65,19 @@
   <div class="lightbox" on:click={() => (selectedImage = null)}>
     <!-- <div class="lightbox-content"> -->
       <img src={selectedImage.src} on:contextmenu={e => e.preventDefault()} bind:this={lightboxImage}/>
-      {#if selectedImage.title}
-        <div class="image-title" on:click={() => window.location.href = `/blog/${selectedImage.link}`} bind:this={imageTitle}>{selectedImage.title}</div>
-      {/if}
+      {#if selectedImage.location}
+        <div class="image-title" bind:this={imageTitle}>
+          <span on:click={() => window.location.href = `/blog/${selectedImage.link}`}>{selectedImage.location}</span> - {selectedImage.title}
+        </div>
+    {:else if selectedImage.title}
+      <div class="image-title no-underline" bind:this={imageTitle}>{selectedImage.title}</div>
+    <!-- {:else}
+      <div class="image-title" bind:this={imageTitle}>{selectedImage.title}</div> -->
     <!-- </div> -->
-  </div>
+    {/if}
+</div>
 {/if}
-  
+
 <div></div>
 <div class="navigation-buttons">
   <a href="/{prevGallery}"><button>Previous</button></a>
@@ -138,6 +144,19 @@
     text-decoration: underline;
     cursor: pointer;
     transition: opacity 0.3s ease;
+    opacity: 1;
+    }
+    /* .no-underline {
+      text-decoration: none !important;
+      cursor: pointer !important;
+      transition: opacity 0.3s ease;
+    } */
+
+    .no-underline:hover {
+      text-decoration: none !important;
+      cursor: default !important;
+      transition: opacity 0.3s ease;
+      opacity: 1;
     }
   
   .gallery-item {
@@ -161,9 +180,9 @@
   .lightbox img:hover + .image-title {
     opacity: 1;
   }
-  .image-title:hover {
+  /* .image-title:hover {
     opacity: 1;
-  }
+  } */
   
   .lightbox {
     position: fixed;

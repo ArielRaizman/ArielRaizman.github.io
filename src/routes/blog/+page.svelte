@@ -9,7 +9,7 @@
 <Header />
 <Banner {pageName} {headerUrl} />
 <section>
-  <p class="link" on:click={() => window.location.href = `/blog/central-coast-tidepooling`}>Tidepooling in California's Central Coast</p>
+  <p class="link underline" on:click={() => window.location.href = `/blog/central-coast-tidepooling`}>Tidepooling in California's Central Coast</p>
 </section>
 <Footer />
 
@@ -23,5 +23,9 @@
   }
   p {
     font-size: 2rem;
+  }
+  .underline {
+    text-decoration: underline;
+    cursor: pointer;
   }
 </style>
