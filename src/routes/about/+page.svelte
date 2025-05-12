@@ -15,16 +15,16 @@
   <div class="content">
     <h1>Ariel Raizman</h1>
     <p>
-      Hello! I'm Ariel Raizman, a wildlife and landscape photographer raised in western Washington, always surrounded by nature and the critters that call it home. One of my earliest memories is going to my local pond, collecting 13 bullfrog tadpoles, and raising them in a plastic tub until they grew legs—much to my parents' dismay.
+      Welcome! I'm Ariel. I was born in Washington and go to school in Santa Cruz, and spend a lot of time between what is for now my two homes.
     </p>
     <p>
-      My parents took our family on many road trips and trips abroad as I grew up, allowing me to experience the incredible diversity on this planet from a young age, which I am forever grateful for. I still travel today, especially on the road with my dad.
+      This site is a place for me to share my nature and wildlife photos in a more permanent and curated place in contrast to Instagram, and to have a place to share my thoughts on photography, the nature around me, and everything in between.
+    </p>
+    <p>
+      I hope you enjoy your stay. 
     </p>
   </div>
   <img class="profile-image" src={profileImage} alt="Ariel Raizman" />
-  <p>
-    I am currently at UC Santa Cruz, where the redwoods and chaparral on campus really sparked my passion for nature photography, and I haven't been able to stop since.
-  </p>
 </section>
 
 <Footer />
