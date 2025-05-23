@@ -7,6 +7,18 @@
 
   let isMobile = false;
   let currentHeaderUrl = headerUrl;
+  
+  // Calculate font size based on string length
+  $: fontSize = calculateFontSize(pageName);
+  
+  function calculateFontSize(text) {
+    // Base case
+    if (text.length <= 10) return '4rem';
+    // else if (text.length <= 10) return '3.5rem';
+    else if (text.length <= 15) return '3rem';
+    // else if (text.length <= 20) return '2.5rem';
+    else return '3rem'; // Minimum size for very long strings
+  }
 
   // Function to update the mobile state
   const updateIsMobile = () => {
@@ -34,13 +46,13 @@
   style="
     background: url({currentHeaderUrl}) no-repeat center center/cover;
     position: relative;
-    height: 60vh;
-    background-color: rgba(0, 0, 0, 0.20);
+    height:45vh;
+    background-color: rgba(0, 0, 0, 0.30);
     background-blend-mode: darken;
   "
 >
   <div class="overlay">
-    <h1>{pageName}</h1>
+    <h1 style="font-size: {fontSize};">{pageName}</h1>
   </div>
 </section>
 
@@ -49,12 +61,11 @@
 
   .overlay {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     font-family: 'Georgia', serif;
     color: white;
-    font-size: 2rem;
   }
 </style>

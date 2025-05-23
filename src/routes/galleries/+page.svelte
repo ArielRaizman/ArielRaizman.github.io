@@ -13,11 +13,11 @@
   let pageName = "Galleries";
   let galleries = [
     {
-    name: "Low Tide",
-    description: "Description for gallery one.",
-    image: {
-      url: Tide
-    }
+      name: "Cascadia",
+      description: "Description for gallery two.",
+      image: {
+        url: Cascadia
+      }
     },
     {
     name: "The Great Bear Valley",
@@ -34,12 +34,13 @@
     }
     },
     {
-      name: "Cascadia",
-      description: "Description for gallery two.",
-      image: {
-        url: Cascadia
-      }
+    name: "Low Tide",
+    description: "Description for gallery one.",
+    image: {
+      url: Tide
+    }
     },
+    
     // {
     //   name: "Central Bay",
     //   description: "Description for gallery two.",
@@ -102,6 +103,10 @@
   .gallery-image {
     position: relative;
     overflow: hidden;
+  }
+  .gallery-info {
+    font-family:'Times New Roman', Times, serif;
+    color: RGB(50,50,50);
   }
 
   .gallery-image img {

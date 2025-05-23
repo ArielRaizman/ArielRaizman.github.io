@@ -12,7 +12,7 @@
   <div class="content">
     <!-- <h2>Email</h2> -->
     <p>
-      For any queries or feedback, please feel free to reach out to me at <b class="hover-grow">ariel.raizman@gmail.com</b> or through <a href="https://www.instagram.com/arl.takes.pics/" target="_blank" class="hover-grow"><b>Instagram</b></a>.
+      For any queries or feedback, feel free to reach out to me at <b class="hover-grow">ariel.raizman@gmail.com</b> or through <a href="https://www.instagram.com/arl.takes.pics/" target="_blank" class="hover-grow"><b>Instagram</b></a>.
     </p>
 </section>
 <Footer />

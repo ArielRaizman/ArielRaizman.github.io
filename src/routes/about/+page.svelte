@@ -21,7 +21,7 @@
       This site is a place for me to share my nature and wildlife photos in a more permanent and curated place in contrast to Instagram, and to have a place to share my thoughts on photography, the nature around me, and everything in between.
     </p>
     <p>
-      I hope you enjoy your stay. 
+      I hope you enjoy your stay!
     </p>
   </div>
   <img class="profile-image" src={profileImage} alt="Ariel Raizman" />
@@ -42,17 +42,19 @@
   }
 
   h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 3em;
+    /* font-family: 'Arial', sans-serif; */
+    font-size: 2em;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    /* text-transform: uppercase; */
+    font-family: 'Georgia', serif;
+    /* letter-spacing: 2/x; */
   }
 
   p {
     font-size: 1.2em;
     line-height: 1.8;
     margin-bottom: 20px;
+    font-family: 'Georgia', serif;
   }
 
   .content {
@@ -62,8 +64,7 @@
 
   .profile-image {
     max-width: 400px;
-    margin-left: 30px;
-    margin-top: 50px;
+    margin: 30px;
   }
 
   img {

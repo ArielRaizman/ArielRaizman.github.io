@@ -20,7 +20,7 @@
   <section>
     <div class="content">
         <!-- <h1>Tidepooling in California's Central Coast</h1> -->
-        <p>
+        <!-- <p>
             Hidden under the waves, revealing themselves for only moments at a time, tidepools give us a brief window into a world completely alien to the human experience. These miniature ecosystems are a microcosm of the life aquatic, where we can witness firsthand memories of life's origin. When the tide returns, these glimpses vanish under the foam, leaving only traces of wonder in our eyes.
         </p>
         <div class="blog-image">
@@ -30,16 +30,19 @@
         <p>
             Just above the towering kelp forests in California’s central coast, these cold, rocky sanctuaries reveal some of the most diverse characters temperate marine life has to offer. Hundreds of tiny shrimp dart in and out of the red algae. Nudibranchs of all varieties glide along the seagrass, displaying resplendent warnings to unknowing predators of their toxic nature. 
         </p>
-        <h1>Seeing the Unseen</h1>
+        <br /> -->
         <div class="side-image">
             <img src={shrimp} alt="" on:contextmenu={e => e.preventDefault()}/>
             <p>A coastal shrimp (<i>Heptacarpus</i> sp.) hiding behind a cluster of red algae. It's body blending into both the foliage and sediment behind it.</p>
         </div>
+        <h1>Seeing the Unseen</h1>
         <p>
             At first glance, outside of the giant green anemones on top sprawling mats of red algae and mussels, these pools of life look seemingly empty. It’s only after your eyes adjust to each miniature scene that life reveals itself. The water is so clear, residents must find other ways to protect themselves from predators, equally eager for low tide as we are. Sculpins lay patiently at the bottom of the pool, perfectly camouflaged against anything that's nearby, while octopus squeeze into the smallest of cracks, leaving only a watchful eye following your movements, only visible when you lean in close. Tidepooling is a relaxing process. I take my time in each pool, taking in each rock and ledge, scanning for the bright colors of tiny nudibranchs, or the slight twitches and movements of crabs and fish. 
         </p>
+        
         <div style="clear: both;"></div>
-        <h1>A new world off each cliffside</h1>
+        <br />
+        <h1>A New World Off Each Cliffside</h1>
         <p>
             Something interesting I’ve noticed in passing after going to different areas is that although you can find mostly the same species at each beach or location, the frequency of each species seems to change dramatically. This can be seen especially in nudibranch species, and is useful when looking for a variety of them. I would try to categorize them to different habitat preferences, and I am sure there is some sort of pattern, but even in the same microhabitat along two adjacent beaches seem to have noticeable variation. I think it's best to just visit a pool and find out-or take a peek at iNaturalist.       
         </p>
@@ -53,6 +56,7 @@
                 <p>A Hilton's Aeolid (<i>Phidiana hiltoni</i>) navigating under the surfgrass meadows at Pleasure Point</p>
             </div>
         </div>
+        <br />
         <h1>Photo Techniques</h1>
         <p>There are two ways I like to photograph wildlife in tide pools, using two different types of gear. Of course these are not the only ways to do so, but they’re methods I’ve found effective and enjoyable. I'm sharing them to inspire you to not only try these techniques but also to discover your own unique perspectives and methods for capturing these miniature underwater worlds. </p>
         <p>The first is using a macro lens and flash. By angling your camera, and hence your flash at just the right angle, so long as the water is smooth and flat, the light can pass through the water without reflecting back from the surface, giving a clear image of the life underneath. Many tidepool subjects are slow moving, or stay still when calm, providing you with many opportunities to compose your shot, and get the flash to pass through.         </p>
@@ -84,11 +88,12 @@
     }
   
     h1 {
-      font-family: 'Arial', sans-serif;
+      /* font-family: 'Arial', sans-serif; */
+      font-family: 'Georgia', serif;
       font-size: 2em;
       margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      /* text-transform: uppercase; */
+      /* letter-spacing: 2px; */
     }
   
     p {
@@ -100,6 +105,7 @@
     .content {
       flex: 1;
       padding-right: 20px;
+      font-family: 'Georgia', serif;
     }
     .blog-image {
       max-width: 600px;
