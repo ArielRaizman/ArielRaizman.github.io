@@ -41,13 +41,13 @@
     }
     },
     
-    // {
-    //   name: "Central Bay",
-    //   description: "Description for gallery two.",
-    //   image: {
-    //     url: Bay
-    //   }
-    // },
+    {
+      name: "Central Bay",
+      description: "Description for gallery two.",
+      image: {
+        url: Bay
+      }
+    },
     // {
     //   name: "American Southwest",
     //   description: "Description for gallery two.",
