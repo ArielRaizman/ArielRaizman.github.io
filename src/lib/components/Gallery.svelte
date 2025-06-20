@@ -1,14 +1,14 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import Masonry from 'svelte-bricks';
   import { page } from '$app/stores';
 
   export let images = [];
-
   export let quote = "quote";
   export let quote_author = "quote_author";
   
   let selectedImage = null;
+  let selectedImageIndex = -1;
   let nColumns = 5; 
   let gap = 20; 
   let minColWidth = 400; 
@@ -18,11 +18,8 @@
   let galleries = ["galleries/low-tide", "galleries/the-great-bear-valley", "galleries/the-central-valley", "galleries/cascadia"];
   let currentGallery = $page.url.pathname.split('/').pop();
   let currentGalleryIndex = galleries.findIndex(gallery => gallery.includes(currentGallery));
-  // console.log(currentGalleryIndex);
   let prevGallery = galleries[(currentGalleryIndex - 1 + galleries.length) % galleries.length];
   let nextGallery = galleries[(currentGalleryIndex + 1) % galleries.length];
-  // let prevGallery = galleries[(currentGalleryIndex + 2  ) % galleries.length];
-  
 
   let lightboxImage;
   let imageTitle;
@@ -30,6 +27,50 @@
   function navigateTo(destination) {
     goto(destination);
   }
+
+  // Set the selected image and update the index
+  function selectImage(image) {
+    selectedImage = image;
+    selectedImageIndex = images.findIndex(img => img.src === image.src);
+  }
+
+  // Navigate to previous image
+  function prevImage() {
+    if (!images || images.length === 0) return;
+    selectedImageIndex = (selectedImageIndex - 1 + images.length) % images.length;
+    selectedImage = images[selectedImageIndex];
+  }
+
+  // Navigate to next image
+  function nextImage() {
+    if (!images || images.length === 0) return;
+    selectedImageIndex = (selectedImageIndex + 1) % images.length;
+    selectedImage = images[selectedImageIndex];
+  }
+
+  // Handle keyboard navigation
+  function handleKeydown(e) {
+    if (!selectedImage) return;
+    
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      prevImage();
+      e.preventDefault();
+    } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      nextImage();
+      e.preventDefault();
+    } else if (e.key === 'Escape') {
+      selectedImage = null;
+      e.preventDefault();
+    }
+  }
+
+  onMount(() => {
+    window.addEventListener('keydown', handleKeydown);
+  });
+
+  onDestroy(() => {
+    window.removeEventListener('keydown', handleKeydown);
+  });
 
   $: if (selectedImage && lightboxImage && imageTitle) {
     imageTitle.style.width = `${lightboxImage.clientWidth}px`;
@@ -54,31 +95,42 @@
     animate={true}
     duration={300}
   >
-    <div class="gallery-item" on:click={() => (selectedImage = item)}>
-    <img src={item.src} alt="Gallery" on:contextmenu={e => e.preventDefault()} />
-    <!-- <p>{item.title}</p> -->
-  </div>
+    <div class="gallery-item" on:click={() => selectImage(item)}>
+      <img src={item.src} alt="Gallery" on:contextmenu={e => e.preventDefault()} />
+    </div>
   </Masonry>
 </section>
   
 {#if selectedImage}
   <div class="lightbox" on:click={() => (selectedImage = null)}>
-    <!-- <div class="lightbox-content"> -->
-      <img src={selectedImage.src} on:contextmenu={e => e.preventDefault()} bind:this={lightboxImage}/>
-      {#if selectedImage.location}
-        <div class="image-title" bind:this={imageTitle}>
-          <span on:click={() => window.location.href = `/blog/${selectedImage.link}`}>{selectedImage.location}</span> - {selectedImage.title}
-        </div>
+    <div class="lightbox-navigation">
+      <button class="nav-button prev" on:click={prevImage} on:click={e => e.stopPropagation()} aria-label="Previous image">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      
+      <img src={selectedImage.src} on:contextmenu={e => e.preventDefault()} on:click={e => e.stopPropagation()} bind:this={lightboxImage}/>
+      
+      <button class="nav-button next" on:click={nextImage} on:click={e => e.stopPropagation()} aria-label="Next image">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+
+    <button class="close-button" on:click={() => (selectedImage = null)} aria-label="Close lightbox">✕</button>
+    
+    {#if selectedImage.location}
+      <div class="image-title" bind:this={imageTitle}>
+        <span on:click={() => window.location.href = `/blog/${selectedImage.link}`}>{selectedImage.location}</span> - {selectedImage.title}
+      </div>
     {:else if selectedImage.title}
       <div class="image-title no-underline" bind:this={imageTitle}>{selectedImage.title}</div>
-    <!-- {:else}
-      <div class="image-title" bind:this={imageTitle}>{selectedImage.title}</div> -->
-    <!-- </div> -->
     {/if}
-</div>
+  </div>
 {/if}
 
-<div></div>
 <div class="navigation-buttons">
   <a href="/{prevGallery}"><button>Previous</button></a>
   <a href="/galleries"><button>Galleries</button></a>
@@ -190,36 +242,91 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
   }
-  /* .lightbox-content {
-    position: relative;
+
+  .lightbox-navigation {
     display: flex;
-    flex-direction: column;
     align-items: center;
-  } */
-  
-  .lightbox img {
-    /* width: auto;
-    height: auto; */
-    max-width: 90%;
-    max-height: 90%;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
   }
 
-  .lightbox .image-title {
+  .nav-button {
     position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    /* transform: translateY(-10%); */
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    text-align: left;
-    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1010;
+  }
+
+  .nav-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .nav-button.prev {
+    left: 20px;
+  }
+
+  .nav-button.next {
+    right: 20px;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1010;
+  }
+
+  .close-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    object-fit: contain;
+  }
+
+  /* Make buttons more touch-friendly on mobile */
+  @media (max-width: 768px) {
+    .nav-button {
+      width: 40px;
+      height: 40px;
+    }
+
+    .nav-button.prev {
+      left: 10px;
+    }
+
+    .nav-button.next {
+      right: 10px;
+    }
   }
 
   .navigation-buttons {
