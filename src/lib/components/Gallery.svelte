@@ -64,11 +64,15 @@
   }
 
   onMount(() => {
-    window.addEventListener('keydown', handleKeydown);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', handleKeydown);
+    }
   });
 
   onDestroy(() => {
-    window.removeEventListener('keydown', handleKeydown);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', handleKeydown);
+    }
   });
 
   // $: if (selectedImage && lightboxImage && imageTitle) {
