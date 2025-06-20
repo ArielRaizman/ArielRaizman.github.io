@@ -14,7 +14,6 @@
   let minColWidth = 400; 
   let maxColWidth = 1600; 
   
-  let width = 0; 
   let galleries = ["galleries/low-tide", "galleries/the-great-bear-valley", "galleries/the-central-valley", "galleries/cascadia"];
   let currentGallery = $page.url.pathname.split('/').pop();
   let currentGalleryIndex = galleries.findIndex(gallery => gallery.includes(currentGallery));
@@ -72,9 +71,9 @@
     window.removeEventListener('keydown', handleKeydown);
   });
 
-  $: if (selectedImage && lightboxImage && imageTitle) {
-    imageTitle.style.width = `${lightboxImage.clientWidth}px`;
-  }
+  // $: if (selectedImage && lightboxImage && imageTitle) {
+  //   imageTitle.style.width = `${lightboxImage.clientWidth}px`;
+  // }
 </script>
   
 <section class="description">
@@ -183,20 +182,14 @@
     position: absolute; 
     bottom: 0;
     left: 0;
-    /* width: 100%; */
-    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
     color: white;
-    text-align: left;
     padding: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    }
-
-    .image-title:hover {
-    text-decoration: underline;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-    opacity: 1;
+    margin-bottom: 20px;
+    text-align : center;
+    font-size: 1.2rem;
+    letter-spacing: 0.7px;
+    font-weight: 100;
     }
     /* .no-underline {
       text-decoration: none !important;
