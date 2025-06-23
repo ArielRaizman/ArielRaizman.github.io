@@ -32,14 +32,14 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('../lib/assets/home/home_img.jpg') no-repeat center center/cover;
+    background: url('../lib/assets/home_img.jpg') no-repeat center center/cover;
     background-color: rgba(0, 0, 0, 0.25);
     background-blend-mode: darken;
   }
 
   @media (max-width: 768px) {
     .hero {
-      background: url('../lib/assets/home/home_img_mobile.jpg') no-repeat center center/cover;
+      background: url('../lib/assets/home_img_mobile.jpg') no-repeat center center/cover;
       background-color: rgba(0, 0, 0, 0.25);
       background-blend-mode: darken;
     }

@@ -2,13 +2,13 @@
   import Header from '../../lib/components/Header.svelte';
   import Footer from '../../lib/components/Footer.svelte';
   import Banner from '../../lib/components/Banner.svelte';
-  import Bear from "./../../lib/assets/galleries/bear.jpg";
-  import Tide from "./../../lib/assets/galleries/tide.jpg";
-  import Cascadia from "./../../lib/assets/galleries/cascadia.jpg";
-  import headerUrl from '../../lib/assets/galleries/gallery_header.jpg';
-  import Bay from "./../../lib/assets/galleries/bay.jpg";
-  import Southwest from "./../../lib/assets/galleries/southwest.jpg";
-  import Valley from "./../../lib/assets/galleries/valley.jpg";
+  import Bear from "./../../lib/assets/bear.jpg";
+  import Tide from "./../../lib/assets/tide.jpg";
+  import Cascadia from "./../../lib/assets/cascadia.jpg";
+  import headerUrl from '../../lib/assets/gallery_header.jpg';
+  import Bay from "./../../lib/assets/bay.jpg";
+  import Southwest from "./../../lib/assets/southwest.jpg";
+  import Valley from "./../../lib/assets/valley.jpg";
   
   let pageName = "Galleries";
   let galleries = [

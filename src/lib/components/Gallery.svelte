@@ -2,11 +2,13 @@
   import { onMount, onDestroy } from 'svelte';
   import Masonry from 'svelte-bricks';
   import { page } from '$app/stores';
+  import masterImageData from './../assets/image-data.json';
 
-  export let images = [];
+  export let location = "";
   export let quote = "quote";
   export let quote_author = "quote_author";
   
+  let images = [];
   let selectedImage = null;
   let selectedImageIndex = -1;
   let nColumns = 5; 
@@ -22,10 +24,37 @@
 
   let lightboxImage;
   let imageTitle;
-
-  function navigateTo(destination) {
-    goto(destination);
-  }
+  
+  // Load images based on location
+  onMount(async () => {
+    if (typeof window === 'undefined') return;
+    
+    try {
+      // Filter master JSON to get images for this location, handling full path
+      const fullPath = location.startsWith('galleries/') ? location : `galleries/${location}`;
+      const relevantImages = masterImageData.filter(img => img.location === fullPath);
+      
+      // Load each image dynamically
+      for (const imageData of relevantImages) {
+        try {
+          // Use @/ alias for imports in Vite/SvelteKit
+          const imageUrl = new URL(`../assets/${imageData.image_name}`, import.meta.url).href;
+          
+          // Add to our images array
+          images = [...images, { 
+            src: imageUrl, 
+            title: imageData.title || "",
+            location: imageData.image_location || "",
+            link: imageData.link || ""
+          }];
+        } catch (err) {
+          console.error(`Failed to load image: ${imageData.image_name} in location ${fullPath}`, err);
+        }
+      }
+    } catch (err) {
+      console.error("Error loading images:", err);
+    }
+  });
 
   // Set the selected image and update the index
   function selectImage(image) {
@@ -71,7 +100,7 @@
 
   onDestroy(() => {
     if (typeof window !== 'undefined') {
-      window.addEventListener('keydown', handleKeydown);
+      window.removeEventListener('keydown', handleKeydown);
     }
   });
 
