@@ -5,7 +5,6 @@
   import Footer from '../../../lib/components/Footer.svelte';
   import Banner from '../../../lib/components/Banner.svelte';
   import headerUrl from '../../../lib/assets/tide.jpg';
-  import metadata from '../../../lib/assets/tide/tide.json';
 
   let pageName = "Low Tide";
   let quote = "It is advisable to look from the tide pool to the stars and then back to the tide pool again.";

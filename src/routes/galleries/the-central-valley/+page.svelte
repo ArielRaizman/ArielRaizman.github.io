@@ -5,7 +5,6 @@
   import Gallery from '../../../lib/components/Gallery.svelte';
   import Banner from '../../../lib/components/Banner.svelte';
   import Footer from '../../../lib/components/Footer.svelte';
-  import metadata from '../../../lib/assets/valley/valley.json';
 
   import headerUrl from '../../../lib/assets/valley.jpg';
 
