@@ -1,7 +1,30 @@
 <script>
+  import { onMount } from 'svelte';
   import Footer from '../lib/components/Footer.svelte';
   import Header from '../lib/components/Header.svelte';
-  
+  import ImageGallery from '../lib/components/ImageGallery.svelte';
+  import masterImageData from '../lib/assets/image-data.json';
+
+  let bestImages = [];
+
+  onMount(async () => {
+    if (typeof window === 'undefined') return;
+    
+    try {
+      // Filter for images with Other: best
+      const bestImageData = masterImageData.filter(img => img.Other === 'best');
+      
+      // Format images for the gallery
+      bestImages = bestImageData.map(img => ({
+        src: new URL(`../lib/assets/${img.image_name}`, import.meta.url).href,
+        title: img.title || '',
+        location: img.location || '',
+        link: img.link || ''
+      }));
+    } catch (err) {
+      console.error("Error loading best images:", err);
+    }
+  });
 </script>
 
 <main>
@@ -13,15 +36,16 @@
       <h2>Nature Photography</h2>
     </div>
   </section>
-  <section class="description">
+  <!-- <section class="description">
     <div>
       <p>"buh"</p>
       <h1>"buh"</h1>  
     </div>
   </section>
-  <section>
-
-  </section>
+  <section class="best-gallery">
+    <h2>Featured Work</h2>
+    <ImageGallery images={bestImages} /> -->
+  <!-- </section> -->
   <Footer />
 </main>
 
@@ -76,5 +100,17 @@
     background-color: rgba(0, 0, 0, 0.2);
     text-align: center;
     color: black;
+  }
+
+  .best-gallery {
+    margin: 2rem auto;
+    max-width: 1600px;
+  }
+
+  .best-gallery h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
   }
 </style>

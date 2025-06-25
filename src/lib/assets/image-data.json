@@ -35,7 +35,8 @@
     "image_name": "_DSC3426.jpg",
     "location": "galleries/valley",
     "title": "Sunset over the Carizzo Plains",
-    "link": "carizzo-plains"
+    "link": "carizzo-plains",
+    "Other": "best"
   },
   {
     "image_name": "_DSC8260-Enhanced-NR.jpg",
@@ -560,7 +561,8 @@
     "image_name": "_DSC8076.jpg",
     "location": "galleries/bay",
     "title": "Southern Sea Otter",
-    "link": "monterey"
+    "link": "monterey",
+    "Other": "best"
   },
   {
     "image_name": "_DSC9515.jpg",
@@ -800,7 +802,8 @@
     "image_name": "_DSC8383.jpg",
     "location": "galleries/bay",
     "title": "Cellophane Bee on a Seaside Daisy",
-    "link": "monterey"
+    "link": "monterey",
+    "Other": "best"
   },
   {
     "image_name": "_DSC7285.jpg",
