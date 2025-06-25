@@ -30,10 +30,10 @@
       <h2>Nature Photography</h2>
     </div>
   </section>
-  <!-- <section class="best-gallery">
+  <section class="best-gallery">
     <h2>Featured Work</h2>
     <ImageGallery images={bestImages} />
-  </section> -->
+  </section>
   <Footer />
 </main>
 
