@@ -7,23 +7,17 @@
 
   let bestImages = [];
 
-  onMount(async () => {
-    if (typeof window === 'undefined') return;
+  onMount(() => {
+    // Filter for images with Other: best
+    const bestImageData = masterImageData.filter(img => img.Other === 'best');
     
-    try {
-      // Filter for images with Other: best
-      const bestImageData = masterImageData.filter(img => img.Other === 'best');
-      
-      // Format images for the gallery
-      bestImages = bestImageData.map(img => ({
-        src: new URL(`../lib/assets/${img.image_name}`, import.meta.url).href,
-        title: img.title || '',
-        location: img.location || '',
-        link: img.link || ''
-      }));
-    } catch (err) {
-      console.error("Error loading best images:", err);
-    }
+    // Format images for the gallery using static paths
+    bestImages = bestImageData.map(img => ({
+      src: `/src/lib/assets/${img.image_name}`,
+      title: img.title || '',
+      location: img.location || '',
+      link: img.link || ''
+    }));
   });
 </script>
 
@@ -36,16 +30,10 @@
       <h2>Nature Photography</h2>
     </div>
   </section>
-  <!-- <section class="description">
-    <div>
-      <p>"buh"</p>
-      <h1>"buh"</h1>  
-    </div>
-  </section>
-  <section class="best-gallery">
+  <!-- <section class="best-gallery">
     <h2>Featured Work</h2>
-    <ImageGallery images={bestImages} /> -->
-  <!-- </section> -->
+    <ImageGallery images={bestImages} />
+  </section> -->
   <Footer />
 </main>
 
