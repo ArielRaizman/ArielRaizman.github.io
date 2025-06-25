@@ -13,6 +13,12 @@
       <h2>Nature Photography</h2>
     </div>
   </section>
+  <section class="description">
+    <div>
+      <p>"buh"</p>
+      <h1>"buh"</h1>  
+    </div>
+  </section>
   <section>
 
   </section>
@@ -63,5 +69,12 @@
   .overlay h2 {
     font-size: 2rem;
     font-weight: normal;
+  }
+
+  .description {
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: black;
   }
 </style>
