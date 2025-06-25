@@ -8,5 +8,7 @@ node_modules
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-.env
-.env
+
+# Development routes
+/src/routes/dev
+/src/routes/api/save-json
