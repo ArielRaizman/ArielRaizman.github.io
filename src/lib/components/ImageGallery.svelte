@@ -117,7 +117,8 @@
     
     {#if selectedImage.location}
       <div class="image-title" bind:this={imageTitle}>
-        <span class="link" on:click={() => window.location.href = `/blog/${selectedImage.link}`}>{selectedImage.location}</span> - {selectedImage.title}
+        <!-- <span class="link" on:click={() => window.location.href = `/blog/${selectedImage.link}`}>{selectedImage.location}</span> - {selectedImage.title} -->
+         {selectedImage.title}
       </div>
     {:else if selectedImage.title}
       <div class="image-title no-underline" bind:this={imageTitle}>{selectedImage.title}</div>

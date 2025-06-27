@@ -4,27 +4,53 @@
   import Header from '../lib/components/Header.svelte';
   import ImageGallery from '../lib/components/ImageGallery.svelte';
   import masterImageData from '../lib/assets/image-data.json';
+  import homeImg from '$lib/assets/home_img.jpg';
+  import homeImgMobile from '$lib/assets/home_img_mobile.jpg';
+
+  let currentBgImage = homeImg;
+
+  // Use Vite's glob import for gallery images
+  const imageFiles = import.meta.glob('../lib/assets/*.{jpg,jpeg,png}', { eager: true });
 
   let bestImages = [];
 
   onMount(() => {
-    // Filter for images with Other: best
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const handleResize = (e) => {
+      currentBgImage = e.matches ? homeImgMobile : homeImg;
+    };
+    mediaQuery.addEventListener('change', handleResize);
+    handleResize(mediaQuery);
+
     const bestImageData = masterImageData.filter(img => img.Other === 'best');
     
-    // Format images for the gallery using static paths
-    bestImages = bestImageData.map(img => ({
-      src: `/src/lib/assets/${img.image_name}`,
-      title: img.title || '',
-      location: img.location || '',
-      link: img.link || ''
-    }));
+    bestImages = bestImageData.map(img => {
+      const imagePath = `../lib/assets/${img.image_name}`;
+      // console.log('Trying to load:', imagePath);
+      // console.log('Available images:', Object.keys(imageFiles));
+      const imageModule = imageFiles[imagePath];
+      if (!imageModule) {
+        console.error(`Image not found: ${imagePath}`);
+        return null;
+      }
+      return {
+        src: imageModule.default,
+        title: img.title || '',
+        location: img.location || '',
+        link: img.link || ''
+      };
+    }).filter(Boolean); // Remove any null entries
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleResize);
+    };
   });
 </script>
 
 <main>
   <Header />
 
-  <section class="hero">
+  <section class="hero" style="background-image: url({currentBgImage})">
     <div class="overlay">
       <h1>Ariel Raizman</h1>
       <h2>Nature Photography</h2>
@@ -50,14 +76,15 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('../lib/assets/home_img.jpg') no-repeat center center/cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     background-color: rgba(0, 0, 0, 0.25);
     background-blend-mode: darken;
   }
 
   @media (max-width: 768px) {
     .hero {
-      background: url('../lib/assets/home_img_mobile.jpg') no-repeat center center/cover;
       background-color: rgba(0, 0, 0, 0.25);
       background-blend-mode: darken;
     }
