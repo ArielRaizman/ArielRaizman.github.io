@@ -35,6 +35,9 @@
 <style>
   @import '../assets/styles/styles.css';
 
+  * {
+    font-family: 'Arial', sans-serif; 
+  }
   header.nav-list {
     display: flex;
     justify-content: space-between;

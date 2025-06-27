@@ -269,6 +269,7 @@
     font-size: 1.2rem;
     letter-spacing: 0.7px;
     font-weight: 100;
+    font-family: 'georgia', serif;
   }
 
   .link {
