@@ -23,7 +23,7 @@
     console.warn(`Gallery "${pageName}" failed to load - missing banner image.`);
   }
 
-  const headerUrl = bannerImage ? `/src/lib/assets/${bannerImage.image_name}` : '';
+  const headerUrl = bannerImage ? new URL(`../../../lib/assets/${bannerImage.image_name}`, import.meta.url).href : '';
 </script>
 
 <Header />
