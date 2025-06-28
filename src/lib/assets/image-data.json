@@ -2,14 +2,22 @@
   {
     "image_name": "home_img_mobile.jpg",
     "location": "home",
+    "title": "",
+    "link": "",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "home_img.jpg",
     "location": "home",
+    "title": "",
+    "link": "",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3599.jpg",
@@ -17,7 +25,9 @@
     "title": "American Black Bear",
     "link": "tahoe",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3285.jpg",
@@ -25,8 +35,9 @@
     "title": "Sandhill Crane Pair",
     "link": "central-valley",
     "active": true,
+    "best": false,
     "banner_image": true,
-    "best": false
+    "image_location": ""
   },
   {
     "image_name": "_DSC3169.jpg",
@@ -34,7 +45,9 @@
     "title": "Little Bear!",
     "link": "carizzo-plains",
     "active": false,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3826-Enhanced-NR.jpg",
@@ -42,15 +55,19 @@
     "title": "American Black Bear",
     "link": "tahoe",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3426.jpg",
     "location": "galleries/valley",
     "title": "Sunset over the Carizzo Plains",
     "link": "carizzo-plains",
+    "active": true,
     "best": false,
-    "active": true
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8260-Enhanced-NR.jpg",
@@ -58,7 +75,9 @@
     "title": "Tule Elk",
     "link": "central-valley",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8345.jpg",
@@ -66,7 +85,9 @@
     "title": "Northern Shovelers",
     "link": "central-valley",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8552-Enhanced-NR.jpg",
@@ -74,7 +95,9 @@
     "title": "Black Necked Stilt",
     "link": "central-valley",
     "active": true,
-    "best": true
+    "best": true,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3246.jpg",
@@ -82,7 +105,9 @@
     "title": "Red Tailed Hawk",
     "link": "carizzo-plains",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC4304-Enhanced-NR.jpg",
@@ -90,7 +115,9 @@
     "title": "Black Necked Stilt",
     "link": "central-valley",
     "active": true,
-    "best": true
+    "best": true,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC4357.jpg",
@@ -98,7 +125,9 @@
     "title": "Black Necked Stilt",
     "link": "central-valley",
     "active": false,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8303-Enhanced-NR.jpg",
@@ -106,7 +135,9 @@
     "title": "Tule Elk",
     "link": "central-valley",
     "active": true,
-    "best": true
+    "best": true,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8618-2.jpg",
@@ -114,7 +145,9 @@
     "title": "Flock of Snow Geese",
     "link": "central-valley",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3473.jpg",
@@ -122,7 +155,9 @@
     "title": "American Black Bear",
     "link": "tahoe",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3560.jpg",
@@ -130,7 +165,9 @@
     "title": "American Black Bear",
     "link": "tahoe",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8582.jpg",
@@ -138,7 +175,9 @@
     "title": "Black Eared Jackrabbit",
     "link": "central-valley",
     "active": false,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8642-2.jpg",
@@ -146,7 +185,9 @@
     "title": "Snow Goose",
     "link": "central-valley",
     "active": false,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3387-Enhanced-NR.jpg",
@@ -154,7 +195,9 @@
     "title": "Sandhill Crane Over a Flock of Cackling Geese",
     "link": "central-valley",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3796-Enhanced-NR.jpg",
@@ -162,7 +205,9 @@
     "title": "American Black Bear",
     "link": "tahoe",
     "active": false,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3311-Enhanced-NR.jpg",
@@ -170,13 +215,19 @@
     "title": "Sandhill Crane",
     "link": "central-valley",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "tide.jpg",
     "location": "galleries",
+    "title": "",
+    "link": "",
     "active": false,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3203.jpg",
@@ -184,7 +235,9 @@
     "title": "Tahoma (Mt. Rainier) at Reflection Lake",
     "link": "paradise",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC6914.jpg",
@@ -192,7 +245,9 @@
     "title": "Columbia Lilly",
     "link": "snow-lake",
     "active": false,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2957.jpg",
@@ -200,7 +255,9 @@
     "title": "Hoary Marmot",
     "link": "paradise",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2900.jpg",
@@ -208,7 +265,9 @@
     "title": "Hoary Marmot",
     "link": "paradise",
     "active": true,
-    "best": true
+    "best": true,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1136.jpg",
@@ -216,7 +275,9 @@
     "title": "Mountain Goat Mother and Kid",
     "link": "the-enchantments",
     "active": true,
-    "best": true
+    "best": true,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC7941 current final.jpg",
@@ -224,14 +285,19 @@
     "title": "Perseids Meteor Shower over Tahoma (Mt. Rainier)",
     "link": "sunrise",
     "active": true,
-    "best": true
+    "best": true,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3055.jpg",
     "location": "galleries/cascadia",
     "title": "Canada Jay",
-    "link": "paradise",
-    "active": true
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8955.jpg",
@@ -239,7 +305,9 @@
     "title": "Mt. Baker Wilderness",
     "link": "baker",
     "active": true,
-    "banner_image": true
+    "best": false,
+    "banner_image": true,
+    "image_location": ""
   },
   {
     "image_name": "_DSC6959.jpg",
@@ -247,7 +315,9 @@
     "title": "Small Waterfall",
     "link": "snow-lake",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC7631.jpg",
@@ -255,167 +325,249 @@
     "title": "Cascade Range",
     "link": "sunrise",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8508.jpg",
     "location": "galleries/cascadia",
     "title": "Mt. Baker Wilderness",
     "link": "baker",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1138.jpg",
     "location": "galleries/cascadia",
     "title": "Mountain Goat Kid",
     "link": "the-enchantments",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1017.jpg",
     "location": "galleries/cascadia",
     "title": "Mountain Goat",
     "link": "the-enchantments",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC9105.jpg",
     "location": "galleries/cascadia",
     "title": "Hoary Marmots",
     "link": "baker",
-    "active": false
+    "active": false,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1303.jpg",
     "location": "galleries/cascadia",
     "title": "Mountain Goat",
     "link": "the-enchantments",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8642.jpg",
     "location": "galleries/cascadia",
     "title": "Kulshan (Mt. Baker)",
     "link": "baker",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1426.jpg",
     "location": "galleries/cascadia",
     "title": "Alpine Creek - Core Enchantments",
     "link": "the-enchantments",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1321.jpg",
     "location": "galleries/cascadia",
     "title": "Crystal Lake - Core Enchantments",
     "link": "the-enchantments",
-    "active": false
+    "active": false,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1267.jpg",
     "location": "galleries/cascadia",
     "title": "Crystal Lake - Core Enchatnments",
     "link": "the-enchantments",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "southwest.jpg",
     "location": "galleries",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "bear.jpg",
     "location": "galleries",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "bay.jpg",
     "location": "galleries",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "valley.jpg",
     "location": "galleries",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1895.jpg",
     "location": "galleries/bear",
     "title": "Glacial Waterfall",
     "link": "bellacoola",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "P9120271.jpg",
     "location": "galleries/bear",
     "title": "Pink Salmon",
     "link": "bellacoola",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2511.jpg",
     "location": "galleries/bear",
     "title": "Brown Bear",
     "link": "bellacoola",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2298.jpg",
     "location": "galleries/bear",
     "title": "Brown Bear and Salmon",
     "link": "bellacoola",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2103.jpg",
     "location": "galleries/bear",
     "title": "Alpine Valley",
     "link": "bellacoola",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2494.jpg",
     "location": "galleries/bear",
     "title": "Brown Bear",
     "link": "bellacoola",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2107.jpg",
     "location": "galleries/bear",
     "title": "Waterfall",
     "link": "bellacoola",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1935.jpg",
     "location": "galleries/bear",
     "title": "Rainforest Boulder",
     "link": "bellacoola",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1990-2.jpg",
     "location": "galleries/bear",
     "title": "Bella Coola Rainforest",
     "link": "bellacoola",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2000.jpg",
     "location": "galleries/bear",
     "title": "Bella Coola Rainforest",
     "link": "bellacoola",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1863.jpg",
     "location": "galleries/bear",
     "title": "Pink Salmon",
     "link": "bellacoola",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2408.jpg",
@@ -423,197 +575,309 @@
     "title": "Brown Bear",
     "link": "bellacoola",
     "active": true,
-    "banner_image": true
+    "best": false,
+    "banner_image": true,
+    "image_location": ""
   },
   {
     "image_name": "spreadoctopus.jpg",
     "location": "galleries/tide",
     "title": "East Pacific Red Octopus",
     "link": "central-coast-tidepooling",
-    "image_location": "California Coast",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": "California Coast"
   },
   {
     "image_name": "sonyopalescent.jpg",
     "location": "galleries/tide",
     "title": "Opalescent Nudibranch",
     "link": "central-coast-tidepooling",
-    "image_location": "California Coast",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": "California Coast"
   },
   {
     "image_name": "PA200089.jpg",
     "location": "galleries/tide",
     "title": "Spotted Dorid",
     "link": "central-coast-tidepooling",
-    "image_location": "California Coast",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": "California Coast"
   },
   {
     "image_name": "PA190532.jpg",
     "location": "galleries/tide",
     "title": "Hilton's Aeolid",
     "link": "central-coast-tidepooling",
-    "image_location": "California Coast",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": "California Coast"
   },
   {
     "image_name": "PB170683.jpg",
     "location": "galleries/tide",
     "title": "Sandalwood Dorid",
     "link": "central-coast-tidepooling",
-    "image_location": "California Coast",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": "California Coast"
   },
   {
     "image_name": "sonyaeolid.jpg",
     "location": "galleries/tide",
     "title": "Hilton's Aeolid",
     "link": "central-coast-tidepooling",
-    "image_location": "California Coast",
     "active": true,
-    "banner_image": true
+    "best": false,
+    "banner_image": true,
+    "image_location": "California Coast"
   },
   {
     "image_name": "PB030352.jpg",
     "location": "galleries/tide",
     "title": "East Pacific Red Octopus",
     "link": "central-coast-tidepooling",
-    "image_location": "California Coast",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": "California Coast"
   },
   {
     "image_name": "PB170660.jpg",
     "location": "galleries/tide",
     "title": "Clown Dorid",
     "link": "central-coast-tidepooling",
-    "image_location": "California Coast",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": "California Coast"
   },
   {
     "image_name": "PB170684.jpg",
     "location": "galleries/tide",
     "title": "Sandalwood Dorid",
     "link": "central-coast-tidepooling",
-    "image_location": "California Coast",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": "California Coast"
   },
   {
     "image_name": "PA190488.jpg",
     "location": "galleries/tide",
     "title": "Shrimp (Heptacarpus sp.)",
     "link": "central-coast-tidepooling",
-    "image_location": "California Coast",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": "California Coast"
   },
   {
     "image_name": "PB170603.jpg",
     "location": "galleries/tide",
     "title": "Noble Dorid",
     "link": "central-coast-tidepooling",
-    "image_location": "California Coast",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": "California Coast"
   },
   {
     "image_name": "PA200090.jpg",
     "location": "galleries/tide",
     "title": "Spotted Dorid",
     "link": "central-coast-tidepooling",
-    "image_location": "California Coast",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": "California Coast"
   },
   {
     "image_name": "PA200032.jpg",
     "location": "galleries/tide",
     "title": "Fluffy Sculpin",
     "link": "central-coast-tidepooling",
-    "image_location": "California Coast",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": "California Coast"
   },
   {
     "image_name": "cascadia.jpg",
     "location": "galleries",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "gallery_header.jpg",
     "location": "galleries",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1784.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2512-Enhanced-NR.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2158.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2033.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2558-Enhanced-NR.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1316.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2525.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2726.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "Big Horned Sheep",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2229-Enhanced-NR.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2837-Enhanced-NR.jpg",
-    "location": "galleries/southwest",
-    "active": true
+    "location": "galleries/southwest`",
+    "title": "Big Horned Sheep",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2316-Enhanced-NR.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2787-Enhanced-NR-2.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "Big Horned Sheep",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1849-2.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC6144.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2041.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC5286.jpg",
@@ -621,7 +885,9 @@
     "title": "Tahoma (Mt. Rainier) at Sunrise",
     "link": "sunrise",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC5283-Enhanced-NR-2.jpg",
@@ -629,7 +895,9 @@
     "title": "Tahoma (Mt. Rainier) at Sunrise",
     "link": "sunrise",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC5245.jpg",
@@ -637,7 +905,9 @@
     "title": "Tahoma (Mt. Rainier) at Sunrise",
     "link": "sunrise",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC5135.jpg",
@@ -645,7 +915,9 @@
     "title": "Tahoma (Mt. Rainier) at Sunrise",
     "link": "sunrise",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC5101.jpg",
@@ -653,7 +925,9 @@
     "title": "Tahoma (Mt. Rainier) at Sunrise",
     "link": "sunrise",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC4658.jpg",
@@ -661,7 +935,9 @@
     "title": "Tahoma (Mt. Rainier) at Sunrise",
     "link": "sunrise",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC4635.jpg",
@@ -669,7 +945,9 @@
     "title": "Tahoma (Mt. Rainier) at Sunrise",
     "link": "sunrise",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC4158.jpg",
@@ -677,7 +955,9 @@
     "title": "Tahoma (Mt. Rainier) at Sunrise",
     "link": "sunrise",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3980.jpg",
@@ -685,7 +965,9 @@
     "title": "Tahoma (Mt. Rainier) at Sunrise",
     "link": "sunrise",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3947.jpg",
@@ -693,91 +975,149 @@
     "title": "Tahoma (Mt. Rainier) at Sunrise",
     "link": "sunrise",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1477.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2201.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2758.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "Big Horned Sheep",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2007.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2965-Enhanced-NR.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "Gambell's Quail",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2093.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC6153.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2598-Enhanced-NR.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2444-Enhanced-NR.jpg",
     "location": "galleries/southwest",
-    "active": true
+    "title": "Mexican Jay",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2941.jpg",
-    "location": "galleries/southwest",
-    "active": true
+    "location": "galleries/southwest`",
+    "title": "Antelope Squirrels",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2277-Enhanced-NR.jpg",
     "location": "galleries/southwest",
-    "active": true
-  },
-  {
-    "image_name": "_DSC5245.jpg",
-    "location": "galleries/bay",
-    "title": "Great Horned Owlett",
-    "link": "owls",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3570.jpg",
     "location": "galleries/bay",
     "title": "Mining Bee",
     "link": "ucsc",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8076.jpg",
     "location": "galleries/bay",
     "title": "Southern Sea Otter",
     "link": "monterey",
+    "active": true,
     "best": true,
-    "active": true
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC9515.jpg",
     "location": "galleries/bay",
     "title": "Great Blue Heron",
     "link": "",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC7922.jpg",
@@ -785,28 +1125,29 @@
     "title": "Monterey Coast",
     "link": "monterey",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC9019.jpg",
     "location": "galleries/bay",
     "title": "Pied Billed Grebe",
     "link": "",
-    "active": true
-  },
-  {
-    "image_name": "_DSC4635.jpg",
-    "location": "galleries/bay",
-    "title": "Slender Banana Slug",
-    "link": "ucsc",
-    "active": false
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC6453.jpg",
     "location": "galleries/bay",
     "title": "Allen's Hummingbird",
     "link": "ucsc",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC7836.jpg",
@@ -814,42 +1155,49 @@
     "title": "Great Horned Owls Sharing a Crow",
     "link": "owls",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8834.jpg",
     "location": "galleries/bay",
     "title": "Arboreal Salamander",
     "link": "ucsc",
-    "active": true
-  },
-  {
-    "image_name": "_DSC3980.jpg",
-    "location": "galleries/bay",
-    "title": "Sanderlings",
-    "link": "",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC6211.jpg",
     "location": "galleries/bay",
     "title": "Ensatina",
     "link": "ucsc",
-    "active": false
+    "active": false,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC0269.jpg",
     "location": "galleries/bay",
     "title": "Slender Banana Slug",
     "link": "ucsc",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC0276.jpg",
     "location": "galleries/bay",
     "title": "Slender Banana Slug",
     "link": "ucsc",
-    "active": false
+    "active": false,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8768.jpg",
@@ -857,161 +1205,199 @@
     "title": "Slender Banana Slug",
     "link": "ucsc",
     "active": true,
-    "banner_image": true
+    "best": false,
+    "banner_image": true,
+    "image_location": ""
   },
   {
     "image_name": "_DSC0182-Enhanced-NR.jpg",
     "location": "galleries/bay",
     "title": "Great Horned Owl",
     "link": "ucsc",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC7933.jpg",
     "location": "galleries/bay",
     "title": "Young Elephant Seal",
     "link": "",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8389.jpg",
     "location": "galleries/bay",
     "title": "Cellophane Bee on a Seaside Daisy",
     "link": "monterey",
-    "active": true
-  },
-  {
-    "image_name": "_DSC5135.jpg",
-    "location": "galleries/bay",
-    "title": "Great Horned Owlett",
-    "link": "owls",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC6180.jpg",
     "location": "galleries/bay",
     "title": "California Ground Squirrel",
     "link": "ucsc",
-    "active": false
+    "active": false,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "PB050382.jpg",
     "location": "galleries/bay",
     "title": "Rough Skinned Newt",
     "link": "ucsc",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3108.jpg",
     "location": "galleries/bay",
     "title": "Ensatina",
-    "link": "ucsc",
-    "active": true
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8176.jpg",
     "location": "galleries/bay",
     "title": "Southern Sea Otter",
     "link": "",
-    "active": false
+    "active": false,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8764.jpg",
     "location": "galleries/bay",
     "title": "Slender Banana Slug",
     "link": "ucsc",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC7499.jpg",
     "location": "galleries/bay",
     "title": "Great Horned Owl Famly",
     "link": "owls",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC0318.jpg",
     "location": "galleries/bay",
     "title": "Great Horned Owletts",
     "link": "owls",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8175.jpg",
     "location": "galleries/bay",
     "title": "Southern Sea Otter",
     "link": "",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8201.jpg",
     "location": "galleries/bay",
     "title": "Southern Sea Otter",
     "link": "monterey",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC1223.jpg",
     "location": "galleries/bay",
     "title": "Harbor Seal",
     "link": "monterey",
-    "active": true
-  },
-  {
-    "image_name": "_DSC5101.jpg",
-    "location": "galleries/bay",
-    "title": "Slender Salamander",
-    "link": "ucsc",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8087.jpg",
     "location": "galleries/bay",
     "title": "Southern Sea Otter",
     "link": "monterey",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8302.jpg",
     "location": "galleries/bay",
     "title": "Black Oystercatcher",
     "link": "monterey",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC2727.jpg",
     "location": "galleries/bay",
     "title": "Anna's Hummingbird",
     "link": "",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC7543.jpg",
     "location": "galleries/bay",
     "title": "Great Horned Owls Cuddling",
     "link": "owls",
-    "active": false
+    "active": false,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC9722.jpg",
     "location": "galleries/bay",
     "title": "Anna's Hummingbird",
     "link": "ucsc",
-    "active": true
-  },
-  {
-    "image_name": "_DSC4158.jpg",
-    "location": "galleries/bay",
-    "title": "Brown Pelican",
-    "link": "",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8719.jpg",
     "location": "galleries/bay",
     "title": "Northern Rubber Boa",
     "link": "ucsc",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC7880.jpg",
@@ -1019,57 +1405,79 @@
     "title": "Male Elephant Seal",
     "link": "",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8136.jpg",
     "location": "galleries/bay",
     "title": "Morro Bay",
     "link": "",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8794.jpg",
     "location": "galleries/bay",
     "title": "Elephant Seal Family",
     "link": "",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3504.jpg",
     "location": "galleries/bay",
     "title": "Gopher Snake",
     "link": "ucsc",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8383.jpg",
     "location": "galleries/bay",
     "title": "Cellophane Bee on a Seaside Daisy",
     "link": "monterey",
+    "active": true,
     "best": true,
-    "active": true
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC7285.jpg",
     "location": "galleries/bay",
     "title": "Monarch Butterflies",
     "link": "",
-    "active": true
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC3124.jpg",
     "location": "galleries/bay",
     "title": "Monarch Butterflies",
     "link": "",
-    "active": false
+    "active": false,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC8277.jpg",
     "location": "galleries/bay",
     "title": "Southern Sea Otter",
     "link": "",
-    "active": false
+    "active": false,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "_DSC7747.jpg",
@@ -1077,108 +1485,98 @@
     "title": "Great Horned Owls Sharing a Crow",
     "link": "owls",
     "active": true,
-    "best": false
-  },
-  {
-    "image_name": "_DSC4658.jpg",
-    "location": "galleries/bay",
-    "title": "Slender Banana Slug",
-    "link": "ucsc",
-    "active": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "profile.jpg",
     "location": "about",
-    "active": true
-  },
-  {
-    "image_name": "tide.jpg",
-    "location": "blogs",
-    "active": true
+    "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
     "image_name": "aeolid.jpg",
     "location": "blogs",
-    "active": true
-  },
-  {
-    "image_name": "_DSC2444-Enhanced-NR.jpg",
-    "location": "galleries/bay",
-    "title": "Long-Billed Curlew",
+    "title": "",
     "link": "",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
-    "image_name": "_DSC3108.jpg",
-    "location": "galleries/bay",
-    "title": "Long-Billed Curlew",
+    "image_name": "tide-banner.jpg",
+    "location": "",
+    "title": "",
     "link": "",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
-    "image_name": "_DSC3055.jpg",
+    "image_name": "_DSC2871-Enhanced-NR-Pano.jpg",
     "location": "galleries/bay",
-    "title": "Long-Billed Curlew",
+    "title": "Milky Way Over Panther Beach",
     "link": "",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
-    "image_name": "_DSC2965-Enhanced-NR.jpg",
+    "image_name": "_DSC2960-Enhanced-NR.jpg",
     "location": "galleries/bay",
-    "title": "Long-Billed Curlew",
+    "title": "Night Sky Over Davenport Beach",
     "link": "",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
-    "image_name": "_DSC2941.jpg",
-    "location": "galleries/bay",
-    "title": "Long-Billed Curlew",
+    "image_name": "IMG_5227.jpg",
+    "location": "",
+    "title": "",
     "link": "",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
-    "image_name": "_DSC2837-Enhanced-NR.jpg",
-    "location": "galleries/bay",
-    "title": "Long-Billed Curlew",
+    "image_name": "_DSC0130.jpg",
+    "location": "",
+    "title": "",
     "link": "",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
-    "image_name": "_DSC2787-Enhanced-NR-2.jpg",
-    "location": "galleries/bay",
-    "title": "Long-Billed Curlew",
+    "image_name": "72d5735d3b577d3be19e6bbc043ccbc2.jpg",
+    "location": "",
+    "title": "",
     "link": "",
     "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   },
   {
-    "image_name": "_DSC2758.jpg",
-    "location": "galleries/bay",
-    "title": "Long-Billed Curlew",
+    "image_name": "_DSC2192.jpg",
+    "location": "TEST",
+    "title": "",
     "link": "",
     "active": true,
-    "best": false
-  },
-  {
-    "image_name": "_DSC2727.jpg",
-    "location": "galleries/bay",
-    "title": "Long-Billed Curlew",
-    "link": "",
-    "active": true,
-    "best": false
-  },
-  {
-    "image_name": "_DSC2726.jpg",
-    "location": "galleries/bay",
-    "title": "Long-Billed Curlew",
-    "link": "",
-    "active": true,
-    "best": false
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
   }
 ]
