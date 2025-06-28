@@ -4,7 +4,11 @@
   import Banner from '../../lib/components/Banner.svelte';
   import headerUrl from '../../lib/assets/gallery_header.jpg';
   import masterImageData from '../../lib/assets/image-data.json';
-  
+  import { base } from '$app/paths';
+
+  // Dynamically import all images in the assets folder #todo, is this standard? surely there is a better way to do this
+  const imageModules = import.meta.glob('../../lib/assets/*.{jpg,jpeg,png,gif,webp}', {eager: true, as: 'url'});
+
   let pageName = "Galleries";
 
   // Define galleries
@@ -46,9 +50,15 @@
       console.warn(`Gallery "${gallery.name}" failed to load - missing banner image.`);
       return false;
     }
-    // Add the image URL to the gallery object
+    // Dynamically resolve the image URL using import.meta.glob
+    const imagePath = `../../lib/assets/${bannerImage.image_name}`;
+    const imageUrl = imageModules[imagePath];
+    if (!imageUrl) {
+      console.warn(`Image file not found for ${imagePath}`);
+      return false;
+    }
     gallery.image = {
-      url: `/src/lib/assets/${bannerImage.image_name}`,
+      url: imageUrl,
       location: gallery.location
     };
     return true;
