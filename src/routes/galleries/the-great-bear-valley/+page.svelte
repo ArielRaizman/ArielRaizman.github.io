@@ -8,8 +8,8 @@
   import masterImageData from '../../../lib/assets/image-data.json';
 
   let pageName = "The Great Bear Valley";
-  let quote = "In wildness is the preservation of the world.";
-  let quote_author = "Henry David Thoreau";
+  let quote = "I don't hear the silence of death, I hear water.";
+  let quote_author = "Aidin Robbins";
   let galleryLocation = "galleries/bear";
 
   // Find banner image from metadata
