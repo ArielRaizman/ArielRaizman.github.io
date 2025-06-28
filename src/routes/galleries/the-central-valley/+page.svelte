@@ -8,8 +8,8 @@
   import masterImageData from '../../../lib/assets/image-data.json';
 
   let pageName = "The Central Valley";
-  let quote = "The valley is a place of life and death, of migration and permanence.";
-  let quote_author = "Gerald Haslam";
+  let quote = "The ultimate value in these marshes is wildness, and the crane is wildness incarnate.";
+  let quote_author = "Aldo Leopold";
   let images = [];
   let galleryLocation = "galleries/valley";
 

@@ -95,7 +95,7 @@
     "title": "Black Necked Stilt",
     "link": "central-valley",
     "active": true,
-    "best": true,
+    "best": false,
     "banner_image": false,
     "image_location": ""
   },
@@ -465,7 +465,7 @@
     "title": "Glacial Waterfall",
     "link": "bellacoola",
     "active": true,
-    "best": false,
+    "best": true,
     "banner_image": false,
     "image_location": ""
   },
@@ -515,7 +515,7 @@
     "title": "Brown Bear",
     "link": "bellacoola",
     "active": true,
-    "best": false,
+    "best": true,
     "banner_image": false,
     "image_location": ""
   },
@@ -585,7 +585,7 @@
     "title": "East Pacific Red Octopus",
     "link": "central-coast-tidepooling",
     "active": true,
-    "best": false,
+    "best": true,
     "banner_image": false,
     "image_location": "California Coast"
   },
@@ -605,7 +605,7 @@
     "title": "Spotted Dorid",
     "link": "central-coast-tidepooling",
     "active": true,
-    "best": false,
+    "best": true,
     "banner_image": false,
     "image_location": "California Coast"
   },
@@ -1125,7 +1125,7 @@
     "title": "Monterey Coast",
     "link": "monterey",
     "active": true,
-    "best": false,
+    "best": true,
     "banner_image": false,
     "image_location": ""
   },
@@ -1165,7 +1165,7 @@
     "title": "Arboreal Salamander",
     "link": "ucsc",
     "active": true,
-    "best": false,
+    "best": true,
     "banner_image": false,
     "image_location": ""
   },
@@ -1205,7 +1205,7 @@
     "title": "Slender Banana Slug",
     "link": "ucsc",
     "active": true,
-    "best": false,
+    "best": true,
     "banner_image": true,
     "image_location": ""
   },
@@ -1295,7 +1295,7 @@
     "title": "Great Horned Owl Famly",
     "link": "owls",
     "active": true,
-    "best": false,
+    "best": true,
     "banner_image": false,
     "image_location": ""
   },
@@ -1335,7 +1335,7 @@
     "title": "Harbor Seal",
     "link": "monterey",
     "active": true,
-    "best": false,
+    "best": true,
     "banner_image": false,
     "image_location": ""
   },
@@ -1395,7 +1395,7 @@
     "title": "Northern Rubber Boa",
     "link": "ucsc",
     "active": true,
-    "best": false,
+    "best": true,
     "banner_image": false,
     "image_location": ""
   },
@@ -1445,7 +1445,7 @@
     "title": "Cellophane Bee on a Seaside Daisy",
     "link": "monterey",
     "active": true,
-    "best": true,
+    "best": false,
     "banner_image": false,
     "image_location": ""
   },
@@ -1535,7 +1535,7 @@
     "title": "Night Sky Over Davenport Beach",
     "link": "",
     "active": true,
-    "best": false,
+    "best": true,
     "banner_image": false,
     "image_location": ""
   },
@@ -1573,6 +1573,456 @@
     "image_name": "_DSC2192.jpg",
     "location": "TEST",
     "title": "",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC0218.jpg",
+    "location": "galleries/neotropical",
+    "title": "Plate Billed Mountain Toucan in the Rain",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC0324-Enhanced-NR-2.jpg",
+    "location": "galleries/neotropical",
+    "title": "Olinguito",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC0431.jpg",
+    "location": "galleries/neotropical",
+    "title": "Crimson Rumped Toucanet",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC0551-Enhanced-NR-3.jpg",
+    "location": "galleries/neotropical",
+    "title": "Andean Bear Cub Eating Bromeliad Hearts",
+    "link": "",
+    "active": true,
+    "best": true,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC0678.jpg",
+    "location": "galleries/neotropical",
+    "title": "Klebba's Snail Eater",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC0806.jpg",
+    "location": "galleries/neotropical",
+    "title": "Cinnamon Flycatcher",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC0824.jpg",
+    "location": "galleries/neotropical",
+    "title": "Green Jay",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC0847.jpg",
+    "location": "galleries/neotropical",
+    "title": "Collared Forest Falcon",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC1372.jpg",
+    "location": "galleries/neotropical",
+    "title": "Bronzy Inca",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC1811-Enhanced-NR.jpg",
+    "location": "galleries/neotropical",
+    "title": "Andean Cock of the Rock",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC1899.jpg",
+    "location": "galleries/neotropical",
+    "title": "Collared Trogon",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC2123.jpg",
+    "location": "galleries/neotropical",
+    "title": "Young Leaf Katydid",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC2125.jpg",
+    "location": "galleries/neotropical",
+    "title": "Glass Frog",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC2607.jpg",
+    "location": "galleries/neotropical",
+    "title": "Tree Frog",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC2634.jpg",
+    "location": "galleries/neotropical",
+    "title": "Tailless Whip Scorpion",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC2683.jpg",
+    "location": "galleries/neotropical",
+    "title": "Rio Bigal in Fog",
+    "link": "",
+    "active": true,
+    "best": true,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC3020.jpg",
+    "location": "galleries/neotropical",
+    "title": "South American Bushmaster",
+    "link": "",
+    "active": true,
+    "best": true,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC3091.jpg",
+    "location": "galleries/neotropical",
+    "title": "Dead Leaf Katydid",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC3400.jpg",
+    "location": "galleries/neotropical",
+    "title": "Timputini River",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC3570-4.jpg",
+    "location": "galleries/neotropical",
+    "title": "Reticulated Poison Frog",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC3572.jpg",
+    "location": "galleries/neotropical",
+    "title": "",
+    "link": "",
+    "active": false,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC3759.jpg",
+    "location": "galleries/neotropical",
+    "title": "White Throated Toucan",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC3896-Enhanced-NR.jpg",
+    "location": "galleries/neotropical",
+    "title": "Wooly Monkey",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC4099.jpg",
+    "location": "galleries/neotropical",
+    "title": "Blue Throated Piping Guan",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC4970.jpg",
+    "location": "galleries/neotropical",
+    "title": "Clearwing Butterfly Sleeping",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC4975.jpg",
+    "location": "galleries/neotropical",
+    "title": "Molting Katydid",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC5225.jpg",
+    "location": "galleries/neotropical",
+    "title": "White-tailed Titi",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC5252.jpg",
+    "location": "galleries/neotropical",
+    "title": "Garden Boa",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC5360.jpg",
+    "location": "galleries/neotropical",
+    "title": "Squirrel Monkeys",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC5514-Enhanced-NR.jpg",
+    "location": "galleries/neotropical",
+    "title": "Squirrel Monkey",
+    "link": "",
+    "active": true,
+    "best": true,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC5667.jpg",
+    "location": "galleries/neotropical",
+    "title": "Saki Monkey",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC5794.jpg",
+    "location": "galleries/neotropical",
+    "title": "Proboscis Bat",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC5874-Enhanced-NR-2.jpg",
+    "location": "galleries/neotropical",
+    "title": "Cocoi Heron",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC5908.jpg",
+    "location": "galleries/neotropical",
+    "title": "Blue and Yellow Macaw",
+    "link": "",
+    "active": true,
+    "best": true,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC5981-Enhanced-NR-2.jpg",
+    "location": "galleries/neotropical",
+    "title": "West Ecuadorian Cloud Forest",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC6182.jpg",
+    "location": "galleries/neotropical",
+    "title": "Young Black Caiman",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC6205.jpg",
+    "location": "galleries/neotropical",
+    "title": "Cuyabeno Sunset",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC6288.jpg",
+    "location": "galleries/neotropical",
+    "title": "Howler Monkeys",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC6330-Enhanced-NR-2.jpg",
+    "location": "galleries/neotropical",
+    "title": "Black Caiman",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC6403.jpg",
+    "location": "galleries/neotropical",
+    "title": "Andean Bear",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC6440.jpg",
+    "location": "galleries/neotropical",
+    "title": "Laguna Canangueno",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC6733.jpg",
+    "location": "galleries/neotropical",
+    "title": "West Ecuadorian Cloud Forest",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC9379-Enhanced-NR-2.jpg",
+    "location": "galleries/neotropical",
+    "title": "White Necked Jacobin",
+    "link": "",
+    "active": true,
+    "best": false,
+    "banner_image": false,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC9705.jpg",
+    "location": "galleries/neotropical",
+    "title": "Yellow Throated Toucan",
+    "link": "",
+    "active": true,
+    "best": true,
+    "banner_image": true,
+    "image_location": ""
+  },
+  {
+    "image_name": "_DSC7215-Enhanced-NR-2.jpg",
+    "location": "galleries/neotropical",
+    "title": "Rufous Motmot",
     "link": "",
     "active": true,
     "best": false,

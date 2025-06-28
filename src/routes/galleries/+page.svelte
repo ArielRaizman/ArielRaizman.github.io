@@ -37,6 +37,11 @@
       name: "Central Bay",
       description: "Description for gallery two.",
       location: "galleries/bay"
+    },
+    {
+      name: "Neotropical",
+      description: "Description for gallery two.",
+      location: "galleries/neotropical"
     }
   ].filter(gallery => {
     // Find banner image for this gallery from metadata

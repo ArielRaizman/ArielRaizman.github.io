@@ -57,7 +57,7 @@
     </div>
   </section>
   <section class="best-gallery">
-    <h2>Featured Work</h2>
+    <h2>My Favortites, Recently</h2>
     <ImageGallery images={bestImages} />
   </section>
   <Footer />
