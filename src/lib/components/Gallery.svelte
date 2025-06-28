@@ -22,7 +22,11 @@
     try {
       // Filter master JSON to get images for this location, handling full path
       const fullPath = location.startsWith('galleries/') ? location : `galleries/${location}`;
-      const relevantImages = masterImageData.filter(img => img.location === fullPath);
+      const relevantImages = masterImageData.filter(img => 
+        img.location === fullPath && 
+        img.active === true 
+        // && img.link 
+      );
       
       // Load each image dynamically
       for (const imageData of relevantImages) {

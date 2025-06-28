@@ -22,7 +22,7 @@
     mediaQuery.addEventListener('change', handleResize);
     handleResize(mediaQuery);
 
-    const bestImageData = masterImageData.filter(img => img.Other === 'best');
+    const bestImageData = masterImageData.filter(img => img.best === true);
     
     bestImages = bestImageData.map(img => {
       const imagePath = `../lib/assets/${img.image_name}`;
