@@ -10,19 +10,24 @@
   let quote = " ";
   let quote_author = " ";
   let galleryLocation = "galleries/southwest";
+  let headerUrl = '';
 
-  // Find banner image from metadata
-  const bannerImage = masterImageData.find(img => 
-    img.location === galleryLocation && 
-    img.banner_image === true && 
-    img.active === true
-  );
+  onMount(() => {
+    if (typeof window === 'undefined') return;
 
-  if (!bannerImage) {
-    console.warn(`Gallery "${pageName}" failed to load - missing banner image.`);
-  }
+    // Find banner image from metadata
+    const bannerImage = masterImageData.find(img => 
+      img.location === galleryLocation && 
+      img.banner_image === true && 
+      img.active === true
+    );
 
-  const headerUrl = bannerImage ? new URL(`../assets/${bannerImage.image_name}`, import.meta.url).href : '';
+    if (!bannerImage) {
+      console.warn(`Gallery "${pageName}" failed to load - missing banner image.`);
+    }
+
+    headerUrl = bannerImage ? new URL(`../../../lib/assets/${bannerImage.image_name}`, import.meta.url).href : '';
+  });
 </script>
 
 <Header />
