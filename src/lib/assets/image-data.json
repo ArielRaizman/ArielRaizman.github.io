@@ -265,7 +265,7 @@
     "title": "Hoary Marmot",
     "link": "paradise",
     "active": true,
-    "best": true,
+    "best": false,
     "banner_image": false,
     "image_location": ""
   },
@@ -465,7 +465,7 @@
     "title": "Glacial Waterfall",
     "link": "bellacoola",
     "active": true,
-    "best": true,
+    "best": false,
     "banner_image": false,
     "image_location": ""
   },
@@ -515,7 +515,7 @@
     "title": "Brown Bear",
     "link": "bellacoola",
     "active": true,
-    "best": true,
+    "best": false,
     "banner_image": false,
     "image_location": ""
   },
@@ -605,7 +605,7 @@
     "title": "Spotted Dorid",
     "link": "central-coast-tidepooling",
     "active": true,
-    "best": true,
+    "best": false,
     "banner_image": false,
     "image_location": "California Coast"
   },
@@ -1125,7 +1125,7 @@
     "title": "Monterey Coast",
     "link": "monterey",
     "active": true,
-    "best": true,
+    "best": false,
     "banner_image": false,
     "image_location": ""
   },
@@ -1165,7 +1165,7 @@
     "title": "Arboreal Salamander",
     "link": "ucsc",
     "active": true,
-    "best": true,
+    "best": false,
     "banner_image": false,
     "image_location": ""
   },
@@ -1335,7 +1335,7 @@
     "title": "Harbor Seal",
     "link": "monterey",
     "active": true,
-    "best": true,
+    "best": false,
     "banner_image": false,
     "image_location": ""
   },
@@ -1395,7 +1395,7 @@
     "title": "Northern Rubber Boa",
     "link": "ucsc",
     "active": true,
-    "best": true,
+    "best": false,
     "banner_image": false,
     "image_location": ""
   },
@@ -1735,7 +1735,7 @@
     "title": "Rio Bigal in Fog",
     "link": "",
     "active": true,
-    "best": true,
+    "best": false,
     "banner_image": false,
     "image_location": ""
   },
@@ -1745,7 +1745,7 @@
     "title": "South American Bushmaster",
     "link": "",
     "active": true,
-    "best": true,
+    "best": false,
     "banner_image": false,
     "image_location": ""
   },
@@ -1922,7 +1922,7 @@
   {
     "image_name": "_DSC5981-Enhanced-NR-2.jpg",
     "location": "galleries/neotropical",
-    "title": "West Ecuadorian Cloud Forest",
+    "title": "Chocó Andino de Pichincha",
     "link": "",
     "active": true,
     "best": false,
@@ -1992,7 +1992,7 @@
   {
     "image_name": "_DSC6733.jpg",
     "location": "galleries/neotropical",
-    "title": "West Ecuadorian Cloud Forest",
+    "title": "Chocó Andino de Pichincha",
     "link": "",
     "active": true,
     "best": false,
@@ -2015,7 +2015,7 @@
     "title": "Yellow Throated Toucan",
     "link": "",
     "active": true,
-    "best": true,
+    "best": false,
     "banner_image": true,
     "image_location": ""
   },
