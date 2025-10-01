@@ -9,7 +9,12 @@
 <Header />
 <Banner {pageName} {headerUrl} />
 <section>
-  <p class="link underline" on:click={() => window.location.href = `/blog/central-coast-tidepooling`}>Tidepooling in California's Central Coast</p>
+  <div>
+    <p class="link underline" on:click={() => window.location.href = `/blog/central-coast-tidepooling`}>Tidepooling in California's Central Coast</p>
+  </div>
+  <div>
+    <p class="link underline" on:click={() => window.location.href = `/blog/public-lands-day`}>Happy National Public Lands Day!</p>
+  </div>
 </section>
 <Footer />
 

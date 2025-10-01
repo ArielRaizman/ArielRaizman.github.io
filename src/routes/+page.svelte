@@ -58,12 +58,12 @@
   </section>
   <section>
     <div class="content home-description">
-      <h1>Welcome!</h1>
+      <!-- <h1>Welcome!</h1>
       <p>
         I am a nature photographer based along the west coast of the United States. My work focuses on all walks of life, highlighting the intricate and delicate ecosystems that exist both in remote parts of the world and in our backyards.
-      </p>
+      </p> -->
       <p class="favorites-note">
-        Explore some of my favorite photos below. This selection changes often as I capture new moments and my inspirations evolve.
+        Explore some of my favorite photos below.
       </p>
     </div>
   </section>
