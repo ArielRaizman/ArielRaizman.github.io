@@ -22,12 +22,17 @@
   @import '../../lib/assets/styles/styles.css';
   section {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
     height: 50vh;
+    padding: 2rem 0;
+    text-align: center;
   }
   p {
     font-size: 2rem;
+    margin: 0;
   }
   .underline {
     text-decoration: underline;
