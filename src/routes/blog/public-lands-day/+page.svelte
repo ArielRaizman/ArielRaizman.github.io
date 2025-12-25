@@ -22,7 +22,7 @@
 <section>
   <div class="content">
     <p>
-      Every year, on the fourth Saturday of September, the United States come together and celebrate our public lands, bringing thousands of volunteers to help restore and steward the US's public lands.
+      Every year, on the fourth Saturday of September, the United States come together and celebrate our public lands, bringing thousands of volunteers to help restore and steward the US's natural landscape.
     </p>
     
     <div class="side-by-side-image">
@@ -53,11 +53,12 @@
     </div>
     
     <p>
-      It is no secret that public lands have been historically underfunded, and more recently put under endless scrutiny and attack, all in the name of political control and mindless profit by cutting staff and resources for land management agencies, pushing for the building of roads, mines, and drilling operations. This year, among many other things, there were severe cuts to staffing and funding to firefighters during peak fire season. Public lands are not well. 
+      <br/><br/>
+      It is no secret that public lands have been historically underfunded, and more recently put under endless scrutiny and attack all in the name of political control and mindless profit by cutting staff and resources for land management agencies, pushing for the building of roads, mines, and drilling operations. This year, among many other things, there were severe cuts to staffing and funding to firefighters during peak fire season. Public lands are not well. 
     </p>
     
     <p>
-      Nearly all of my photos in the US have been in public lands, they allow me and many others to reconnect with nature, and shows why these lands urgently need to be protected, for us, and for our future. Advocate for public lands! Advocate for the people, both in the US and overseas. 
+      Nearly all of my photos in the US have been in public lands, they allow me and many others to reconnect with nature, and shows why these lands urgently need to be protected, for us, and for our future. Advocate for public lands, advocate for the people, both in the US and overseas. 
     </p>
     
     <div style="clear: both;"></div>
@@ -76,7 +77,7 @@
     <p style="text-align: center;">
       Go out, leave no trace, and enjoy what natural world we have across the US. 
     </p>
-    <p style="text-align: center;">Public lands in public hands ❤️</p>
+    <p style="text-align: center;">Public lands in public hands.</p>
     
     <div class="blog-image">
       <img src={photo7} alt="Mt. Rainier National Park - Milky Way" on:contextmenu={e => e.preventDefault()}/>
