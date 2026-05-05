@@ -1,0 +1,44 @@
+{
+  "displayName": "images",
+  "kind": "images",
+  "schema": {
+    "image_name": {
+      "type": "string",
+      "removable": false,
+      "defaultValue": ""
+    },
+    "active": {
+      "type": "boolean",
+      "removable": true,
+      "defaultValue": false
+    },
+    "best": {
+      "type": "boolean",
+      "removable": true,
+      "defaultValue": false
+    },
+    "banner_image": {
+      "type": "boolean",
+      "removable": true,
+      "defaultValue": false
+    },
+    "site_location": {
+      "type": "string",
+      "removable": true
+    },
+    "location": {
+      "type": "string",
+      "removable": true
+    },
+    "location_best": {
+      "type": "boolean",
+      "removable": true,
+      "defaultValue": false
+    }
+  },
+  "dataFileName": "image-data.json",
+  "filesSubdir": "files",
+  "gridSize": "medium",
+  "autoAdvanceToNextUnlinked": false,
+  "autoSaveOnAdvance": true
+}

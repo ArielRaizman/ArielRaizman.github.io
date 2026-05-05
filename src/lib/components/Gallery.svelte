@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { page } from '$app/stores';
-  import masterImageData from './../assets/image-data.json';
+  import masterImageData from './../assets/media_manager/images/image-data.json';
   import ImageGallery from './ImageGallery.svelte';
 
   export let location = "";
@@ -22,8 +22,8 @@
     try {
       // Filter master JSON to get images for this location, handling full path
       const fullPath = location.startsWith('galleries/') ? location : `galleries/${location}`;
-      const relevantImages = masterImageData.filter(img => 
-        img.location === fullPath && 
+      const relevantImages = masterImageData.images.filter(img => 
+        img.site_location === fullPath && 
         img.active === true 
         // && img.link 
       );
@@ -32,17 +32,17 @@
       for (const imageData of relevantImages) {
         try {
           // Use @/ alias for imports in Vite/SvelteKit
-          const imageUrl = new URL(`../assets/${imageData.image_name}`, import.meta.url).href;
+          const imageUrl = new URL(`../assets/media_manager/images/files/${imageData.file_name}`, import.meta.url).href;
           
           // Add to our images array
           images = [...images, { 
             src: imageUrl, 
-            title: imageData.title || "",
-            location: imageData.image_location || "",
-            link: imageData.link || ""
+            title: imageData.image_name || "",
+            location: "",
+            link: ""
           }];
         } catch (err) {
-          console.error(`Failed to load image: ${imageData.image_name} in location ${fullPath}`, err);
+          console.error(`Failed to load image: ${imageData.file_name} in location ${fullPath}`, err);
         }
       }
     } catch (err) {

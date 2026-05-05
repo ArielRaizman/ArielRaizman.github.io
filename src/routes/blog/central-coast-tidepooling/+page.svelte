@@ -2,15 +2,15 @@
   import Header from '../../../lib/components/Header.svelte';
   import Footer from '../../../lib/components/Footer.svelte';
   import Banner from '../../../lib/components/Banner.svelte';
-  import headerUrl from '../../../lib/assets/tide.jpg';
+  import headerUrl from '../../../lib/assets/media_manager/images/files/tide.jpg';
   // import mobileHeaderUrl from '../../lib/assets/gallery_header_mobile.jpg';
-  import profileImage from '../../../lib/assets/profile.jpg';
-  import sculpin from "../../../lib/assets/PA200032.jpg";
-  import shrimp from "../../../lib/assets/PA190488.jpg";
-  import spotted from "../../../lib/assets/PA200090.jpg";
-  import aeolid from "../../../lib/assets/aeolid.jpg";
-  import opalescent from "../../../lib/assets/sonyopalescent.jpg";
-  import sandalwood from "../../../lib/assets/PB170683.jpg";
+  import profileImage from '../../../lib/assets/media_manager/images/files/profile.jpg';
+  import sculpin from "../../../lib/assets/media_manager/images/files/PA200032.jpg";
+  import shrimp from "../../../lib/assets/media_manager/images/files/PA190488.jpg";
+  import spotted from "../../../lib/assets/media_manager/images/files/PA200090.jpg";
+  import aeolid from "../../../lib/assets/media_manager/images/files/aeolid.jpg";
+  import opalescent from "../../../lib/assets/media_manager/images/files/sonyopalescent.jpg";
+  import sandalwood from "../../../lib/assets/media_manager/images/files/PB170683.jpg";
   let pageName = "Tidepooling in California's Central Coast";
 </script>
   

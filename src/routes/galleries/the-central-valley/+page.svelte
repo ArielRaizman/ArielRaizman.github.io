@@ -5,7 +5,7 @@
   import Gallery from '../../../lib/components/Gallery.svelte';
   import Footer from '../../../lib/components/Footer.svelte';
   import Banner from '../../../lib/components/Banner.svelte';
-  import masterImageData from '../../../lib/assets/image-data.json';
+  import masterImageData from '../../../lib/assets/media_manager/images/image-data.json';
 
   let pageName = "The Central Valley";
   let quote = "The ultimate value in these marshes is wildness, and the crane is wildness incarnate.";
@@ -14,8 +14,8 @@
   let galleryLocation = "galleries/valley";
 
   // Find banner image from metadata
-  const bannerImage = masterImageData.find(img => 
-    img.location === galleryLocation && 
+  const bannerImage = masterImageData.images.find(img => 
+    img.site_location === galleryLocation && 
     img.banner_image === true && 
     img.active === true
   );
@@ -24,7 +24,7 @@
     console.warn(`Gallery "${pageName}" failed to load - missing banner image.`);
   }
 
-  const headerUrl = bannerImage ? new URL(`../../../lib/assets/${bannerImage.image_name}`, import.meta.url).href : '';
+  const headerUrl = bannerImage ? new URL(`../../../lib/assets/media_manager/images/files/${bannerImage.file_name}`, import.meta.url).href : '';
 </script>
 
 <Header />

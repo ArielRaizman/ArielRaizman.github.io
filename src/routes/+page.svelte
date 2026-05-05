@@ -3,14 +3,14 @@
   import Footer from '../lib/components/Footer.svelte';
   import Header from '../lib/components/Header.svelte';
   import ImageGallery from '../lib/components/ImageGallery.svelte';
-  import masterImageData from '../lib/assets/image-data.json';
-  import homeImg from '$lib/assets/home_img.jpg';
-  import homeImgMobile from '$lib/assets/home_img_mobile.jpg';
+  import masterImageData from '../lib/assets/media_manager/images/image-data.json';
+  import homeImg from '$lib/assets/media_manager/images/files/home_img.jpg';
+  import homeImgMobile from '$lib/assets/media_manager/images/files/home_img_mobile.jpg';
 
   let currentBgImage = homeImg;
 
   // Use Vite's glob import for gallery images
-  const imageFiles = import.meta.glob('../lib/assets/*.{jpg,jpeg,png}', { eager: true });
+  const imageFiles = import.meta.glob('../lib/assets/media_manager/images/files/*.{jpg,jpeg,png}', { eager: true });
 
   let bestImages = [];
 
@@ -22,10 +22,10 @@
     mediaQuery.addEventListener('change', handleResize);
     handleResize(mediaQuery);
 
-    const bestImageData = masterImageData.filter(img => img.best === true);
+    const bestImageData = masterImageData.images.filter(img => img.best === true);
     
     bestImages = bestImageData.map(img => {
-      const imagePath = `../lib/assets/${img.image_name}`;
+      const imagePath = `../lib/assets/media_manager/images/files/${img.file_name}`;
       // console.log('Trying to load:', imagePath);
       // console.log('Available images:', Object.keys(imageFiles));
       const imageModule = imageFiles[imagePath];
@@ -35,9 +35,9 @@
       }
       return {
         src: imageModule.default,
-        title: img.title || '',
-        location: img.location || '',
-        link: img.link || ''
+        title: img.image_name || '',
+        location: img.site_location || '',
+        link: ''
       };
     }).filter(Boolean); // Remove any null entries
 

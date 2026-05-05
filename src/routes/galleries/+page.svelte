@@ -2,12 +2,12 @@
   import Header from '../../lib/components/Header.svelte';
   import Footer from '../../lib/components/Footer.svelte';
   import Banner from '../../lib/components/Banner.svelte';
-  import headerUrl from '../../lib/assets/gallery_header.jpg';
-  import masterImageData from '../../lib/assets/image-data.json';
+  import headerUrl from '../../lib/assets/media_manager/images/files/gallery_header.jpg';
+  import masterImageData from '../../lib/assets/media_manager/images/image-data.json';
   import { base } from '$app/paths';
 
   // Dynamically import all images in the assets folder #todo, is this standard? surely there is a better way to do this
-  const imageModules = import.meta.glob('../../lib/assets/*.{jpg,jpeg,png,gif,webp}', {eager: true, as: 'url'});
+  const imageModules = import.meta.glob('../../lib/assets/media_manager/images/files/*.{jpg,jpeg,png,gif,webp}', {eager: true, as: 'url'});
 
   let pageName = "Galleries";
 
@@ -45,8 +45,8 @@
     }
   ].filter(gallery => {
     // Find banner image for this gallery from metadata
-    const bannerImage = masterImageData.find(img => 
-      img.location === gallery.location && 
+    const bannerImage = masterImageData.images.find(img => 
+      img.site_location === gallery.location && 
       img.banner_image === true && 
       img.active === true
     );
@@ -56,7 +56,7 @@
       return false;
     }
     // Dynamically resolve the image URL using import.meta.glob
-    const imagePath = `../../lib/assets/${bannerImage.image_name}`;
+    const imagePath = `../../lib/assets/media_manager/images/files/${bannerImage.file_name}`;
     const imageUrl = imageModules[imagePath];
     if (!imageUrl) {
       console.warn(`Image file not found for ${imagePath}`);

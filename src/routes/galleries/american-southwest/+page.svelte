@@ -4,7 +4,7 @@
   import Gallery from '../../../lib/components/Gallery.svelte';
   import Footer from '../../../lib/components/Footer.svelte';
   import Banner from '../../../lib/components/Banner.svelte';
-  import masterImageData from '../../../lib/assets/image-data.json';
+  import masterImageData from '../../../lib/assets/media_manager/images/image-data.json';
 
   let pageName = "American Southwest";
   let quote = " ";
@@ -16,8 +16,8 @@
     if (typeof window === 'undefined') return;
 
     // Find banner image from metadata
-    const bannerImage = masterImageData.find(img => 
-      img.location === galleryLocation && 
+    const bannerImage = masterImageData.images.find(img => 
+      img.site_location === galleryLocation && 
       img.banner_image === true && 
       img.active === true
     );
@@ -26,7 +26,7 @@
       console.warn(`Gallery "${pageName}" failed to load - missing banner image.`);
     }
 
-    headerUrl = bannerImage ? new URL(`../../../lib/assets/${bannerImage.image_name}`, import.meta.url).href : '';
+    headerUrl = bannerImage ? new URL(`../../../lib/assets/media_manager/images/files/${bannerImage.file_name}`, import.meta.url).href : '';
   });
 </script>
 
