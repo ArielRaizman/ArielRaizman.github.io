@@ -1,0 +1,16 @@
+{
+  "records": [
+    {
+      "id": "00000000-0000-4000-8000-000000000001",
+      "last_modified": "2026-07-07T22:01:54.770Z",
+      "name": "",
+      "hero_desktop": "82b2c224-e1e8-4960-b084-33c675e8217f",
+      "hero_mobile": "1d5b0ccf-a005-4590-b8b1-5d967b380595",
+      "page_header": "1b8cea6b-67b5-4fb6-afcd-32db1d6b23d1",
+      "profile_photo": "70b801de-a125-4030-a123-c2a1c0347f67",
+      "__field_kinds": "{\"name\":\"string\",\"hero_desktop\":\"file\",\"hero_mobile\":\"file\",\"page_header\":\"file\",\"profile_photo\":\"file\"}",
+      "__field_meta": "{}",
+      "__layout": "{\"sections\":[{\"id\":\"sec_92e754d6cb\",\"name\":\"General\",\"collapsed\":false,\"fields\":[\"name\",\"hero_desktop\",\"hero_mobile\",\"page_header\",\"profile_photo\"]}],\"defaultSectionId\":\"sec_92e754d6cb\",\"fieldSort\":\"manual\"}"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "displayName": "Globals",
+  "kind": "json",
+  "schema": {
+    "name": {
+      "type": "string",
+      "removable": false,
+      "defaultValue": ""
+    },
+    "hero_desktop": {
+      "type": "file",
+      "removable": true,
+      "classId": "photos"
+    },
+    "hero_mobile": {
+      "type": "file",
+      "removable": true,
+      "classId": "photos"
+    },
+    "page_header": {
+      "type": "file",
+      "removable": true,
+      "classId": "photos"
+    },
+    "profile_photo": {
+      "type": "file",
+      "removable": true,
+      "classId": "photos"
+    }
+  }
+}

@@ -2,15 +2,16 @@
   import Header from '../../../lib/components/Header.svelte';
   import Footer from '../../../lib/components/Footer.svelte';
   import Banner from '../../../lib/components/Banner.svelte';
-  import headerUrl from '../../../lib/assets/tide.jpg';
-  // import mobileHeaderUrl from '../../lib/assets/gallery_header_mobile.jpg';
-  import profileImage from '../../../lib/assets/profile.jpg';
-  import sculpin from "../../../lib/assets/PA200032.jpg";
-  import shrimp from "../../../lib/assets/PA190488.jpg";
-  import spotted from "../../../lib/assets/PA200090.jpg";
-  import aeolid from "../../../lib/assets/aeolid.jpg";
-  import opalescent from "../../../lib/assets/sonyopalescent.jpg";
-  import sandalwood from "../../../lib/assets/PB170683.jpg";
+  import { getPhotoSrc } from '$lib/data.js';
+
+  // Images pulled from the media-manager workspace by filename.
+  const headerUrl = getPhotoSrc('tide.jpg');
+  const sculpin = getPhotoSrc('PA200032.jpg');
+  const shrimp = getPhotoSrc('PA190488.jpg');
+  const spotted = getPhotoSrc('PA200090.jpg');
+  const aeolid = getPhotoSrc('aeolid.jpg');
+  const opalescent = getPhotoSrc('sonyopalescent.jpg');
+  const sandalwood = getPhotoSrc('PB170683.jpg');
   let pageName = "Tidepooling in California's Central Coast";
 </script>
   

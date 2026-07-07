@@ -1,69 +1,24 @@
 <script>
-  import { onMount } from 'svelte';
-  import { page } from '$app/stores';
-  import masterImageData from './../assets/image-data.json';
   import ImageGallery from './ImageGallery.svelte';
 
-  export let location = "";
-  export let quote = "quote";
-  export let quote_author = "quote_author";
-  
-  let images = [];
-  let galleries = ["galleries/low-tide", "galleries/the-great-bear-valley", "galleries/the-central-valley", "galleries/cascadia"];
-  let currentGallery = $page.url.pathname.split('/').pop();
-  let currentGalleryIndex = galleries.findIndex(gallery => gallery.includes(currentGallery));
-  let prevGallery = galleries[(currentGalleryIndex - 1 + galleries.length) % galleries.length];
-  let nextGallery = galleries[(currentGalleryIndex + 1) % galleries.length];
-  
-  // Load images based on location
-  onMount(async () => {
-    if (typeof window === 'undefined') return;
-    
-    try {
-      // Filter master JSON to get images for this location, handling full path
-      const fullPath = location.startsWith('galleries/') ? location : `galleries/${location}`;
-      const relevantImages = masterImageData.filter(img => 
-        img.location === fullPath && 
-        img.active === true 
-        // && img.link 
-      );
-      
-      // Load each image dynamically
-      for (const imageData of relevantImages) {
-        try {
-          // Use @/ alias for imports in Vite/SvelteKit
-          const imageUrl = new URL(`../assets/${imageData.image_name}`, import.meta.url).href;
-          
-          // Add to our images array
-          images = [...images, { 
-            src: imageUrl, 
-            title: imageData.title || "",
-            location: imageData.image_location || "",
-            link: imageData.link || ""
-          }];
-        } catch (err) {
-          console.error(`Failed to load image: ${imageData.image_name} in location ${fullPath}`, err);
-        }
-      }
-    } catch (err) {
-      console.error("Error loading images:", err);
-    }
-  });
+  // A resolved gallery from `$lib/data.js`:
+  // { name, slug, quote, quote_author, description, banner, photos, prev, next }.
+  export let gallery;
 </script>
 
 <section class="description">
   <div>
-    <p>{quote}</p>
-    <h1>{quote_author}</h1>
+    <p>{gallery.quote}</p>
+    <h1>{gallery.quote_author}</h1>
   </div>
 </section>
 
-<ImageGallery {images} />
+<ImageGallery images={gallery.photos} />
 
 <div class="navigation-buttons">
-  <a href="/{prevGallery}"><button>Previous</button></a>
+  <a href="/galleries/{gallery.prev}"><button>Previous</button></a>
   <a href="/galleries"><button>Galleries</button></a>
-  <a href="/{nextGallery}"><button>Next</button></a>
+  <a href="/galleries/{gallery.next}"><button>Next</button></a>
 </div>
 
 <style>

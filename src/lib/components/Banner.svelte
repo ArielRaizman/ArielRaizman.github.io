@@ -2,7 +2,7 @@
   import { onMount, onDestroy } from 'svelte';
 
   export let pageName = "Home";
-  export let headerUrl = "../assets/gallery_header.jpg";
+  export let headerUrl = "";
   export let mobileHeaderUrl = "";
 
   let isMobile = false;

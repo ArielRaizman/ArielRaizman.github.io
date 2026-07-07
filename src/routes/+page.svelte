@@ -3,43 +3,21 @@
   import Footer from '../lib/components/Footer.svelte';
   import Header from '../lib/components/Header.svelte';
   import ImageGallery from '../lib/components/ImageGallery.svelte';
-  import masterImageData from '../lib/assets/image-data.json';
-  import homeImg from '$lib/assets/home_img.jpg';
-  import homeImgMobile from '$lib/assets/home_img_mobile.jpg';
+  import { getBestPhotos, getSiteAssets } from '$lib/data.js';
 
-  let currentBgImage = homeImg;
+  // Hero backgrounds + favourites grid, read from the media-manager workspace.
+  const { heroDesktop, heroMobile } = getSiteAssets();
+  const bestImages = getBestPhotos();
 
-  // Use Vite's glob import for gallery images
-  const imageFiles = import.meta.glob('../lib/assets/*.{jpg,jpeg,png}', { eager: true });
-
-  let bestImages = [];
+  let currentBgImage = heroDesktop;
 
   onMount(() => {
     const mediaQuery = window.matchMedia('(max-width: 768px)');
     const handleResize = (e) => {
-      currentBgImage = e.matches ? homeImgMobile : homeImg;
+      currentBgImage = e.matches ? heroMobile : heroDesktop;
     };
     mediaQuery.addEventListener('change', handleResize);
     handleResize(mediaQuery);
-
-    const bestImageData = masterImageData.filter(img => img.best === true);
-    
-    bestImages = bestImageData.map(img => {
-      const imagePath = `../lib/assets/${img.image_name}`;
-      // console.log('Trying to load:', imagePath);
-      // console.log('Available images:', Object.keys(imageFiles));
-      const imageModule = imageFiles[imagePath];
-      if (!imageModule) {
-        console.error(`Image not found: ${imagePath}`);
-        return null;
-      }
-      return {
-        src: imageModule.default,
-        title: img.title || '',
-        location: img.location || '',
-        link: img.link || ''
-      };
-    }).filter(Boolean); // Remove any null entries
 
     return () => {
       mediaQuery.removeEventListener('change', handleResize);

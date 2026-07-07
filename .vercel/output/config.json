@@ -1,0 +1,51 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "/_app/immutable/.+",
+			"headers": {
+				"cache-control": "public, immutable, max-age=31536000"
+			}
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^/?(?:/__data.json)?$",
+			"dest": "/"
+		},
+		{
+			"src": "^/about/?(?:/__data.json)?$",
+			"dest": "/about"
+		},
+		{
+			"src": "^/blog/?(?:/__data.json)?$",
+			"dest": "/blog"
+		},
+		{
+			"src": "^/blog/central-coast-tidepooling/?(?:/__data.json)?$",
+			"dest": "/blog/central-coast-tidepooling"
+		},
+		{
+			"src": "^/blog/public-lands-day/?(?:/__data.json)?$",
+			"dest": "/blog/public-lands-day"
+		},
+		{
+			"src": "^/contact/?(?:/__data.json)?$",
+			"dest": "/contact"
+		},
+		{
+			"src": "^/galleries/?(?:/__data.json)?$",
+			"dest": "/galleries"
+		},
+		{
+			"src": "^/galleries/([^/]+?)/?(?:/__data.json)?$",
+			"dest": "/galleries/[slug]"
+		},
+		{
+			"src": "/.*",
+			"dest": "/![-]/catchall"
+		}
+	],
+	"overrides": {}
+}
