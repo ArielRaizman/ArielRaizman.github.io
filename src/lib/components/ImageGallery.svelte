@@ -147,7 +147,6 @@
     border: none;
     background: none;
     overflow: hidden;
-    border-radius: 8px;
     cursor: pointer;
     transition: transform 0.3s ease;
   }
@@ -156,7 +155,6 @@
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
   }
