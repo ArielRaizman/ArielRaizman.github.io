@@ -1,0 +1,51 @@
+{
+  "displayName": "Galleries",
+  "kind": "json",
+  "schema": {
+    "name": {
+      "type": "string",
+      "removable": false,
+      "defaultValue": ""
+    },
+    "cover_photo": {
+      "type": "file",
+      "removable": true,
+      "classId": "photos"
+    },
+    "description": {
+      "type": "string",
+      "removable": true,
+      "defaultValue": ""
+    },
+    "quote": {
+      "type": "string",
+      "removable": true,
+      "long": true,
+      "defaultValue": ""
+    },
+    "quote_author": {
+      "type": "string",
+      "removable": true,
+      "defaultValue": ""
+    },
+    "location": {
+      "type": "string",
+      "removable": true,
+      "defaultValue": ""
+    },
+    "html_route": {
+      "type": "string",
+      "removable": true,
+      "defaultValue": ""
+    },
+    "photos": {
+      "type": "file",
+      "removable": true,
+      "multiselect": true,
+      "classId": "photos",
+      "linkedField": "gallery"
+    }
+  },
+  "displayField": "name",
+  "icon": "image"
+}

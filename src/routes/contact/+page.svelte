@@ -2,7 +2,8 @@
   import Header from '../../lib/components/Header.svelte';
   import Footer from '../../lib/components/Footer.svelte';
   import Banner from '../../lib/components/Banner.svelte';
-  import headerUrl from '../../lib/assets/gallery_header.jpg';
+  import { getSiteAssets } from '$lib/data.js';
+  const { pageHeader: headerUrl } = getSiteAssets();
   let pageName = "Contact";
 </script>
 

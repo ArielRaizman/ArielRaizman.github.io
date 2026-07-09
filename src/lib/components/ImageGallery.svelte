@@ -1,47 +1,40 @@
 <script>
-  import { onMount, onDestroy } from 'svelte';
-  import Masonry from 'svelte-bricks';
+  import { Masonry } from '@nicbat/svelte-masonry';
 
-  export let images = [];
-  export let minColWidth = 400;
-  export let maxColWidth = 1600;
-  export let gap = 20;
+  let { images = [], minColumnWidth = 400, gap = 16 } = $props();
 
-  let selectedImage = null;
-  let selectedImageIndex = -1;
-  let lightboxImage;
-  let imageTitle;
-  let loadedImages = new Set();
+  let selectedImage = $state(null);
+  let selectedIndex = $state(-1);
+  let loaded = $state(new Set());
 
-  function handleImageLoad(src) {
-    loadedImages.add(src);
-    loadedImages = loadedImages; // Trigger reactivity
+  function markLoaded(src) {
+    loaded.add(src);
+    loaded = new Set(loaded); // trigger reactivity
   }
 
-  // Set the selected image and update the index
   function selectImage(image) {
     selectedImage = image;
-    selectedImageIndex = images.findIndex(img => img.src === image.src);
+    selectedIndex = images.findIndex((img) => img.src === image.src);
   }
 
-  // Navigate to previous image
   function prevImage() {
-    if (!images || images.length === 0) return;
-    selectedImageIndex = (selectedImageIndex - 1 + images.length) % images.length;
-    selectedImage = images[selectedImageIndex];
+    if (!images.length) return;
+    selectedIndex = (selectedIndex - 1 + images.length) % images.length;
+    selectedImage = images[selectedIndex];
   }
 
-  // Navigate to next image
   function nextImage() {
-    if (!images || images.length === 0) return;
-    selectedImageIndex = (selectedImageIndex + 1) % images.length;
-    selectedImage = images[selectedImageIndex];
+    if (!images.length) return;
+    selectedIndex = (selectedIndex + 1) % images.length;
+    selectedImage = images[selectedIndex];
   }
 
-  // Handle keyboard navigation
+  function closeLightbox() {
+    selectedImage = null;
+  }
+
   function handleKeydown(e) {
     if (!selectedImage) return;
-    
     if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
       prevImage();
       e.preventDefault();
@@ -49,79 +42,95 @@
       nextImage();
       e.preventDefault();
     } else if (e.key === 'Escape') {
-      selectedImage = null;
+      closeLightbox();
       e.preventDefault();
     }
   }
 
-  onMount(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('keydown', handleKeydown);
-    }
-  });
-
-  onDestroy(() => {
-    if (typeof window !== 'undefined') {
-      window.removeEventListener('keydown', handleKeydown);
-    }
-  });
+  const aspectOf = (item) =>
+    item.width && item.height ? item.width / item.height : 1;
 </script>
+
+<svelte:window onkeydown={handleKeydown} />
 
 <section class="gallery">
   <Masonry
     items={images}
-    idKey="src"
-    let:item
-    {minColWidth}
-    {maxColWidth}
+    getKey={(item) => item.src}
+    aspectRatio={aspectOf}
+    {minColumnWidth}
     {gap}
-    animate={true}
-    duration={300}
+    footerEstimate={0}
+    animate
   >
-    <div class="gallery-item" on:click={() => selectImage(item)}>
-      <div class="image-container">
-        <img 
-          src={item.src} 
-          alt={item.title || "Gallery"} 
-          class:loaded={loadedImages.has(item.src)}
-          on:load={() => handleImageLoad(item.src)}
-          on:contextmenu={e => e.preventDefault()} 
+    {#snippet children(item)}
+      <button
+        class="gallery-item"
+        onclick={() => selectImage(item)}
+        aria-label={item.title || 'Open image'}
+      >
+        <img
+          src={item.src}
+          alt={item.title || 'Gallery'}
+          loading="lazy"
+          class:loaded={loaded.has(item.src)}
+          onload={() => markLoaded(item.src)}
+          oncontextmenu={(e) => e.preventDefault()}
         />
-        {#if !loadedImages.has(item.src)}
-          <div class="loading-placeholder"></div>
-        {/if}
-      </div>
-    </div>
+      </button>
+    {/snippet}
   </Masonry>
 </section>
 
 {#if selectedImage}
-  <div class="lightbox" on:click={() => (selectedImage = null)}>
+  <div
+    class="lightbox"
+    role="dialog"
+    aria-modal="true"
+    tabindex="-1"
+    onclick={closeLightbox}
+  >
     <div class="lightbox-navigation">
-      <button class="nav-button prev" on:click={prevImage} on:click={e => e.stopPropagation()} aria-label="Previous image">
+      <button
+        class="nav-button prev"
+        onclick={(e) => {
+          e.stopPropagation();
+          prevImage();
+        }}
+        aria-label="Previous image"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="15 18 9 12 15 6"></polyline>
         </svg>
       </button>
-      
-      <img src={selectedImage.src} on:contextmenu={e => e.preventDefault()} on:click={e => e.stopPropagation()} bind:this={lightboxImage}/>
-      
-      <button class="nav-button next" on:click={nextImage} on:click={e => e.stopPropagation()} aria-label="Next image">
+
+      <img
+        src={selectedImage.src}
+        alt={selectedImage.title || 'Gallery'}
+        onclick={(e) => e.stopPropagation()}
+        oncontextmenu={(e) => e.preventDefault()}
+      />
+
+      <button
+        class="nav-button next"
+        onclick={(e) => {
+          e.stopPropagation();
+          nextImage();
+        }}
+        aria-label="Next image"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="9 18 15 12 9 6"></polyline>
         </svg>
       </button>
     </div>
 
-    <button class="close-button" on:click={() => (selectedImage = null)} aria-label="Close lightbox">✕</button>
-    
+    <button class="close-button" onclick={closeLightbox} aria-label="Close lightbox">✕</button>
+
     {#if selectedImage.location}
-      <div class="image-title" bind:this={imageTitle}>
-        <!-- <span class="link" on:click={() => window.location.href = `/blog/${selectedImage.link}`}>{selectedImage.location}</span> - {selectedImage.title} -->
-         {selectedImage.title}
-      </div>
+      <div class="image-title">{selectedImage.title}</div>
     {:else if selectedImage.title}
-      <div class="image-title no-underline" bind:this={imageTitle}>{selectedImage.title}</div>
+      <div class="image-title no-underline">{selectedImage.title}</div>
     {/if}
   </div>
 {/if}
@@ -132,48 +141,26 @@
   }
 
   .gallery-item {
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    display: block;
     width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
     overflow: hidden;
-  }
-
-  .image-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
   }
 
   .gallery-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
   }
 
   .gallery-item img.loaded {
     opacity: 1;
-  }
-
-  .loading-placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
-    background-size: 200% 100%;
-    animation: loading 1.5s infinite;
-  }
-
-  @keyframes loading {
-    0% {
-      background-position: 200% 0;
-    }
-    100% {
-      background-position: -200% 0;
-    }
   }
 
   .gallery-item:hover {
@@ -191,6 +178,7 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    border: none;
   }
 
   .lightbox-navigation {
@@ -272,20 +260,9 @@
     font-family: 'georgia', serif;
   }
 
-  .link {
-    text-decoration: underline;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-  }
-
-  .link:hover {
-    opacity: 0.8;
-  }
-
   .no-underline:hover {
     text-decoration: none !important;
     cursor: default !important;
-    transition: opacity 0.3s ease;
     opacity: 1;
   }
 
@@ -303,4 +280,4 @@
       right: 10px;
     }
   }
-</style> 
+</style>

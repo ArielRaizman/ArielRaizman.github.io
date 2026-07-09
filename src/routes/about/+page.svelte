@@ -2,9 +2,8 @@
   import Header from '../../lib/components/Header.svelte';
   import Footer from '../../lib/components/Footer.svelte';
   import Banner from '../../lib/components/Banner.svelte';
-  import headerUrl from '../../lib/assets/gallery_header.jpg';
-  // import mobileHeaderUrl from '../../lib/assets/gallery_header_mobile.jpg';
-  import profileImage from '../../lib/assets/profile.jpg';
+  import { getSiteAssets } from '$lib/data.js';
+  const { pageHeader: headerUrl, profile: profileImage } = getSiteAssets();
   let pageName = "About";
 </script>
 

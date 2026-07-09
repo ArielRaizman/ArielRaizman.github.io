@@ -2,17 +2,19 @@
   import Header from '../../../lib/components/Header.svelte';
   import Footer from '../../../lib/components/Footer.svelte';
   import Banner from '../../../lib/components/Banner.svelte';
-  import headerUrl from '../../../lib/assets/_DSC8955.jpg';
-  
-  import photo1 from "../../../lib/assets/_DSC8955.jpg";
-  import photo2 from "../../../lib/assets/_DSC9948.jpg";
-  import photo3 from "../../../lib/assets/_DSC0498.jpg";
-  import photo4 from "../../../lib/assets/_DSC1926.jpg";
-  import photo5 from "../../../lib/assets/_DSC1857.jpg";
-  import photo6 from "../../../lib/assets/_DSC2598-Enhanced-NR.jpg";
-  import photo7 from "../../../lib/assets/_DSC1691-2.jpg";
-  import photo8 from "../../../lib/assets/_DSC8303-Enhanced-NR.jpg";
-  
+  import { getPhotoSrc } from '$lib/data.js';
+
+  // Images pulled from the media-manager workspace by filename.
+  const headerUrl = getPhotoSrc('_DSC8955.jpg');
+  const photo1 = getPhotoSrc('_DSC8955.jpg');
+  const photo2 = getPhotoSrc('_DSC9948.jpg');
+  const photo3 = getPhotoSrc('_DSC0498.jpg');
+  const photo4 = getPhotoSrc('_DSC1926.jpg');
+  const photo5 = getPhotoSrc('_DSC1857.jpg');
+  const photo6 = getPhotoSrc('_DSC2598-Enhanced-NR.jpg');
+  const photo7 = getPhotoSrc('_DSC1691-2.jpg');
+  const photo8 = getPhotoSrc('_DSC8303-Enhanced-NR.jpg');
+
   let pageName = "Happy National Public Lands Day!";
 </script>
 
