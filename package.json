@@ -22,6 +22,6 @@
 	"type": "module",
 	"dependencies": {
 		"@nicbat/svelte-masonry": "github:nicbat/svelte-masonry",
-		"media-manager": "github:nicbat/media-manager#v0.2.0"
+		"media-manager": "github:nicbat/media-manager#v0.4.0"
 	}
 }
