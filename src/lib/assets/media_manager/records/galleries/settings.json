@@ -47,5 +47,7 @@
     }
   },
   "displayField": "name",
+  "sortField": "last_modified",
+  "sortDir": "desc",
   "icon": "image"
 }

@@ -41,6 +41,7 @@ const toImage = (p) => ({
   width: p.width,
   height: p.height,
   title: p.field('title') ?? '',
+  caption: p.field('caption') ?? '',
   location: p.field('image_location') ?? '',
   link: p.field('link') ?? ''
 });
@@ -51,11 +52,17 @@ const toImage = (p) => ({
 // it directly as a background/src.
 export function getSiteAssets() {
   const g = mm.globals();
+  const allPhotos = mm.media('photos');
+  const getFullPhoto = (blob) => allPhotos.find((p) => p.id === blob.id) || blob;
+
   return {
     heroDesktop: g?.file('hero_desktop')?.src ?? '',
     heroMobile: g?.file('hero_mobile')?.src ?? '',
     pageHeader: g?.file('page_header')?.src ?? '',
-    profile: g?.file('profile_photo')?.src ?? ''
+    profile: g?.file('profile_photo')?.src ?? '',
+    story1Photos: (g?.files?.('story_1_photos') || []).map(getFullPhoto).map(toImage),
+    story2Photos: (g?.files?.('story_2_photos') || []).map(getFullPhoto).map(toImage),
+    childPhoto: g?.file('child_photo') ? toImage(getFullPhoto(g.file('child_photo'))) : null
   };
 }
 
