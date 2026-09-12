@@ -2,7 +2,7 @@
   "records": [
     {
       "id": "00000000-0000-4000-8000-000000000001",
-      "last_modified": "2026-09-11T08:42:00.940Z",
+      "last_modified": "2026-09-12T00:07:22.180Z",
       "name": "",
       "hero_desktop": "82b2c224-e1e8-4960-b084-33c675e8217f",
       "hero_mobile": "1d5b0ccf-a005-4590-b8b1-5d967b380595",
@@ -11,7 +11,8 @@
       "story_1_photos": [
         "246ede71-9959-4c3f-a2dd-0290c8f34995",
         "77f5a999-8434-4d24-a7ac-75046a1c559e",
-        "21d7ae9c-d77c-4da0-a464-0c9b23b36fa9"
+        "21d7ae9c-d77c-4da0-a464-0c9b23b36fa9",
+        "5b62c51f-4b18-4a19-8829-1dbc2b4f43d1"
       ],
       "story_2_photos": [
         "32d53fb6-66bd-4eaf-bd8c-91e46cc22538",

@@ -35,6 +35,11 @@
       "removable": true,
       "recordType": "galleries",
       "linkedField": "photos"
+    },
+    "ecoregion": {
+      "type": "record",
+      "removable": true,
+      "recordType": "ecoregions"
     }
   },
   "config": {
@@ -2736,9 +2741,9 @@
     },
     "246ede71-9959-4c3f-a2dd-0290c8f34995": {
       "id": "246ede71-9959-4c3f-a2dd-0290c8f34995",
-      "last_modified": "2026-09-11T05:45:43.260Z",
+      "last_modified": "2026-09-11T19:31:02.094Z",
       "title": "Kelp Rockfish",
-      "caption": "A Kelp Rockfish pretends to be a kelp frond",
+      "caption": "A kelp rockfish (<i>Sebastes atrovirens</i>) under the canopy. As their name suggests, they are often found resting on kelp blades. They lie motionless perpendicular to the stalk, hoping to be mistaken as one. ",
       "active": true,
       "best": false,
       "link": "",
@@ -2758,9 +2763,9 @@
     },
     "5353a5a6-7ea1-40b1-b9f8-2c4b3bafbe65": {
       "id": "5353a5a6-7ea1-40b1-b9f8-2c4b3bafbe65",
-      "last_modified": "2026-09-11T07:16:16.602Z",
+      "last_modified": "2026-09-11T19:37:09.800Z",
       "title": "Brazil nut husk",
-      "caption": "Brazil nut husks on the forest floor. Piles are created by Castañeros, harvesters in Brazil nut concessions. ",
+      "caption": "Brazil nut husks on the forest floor. Piles are created by Castañeros, concession managers and harvesters of Brazil nut concessions. ",
       "active": true,
       "best": false,
       "link": "",
@@ -2791,9 +2796,9 @@
     },
     "1ec07376-173f-4125-b9a7-1cded1eb182c": {
       "id": "1ec07376-173f-4125-b9a7-1cded1eb182c",
-      "last_modified": "2026-09-11T07:34:32.079Z",
+      "last_modified": "2026-09-11T19:36:16.664Z",
       "title": "Tree Frog",
-      "caption": "Frogs like Ostecephalus castaneicola breed and lay their eggs in empty Brazil nut husks filled with water. ",
+      "caption": "Frogs like <i>Ostecephalus castaneicola</i> breed and lay their eggs in empty Brazil nut husks filled with water. ",
       "active": true,
       "best": false,
       "link": "",
