@@ -68,6 +68,17 @@
       }
     }
   }
+  function scrollPrev() {
+    if (currentImageIndex > 0) {
+      scrollToSlide(currentImageIndex - 1);
+    }
+  }
+
+  function scrollNext() {
+    if (currentImageIndex < images.length - 1) {
+      scrollToSlide(currentImageIndex + 1);
+    }
+  }
 </script>
 
 {#if images.length > 0}
