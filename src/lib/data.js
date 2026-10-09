@@ -103,16 +103,67 @@ export function getGallerySlugs() {
     .filter(Boolean);
 }
 
-// One gallery by its html_route slug, with its active photos and prev/next
-// neighbours (wrapping) for the gallery-to-gallery nav buttons.
+// Fisher-Yates shuffle — randomises subcategory section order per build so
+// galleries feel fresh without requiring manual sort fields.
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// One gallery by its html_route slug, with its active photos grouped into
+// subcategory sections and prev/next neighbours (wrapping) for nav buttons.
 export function getGallery(slug) {
   const g = mm.records('galleries').find((rec) => rec.field('html_route') === slug);
   if (!g) return null;
 
-  const photoList = membersOf(g.id)
-    .where({ active: true })
-    .map(toImage)
-    .filter((img) => img.src);
+  const activePhotos = membersOf(g.id).where({ active: true });
+
+  // Subcategories belonging to this gallery
+  const subcategories = mm.records('subcategories')
+    .filter(sc => sc.field('gallery') === g.id);
+  const subcatMap = new Map(
+    subcategories.map(sc => [sc.id, {
+      name: sc.field('name') ?? '',
+      description: sc.field('description') ?? ''
+    }])
+  );
+
+  // Tag each photo with its subcategory, then split into groups
+  const tagged = activePhotos
+    .map(p => ({ subcatId: p.field('subcategory') || null, image: toImage(p) }))
+    .filter(t => t.image.src);
+
+  const uncategorized = [];
+  const groupedMap = new Map();
+
+  for (const t of tagged) {
+    if (t.subcatId && subcatMap.has(t.subcatId)) {
+      if (!groupedMap.has(t.subcatId)) groupedMap.set(t.subcatId, []);
+      groupedMap.get(t.subcatId).push(t.image);
+    } else {
+      uncategorized.push(t.image);
+    }
+  }
+
+  // Build sections: uncategorized at top, then shuffled subcategories
+  const sections = [];
+  if (uncategorized.length > 0) {
+    sections.push({ name: null, description: null, photos: uncategorized });
+  }
+
+  const subcatSections = [...groupedMap.entries()].map(([id, sectionPhotos]) => ({
+    name: subcatMap.get(id).name,
+    description: subcatMap.get(id).description,
+    photos: sectionPhotos
+  }));
+  sections.push(...shuffle(subcatSections));
+
+  // Flat list preserving section order (used by the lightbox)
+  const allPhotos = sections.flatMap(s => s.photos);
 
   const slugs = getGallerySlugs();
   const i = slugs.indexOf(slug);
@@ -126,8 +177,10 @@ export function getGallery(slug) {
     quote_author: g.field('quote_author') ?? '',
     description: g.field('description') ?? '',
     banner: coverSrcOf(g) ?? '',
-    photos: photoList,
+    sections,
+    photos: allPhotos,
     prev,
     next
   };
 }
+

@@ -663,10 +663,8 @@
     },
     "6288de1d-a334-4464-b56e-3689f1cba3c4": {
       "file_name": "PB170684.jpg",
-      "classes": [
-        "photos"
-      ],
-      "missing": false,
+      "classes": [],
+      "missing": true,
       "created_at": "2026-07-02T05:45:23.848Z",
       "width": 1536,
       "height": 2048
@@ -683,10 +681,8 @@
     },
     "a6f6b617-c909-43f7-ab56-f5a40776ce46": {
       "file_name": "PB170603.jpg",
-      "classes": [
-        "photos"
-      ],
-      "missing": false,
+      "classes": [],
+      "missing": true,
       "created_at": "2026-07-02T05:45:23.845Z",
       "width": 2048,
       "height": 1536
@@ -1173,10 +1169,8 @@
     },
     "043f7cf9-d84a-4408-b065-0ddf80bf104f": {
       "file_name": "_DSC6211.jpg",
-      "classes": [
-        "photos"
-      ],
-      "missing": false,
+      "classes": [],
+      "missing": true,
       "created_at": "2026-07-02T05:45:24.018Z",
       "width": 2048,
       "height": 1366
@@ -1268,16 +1262,6 @@
       ],
       "missing": false,
       "created_at": "2026-07-02T05:45:23.959Z",
-      "width": 2048,
-      "height": 1366
-    },
-    "005ade39-2913-4c6b-86c8-cdc09c882a2a": {
-      "file_name": "_DSC8176.jpg",
-      "classes": [
-        "photos"
-      ],
-      "missing": false,
-      "created_at": "2026-07-02T05:45:24.058Z",
       "width": 2048,
       "height": 1366
     },
@@ -2622,7 +2606,9 @@
     },
     "77f3e581-4ae6-43a0-9653-02ab150fb869": {
       "file_name": "_DSC9835 (1).jpg",
-      "classes": [],
+      "classes": [
+        "photos"
+      ],
       "missing": false,
       "size": 693868,
       "created_at": "2026-09-11T23:26:52.402Z",
@@ -2631,7 +2617,9 @@
     },
     "3e088211-d93f-4e2c-8b91-8b8d33c18b1d": {
       "file_name": "_DSC9943.jpg",
-      "classes": [],
+      "classes": [
+        "photos"
+      ],
       "missing": false,
       "size": 343573,
       "created_at": "2026-09-11T23:26:52.435Z",
@@ -2712,7 +2700,9 @@
     },
     "1d7d1baf-57cb-4242-b64d-1171f4681bd5": {
       "file_name": "_DSC4229.jpg",
-      "classes": [],
+      "classes": [
+        "photos"
+      ],
       "missing": false,
       "size": 928159,
       "created_at": "2026-09-11T23:26:52.524Z",

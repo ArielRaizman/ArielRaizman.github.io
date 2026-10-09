@@ -13,7 +13,7 @@
   </div>
 </section>
 
-<ImageGallery images={gallery.photos} />
+<ImageGallery sections={gallery.sections} />
 
 <div class="navigation-buttons">
   <a href="/galleries/{gallery.prev}"><button>Previous</button></a>

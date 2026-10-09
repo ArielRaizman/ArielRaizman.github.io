@@ -99,7 +99,7 @@
     },
     {
       "id": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7",
-      "last_modified": "2026-07-02T06:57:07.287Z",
+      "last_modified": "2026-09-27T06:12:24.161Z",
       "name": "Low Tide",
       "cover_photo": "7d8b6dec-58c3-475a-a611-fac7c3809022",
       "description": "",
@@ -107,25 +107,11 @@
       "quote_author": "John Steinbeck",
       "location": "galleries/tide",
       "html_route": "low-tide",
-      "photos": [
-        "58fe9cdf-6c6f-4351-ad5d-a5c00b2277b8",
-        "f886581e-0afc-44e8-9c0b-6a21162c1678",
-        "83daa270-bc6a-4f27-a971-8a6040120629",
-        "ce1b151a-366d-47c7-9cd5-3bc83de17202",
-        "99dec9a5-cac8-44cb-a267-3d192454ab45",
-        "7d8b6dec-58c3-475a-a611-fac7c3809022",
-        "bd767c9a-66bb-4f30-a874-f29667a943ef",
-        "9484eff5-4b0b-49a0-8e35-c88c80fc1f3b",
-        "6288de1d-a334-4464-b56e-3689f1cba3c4",
-        "1a151ccf-d3b8-41b5-aa80-47c7a5b46046",
-        "a6f6b617-c909-43f7-ab56-f5a40776ce46",
-        "d98b90b4-784a-431b-b51e-18e3f0766cd2",
-        "cebff2cd-36dd-4789-887a-01eae98fada1"
-      ]
+      "photos": []
     },
     {
       "id": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
-      "last_modified": "2026-09-11T08:06:57.449Z",
+      "last_modified": "2026-09-29T06:34:43.645Z",
       "name": "Central Bay",
       "cover_photo": "f512ac24-7b8a-47b8-9106-58b482da028e",
       "description": "",
@@ -142,7 +128,6 @@
         "0e682908-32b7-4a77-be09-ddd5e2b57a69",
         "51ed0d4c-b9f4-40c2-a816-60596870921e",
         "beecacc3-9a91-4b24-ae2e-1edf1a16ac9f",
-        "043f7cf9-d84a-4408-b065-0ddf80bf104f",
         "ff2bd8d3-4ce2-4ac2-aa75-6f6f20e715f4",
         "1b494dde-e81d-4d67-92ab-a7fe5bc42e28",
         "f512ac24-7b8a-47b8-9106-58b482da028e",
@@ -152,7 +137,6 @@
         "95c7e574-8785-4a0d-a561-949aeef07dd2",
         "4f3bf31b-aa97-4ed4-8704-aa032fa0dc97",
         "9aee8d87-0735-42da-9b4e-ea76a8971d87",
-        "005ade39-2913-4c6b-86c8-cdc09c882a2a",
         "407e8142-9068-4d16-b6ec-fec0c7e2b97e",
         "f2e4eaab-95cc-493a-957b-d11f9433846d",
         "274bbb3a-30a9-41d5-9b85-36ea19c7bd32",
@@ -190,7 +174,21 @@
         "74076f67-bcf9-4d33-95a8-24fd66532423",
         "7792f1c2-b021-4fc6-b935-795297cd96b2",
         "f83457a3-c7b1-48e4-81f6-06c4b3a316c4",
-        "16bee39e-1c16-450d-bc09-ea320c972278"
+        "16bee39e-1c16-450d-bc09-ea320c972278",
+        "1d7d1baf-57cb-4242-b64d-1171f4681bd5",
+        "58fe9cdf-6c6f-4351-ad5d-a5c00b2277b8",
+        "7d8b6dec-58c3-475a-a611-fac7c3809022",
+        "f886581e-0afc-44e8-9c0b-6a21162c1678",
+        "99dec9a5-cac8-44cb-a267-3d192454ab45",
+        "cebff2cd-36dd-4789-887a-01eae98fada1",
+        "83daa270-bc6a-4f27-a971-8a6040120629",
+        "bd767c9a-66bb-4f30-a874-f29667a943ef",
+        "9484eff5-4b0b-49a0-8e35-c88c80fc1f3b",
+        "d98b90b4-784a-431b-b51e-18e3f0766cd2",
+        "ce1b151a-366d-47c7-9cd5-3bc83de17202",
+        "1a151ccf-d3b8-41b5-aa80-47c7a5b46046",
+        "3e088211-d93f-4e2c-8b91-8b8d33c18b1d",
+        "77f3e581-4ae6-43a0-9653-02ab150fb869"
       ]
     },
     {
