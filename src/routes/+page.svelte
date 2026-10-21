@@ -3,13 +3,12 @@
   import Footer from '../lib/components/Footer.svelte';
   import Header from '../lib/components/Header.svelte';
   import ImageGallery from '../lib/components/ImageGallery.svelte';
-  import { getBestPhotos, getSiteAssets } from '$lib/data.js';
+  export let data;
 
   // Hero backgrounds + favourites grid, read from the media-manager workspace.
-  const { heroDesktop, heroMobile } = getSiteAssets();
-  const bestImages = getBestPhotos();
+  $: ({ heroDesktop, heroMobile, bestImages } = data);
 
-  let currentBgImage = heroDesktop;
+  let currentBgImage = data.heroDesktop;
 
   onMount(() => {
     const mediaQuery = window.matchMedia('(max-width: 768px)');
@@ -24,6 +23,10 @@
     };
   });
 </script>
+
+<svelte:head>
+  <title>Ariel Raizman — Nature Photography</title>
+</svelte:head>
 
 <main>
   <Header />

@@ -3,16 +3,20 @@
   import Footer from "../../lib/components/Footer.svelte";
   import Banner from "../../lib/components/Banner.svelte";
   import Carousel from "../../lib/components/Carousel.svelte";
-  import { getSiteAssets } from "$lib/data.js";
-  const {
+  export let data;
+  $: ({
     pageHeader: headerUrl,
     profile: profileImage,
     story1Photos,
     story2Photos,
     childPhoto,
-  } = getSiteAssets();
+  } = data);
   let pageName = "About";
 </script>
+
+<svelte:head>
+  <title>{pageName} — Ariel Raizman</title>
+</svelte:head>
 
 <Header />
 <Banner {pageName} {headerUrl} />

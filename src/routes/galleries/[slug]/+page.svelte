@@ -8,6 +8,10 @@
   $: gallery = data.gallery;
 </script>
 
+<svelte:head>
+  <title>{gallery.name} — Ariel Raizman</title>
+</svelte:head>
+
 <Header />
 <Banner pageName={gallery.name} headerUrl={gallery.banner} />
 <Gallery {gallery} />
