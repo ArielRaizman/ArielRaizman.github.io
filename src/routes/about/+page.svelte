@@ -86,7 +86,7 @@
     </p>
     {#if childPhoto}
       <div class="child-photo-container">
-        <img src={childPhoto.src} alt={childPhoto.title} class="child-photo" />
+        <img src={childPhoto.previewSrc || childPhoto.src} alt={childPhoto.title} class="child-photo" />
         {#if childPhoto.caption || childPhoto.title}
           <div class="caption">{childPhoto.caption || childPhoto.title}</div>
         {/if}
