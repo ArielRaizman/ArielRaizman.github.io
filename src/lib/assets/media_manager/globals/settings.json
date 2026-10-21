@@ -26,6 +26,23 @@
       "type": "file",
       "removable": true,
       "classId": "photos"
+    },
+    "story_1_photos": {
+      "type": "file",
+      "removable": true,
+      "multiselect": true,
+      "classId": "photos"
+    },
+    "story_2_photos": {
+      "type": "file",
+      "removable": true,
+      "multiselect": true,
+      "classId": "photos"
+    },
+    "child_photo": {
+      "type": "file",
+      "removable": true,
+      "classId": "photos"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "displayName": "Subcategories",
+  "kind": "json",
+  "schema": {
+    "name": {
+      "type": "string",
+      "removable": false,
+      "defaultValue": ""
+    },
+    "description": {
+      "type": "string",
+      "removable": true,
+      "long": true,
+      "defaultValue": ""
+    },
+    "gallery": {
+      "type": "record",
+      "removable": true,
+      "recordType": "galleries"
+    },
+    "photos": {
+      "type": "file",
+      "removable": true,
+      "multiselect": true,
+      "classId": "photos",
+      "linkedField": "subcategory"
+    }
+  },
+  "displayField": "name",
+  "sortField": "last_modified",
+  "sortDir": "desc",
+  "icon": "layers"
+}

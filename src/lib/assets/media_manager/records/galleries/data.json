@@ -2,7 +2,7 @@
   "records": [
     {
       "id": "35549355-fbbe-48ae-9483-66b2097f16a0",
-      "last_modified": "2026-07-02T06:57:07.286Z",
+      "last_modified": "2026-09-11T08:07:19.081Z",
       "name": "Cascadia",
       "cover_photo": "dad02698-4298-415f-82e9-5cfc43647111",
       "description": "",
@@ -34,7 +34,9 @@
         "afd20fa8-93c6-4b80-bcd1-a50364807321",
         "7d701360-c83a-434e-8732-c2fb9ec7d3a3",
         "70713bf9-ea94-4d83-b519-271d4c1ca88b",
-        "c24ab6b2-bceb-4744-b4f4-9261305db12a"
+        "c24ab6b2-bceb-4744-b4f4-9261305db12a",
+        "370f3f9f-2a0b-40eb-9805-0e66a04ff96e",
+        "69a5dfe3-89ae-4aa6-b19a-1ea861e137a3"
       ]
     },
     {
@@ -97,7 +99,7 @@
     },
     {
       "id": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7",
-      "last_modified": "2026-07-02T06:57:07.287Z",
+      "last_modified": "2026-09-27T06:12:24.161Z",
       "name": "Low Tide",
       "cover_photo": "7d8b6dec-58c3-475a-a611-fac7c3809022",
       "description": "",
@@ -105,25 +107,11 @@
       "quote_author": "John Steinbeck",
       "location": "galleries/tide",
       "html_route": "low-tide",
-      "photos": [
-        "58fe9cdf-6c6f-4351-ad5d-a5c00b2277b8",
-        "f886581e-0afc-44e8-9c0b-6a21162c1678",
-        "83daa270-bc6a-4f27-a971-8a6040120629",
-        "ce1b151a-366d-47c7-9cd5-3bc83de17202",
-        "99dec9a5-cac8-44cb-a267-3d192454ab45",
-        "7d8b6dec-58c3-475a-a611-fac7c3809022",
-        "bd767c9a-66bb-4f30-a874-f29667a943ef",
-        "9484eff5-4b0b-49a0-8e35-c88c80fc1f3b",
-        "6288de1d-a334-4464-b56e-3689f1cba3c4",
-        "1a151ccf-d3b8-41b5-aa80-47c7a5b46046",
-        "a6f6b617-c909-43f7-ab56-f5a40776ce46",
-        "d98b90b4-784a-431b-b51e-18e3f0766cd2",
-        "cebff2cd-36dd-4789-887a-01eae98fada1"
-      ]
+      "photos": []
     },
     {
       "id": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
-      "last_modified": "2026-07-02T06:57:07.287Z",
+      "last_modified": "2026-09-29T06:34:43.645Z",
       "name": "Central Bay",
       "cover_photo": "f512ac24-7b8a-47b8-9106-58b482da028e",
       "description": "",
@@ -140,7 +128,6 @@
         "0e682908-32b7-4a77-be09-ddd5e2b57a69",
         "51ed0d4c-b9f4-40c2-a816-60596870921e",
         "beecacc3-9a91-4b24-ae2e-1edf1a16ac9f",
-        "043f7cf9-d84a-4408-b065-0ddf80bf104f",
         "ff2bd8d3-4ce2-4ac2-aa75-6f6f20e715f4",
         "1b494dde-e81d-4d67-92ab-a7fe5bc42e28",
         "f512ac24-7b8a-47b8-9106-58b482da028e",
@@ -150,7 +137,6 @@
         "95c7e574-8785-4a0d-a561-949aeef07dd2",
         "4f3bf31b-aa97-4ed4-8704-aa032fa0dc97",
         "9aee8d87-0735-42da-9b4e-ea76a8971d87",
-        "005ade39-2913-4c6b-86c8-cdc09c882a2a",
         "407e8142-9068-4d16-b6ec-fec0c7e2b97e",
         "f2e4eaab-95cc-493a-957b-d11f9433846d",
         "274bbb3a-30a9-41d5-9b85-36ea19c7bd32",
@@ -173,7 +159,36 @@
         "66d3ac0e-31a9-429e-b58f-584a68ed2690",
         "48fae8df-4254-463b-b40a-07daf43ce932",
         "0e94ad0d-c690-4470-a5db-679a3d9ba771",
-        "438449ab-ba2c-4fb2-85e0-e7c09d642818"
+        "438449ab-ba2c-4fb2-85e0-e7c09d642818",
+        "246ede71-9959-4c3f-a2dd-0290c8f34995",
+        "21d7ae9c-d77c-4da0-a464-0c9b23b36fa9",
+        "86388861-6ec6-4c22-97a9-ceb2da9b2429",
+        "da3b015a-8783-4aeb-ac63-30b182b2d231",
+        "0150f438-bcce-48ae-a619-5bc3b1ee5255",
+        "5c2380ad-5f06-4ecc-b0f0-a35a4aba060c",
+        "fbf458de-0f4d-4f07-b8c0-37dbd7a59e55",
+        "82d1fb9c-3bb3-47c1-9f2d-2a9da91eabbb",
+        "75417627-6a4c-4da2-bae6-00decbf8ebf0",
+        "5b62c51f-4b18-4a19-8829-1dbc2b4f43d1",
+        "0c01b6ed-d55e-477f-be75-350d2a790d68",
+        "74076f67-bcf9-4d33-95a8-24fd66532423",
+        "7792f1c2-b021-4fc6-b935-795297cd96b2",
+        "f83457a3-c7b1-48e4-81f6-06c4b3a316c4",
+        "16bee39e-1c16-450d-bc09-ea320c972278",
+        "1d7d1baf-57cb-4242-b64d-1171f4681bd5",
+        "58fe9cdf-6c6f-4351-ad5d-a5c00b2277b8",
+        "7d8b6dec-58c3-475a-a611-fac7c3809022",
+        "f886581e-0afc-44e8-9c0b-6a21162c1678",
+        "99dec9a5-cac8-44cb-a267-3d192454ab45",
+        "cebff2cd-36dd-4789-887a-01eae98fada1",
+        "83daa270-bc6a-4f27-a971-8a6040120629",
+        "bd767c9a-66bb-4f30-a874-f29667a943ef",
+        "9484eff5-4b0b-49a0-8e35-c88c80fc1f3b",
+        "d98b90b4-784a-431b-b51e-18e3f0766cd2",
+        "ce1b151a-366d-47c7-9cd5-3bc83de17202",
+        "1a151ccf-d3b8-41b5-aa80-47c7a5b46046",
+        "3e088211-d93f-4e2c-8b91-8b8d33c18b1d",
+        "77f3e581-4ae6-43a0-9653-02ab150fb869"
       ]
     },
     {
@@ -298,6 +313,29 @@
         "e5fa0522-8001-4306-ab85-70ebbe15b867",
         "3da4f0ed-eae9-493d-828c-59f43681461b",
         "9dbe3243-369c-4528-bdd0-5852034648c6"
+      ]
+    },
+    {
+      "id": "f45b9dc1-f14c-4ab7-884b-f289f2d05a57",
+      "last_modified": "2026-09-11T08:13:39.986Z",
+      "name": "Yellowstone",
+      "cover_photo": "997e326f-3371-4784-a09c-83e342f921e9",
+      "description": "",
+      "quote": "",
+      "quote_author": "",
+      "location": "",
+      "html_route": "yellowstone",
+      "photos": [
+        "7616f4bf-db32-4344-abb5-96ba1d9a0e95",
+        "69bca758-f7f6-4d5c-99a1-dc8c68069f38",
+        "5f4b3a17-177d-4893-988e-ae3a7733af21",
+        "20a58540-7bac-43b1-955d-10b15aed992b",
+        "fcdf4e50-54e9-4ea5-92df-a2f6e6efe7ba",
+        "fad4add5-59ee-4ca9-8b24-16d9acefb5b7",
+        "7595df67-8bbf-4af4-a530-989a6771112c",
+        "ee4b5792-45d8-49bf-a48c-19c0a6a22443",
+        "69fea24a-11bc-48f0-9e2e-66a3e3add788",
+        "997e326f-3371-4784-a09c-83e342f921e9"
       ]
     }
   ]

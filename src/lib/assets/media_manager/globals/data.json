@@ -2,15 +2,28 @@
   "records": [
     {
       "id": "00000000-0000-4000-8000-000000000001",
-      "last_modified": "2026-07-07T22:01:54.770Z",
+      "last_modified": "2026-09-12T00:07:22.180Z",
       "name": "",
       "hero_desktop": "82b2c224-e1e8-4960-b084-33c675e8217f",
       "hero_mobile": "1d5b0ccf-a005-4590-b8b1-5d967b380595",
       "page_header": "1b8cea6b-67b5-4fb6-afcd-32db1d6b23d1",
       "profile_photo": "70b801de-a125-4030-a123-c2a1c0347f67",
-      "__field_kinds": "{\"name\":\"string\",\"hero_desktop\":\"file\",\"hero_mobile\":\"file\",\"page_header\":\"file\",\"profile_photo\":\"file\"}",
-      "__field_meta": "{}",
-      "__layout": "{\"sections\":[{\"id\":\"sec_92e754d6cb\",\"name\":\"General\",\"collapsed\":false,\"fields\":[\"name\",\"hero_desktop\",\"hero_mobile\",\"page_header\",\"profile_photo\"]}],\"defaultSectionId\":\"sec_92e754d6cb\",\"fieldSort\":\"manual\"}"
+      "story_1_photos": [
+        "246ede71-9959-4c3f-a2dd-0290c8f34995",
+        "77f5a999-8434-4d24-a7ac-75046a1c559e",
+        "21d7ae9c-d77c-4da0-a464-0c9b23b36fa9",
+        "5b62c51f-4b18-4a19-8829-1dbc2b4f43d1"
+      ],
+      "story_2_photos": [
+        "32d53fb6-66bd-4eaf-bd8c-91e46cc22538",
+        "ae30698f-bb22-4c3d-ab94-3a34e61ba4ff",
+        "1ec07376-173f-4125-b9a7-1cded1eb182c",
+        "5353a5a6-7ea1-40b1-b9f8-2c4b3bafbe65"
+      ],
+      "__field_kinds": "{\"name\":\"string\",\"hero_desktop\":\"file\",\"hero_mobile\":\"file\",\"page_header\":\"file\",\"profile_photo\":\"file\",\"story_1_photos\":\"file\",\"story_2_photos\":\"file\",\"child_photo\":\"file\"}",
+      "__field_meta": "{\"story_1_photos\":{\"multiselect\":true},\"story_2_photos\":{\"multiselect\":true}}",
+      "__layout": "{\"sections\":[{\"id\":\"sec_92e754d6cb\",\"name\":\"General\",\"collapsed\":false,\"fields\":[\"name\",\"hero_desktop\",\"hero_mobile\",\"page_header\",\"profile_photo\"]},{\"id\":\"sec_about_pg\",\"name\":\"About Page\",\"collapsed\":false,\"fields\":[\"story_1_photos\",\"story_2_photos\",\"child_photo\"]}],\"defaultSectionId\":\"sec_92e754d6cb\",\"fieldSort\":\"manual\"}",
+      "child_photo": "a6c111ad-d1aa-409d-8450-95768cb70801"
     }
   ]
 }

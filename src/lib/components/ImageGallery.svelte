@@ -1,11 +1,34 @@
 <script>
   import { Masonry } from '@nicbat/svelte-masonry';
 
-  let { images = [], minColumnWidth = 400, gap = 16 } = $props();
+  import Lightbox from './Lightbox.svelte';
+  import SubcategoryDivider from './SubcategoryDivider.svelte';
 
-  let selectedImage = $state(null);
-  let selectedIndex = $state(-1);
+  let { images = null, sections = null, minColumnWidth = 400, gap = 16 } = $props();
+
+  // Normalise: flat `images` (backward compat) wraps into a single anonymous
+  // section; `sections` is used as-is when provided.
+  let displaySections = $derived(
+    sections ?? [{ name: null, description: null, photos: images ?? [] }]
+  );
+
+  // Flat image list for lightbox — preserves visual (section) order.
+  let allImages = $derived(displaySections.flatMap(s => s.photos));
+
+  // Named sections drive the jump-nav at the top.
+  let namedSections = $derived(displaySections.filter(s => s.name));
+
+  let showLightbox = $state(false);
+  let lightboxInitialIndex = $state(0);
   let loaded = $state(new Set());
+
+  const slugify = (str) =>
+    str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+  function scrollToSection(name) {
+    const el = document.getElementById(`subcategory-${slugify(name)}`);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 
   function markLoaded(src) {
     loaded.add(src);
@@ -13,132 +36,120 @@
   }
 
   function selectImage(image) {
-    selectedImage = image;
-    selectedIndex = images.findIndex((img) => img.src === image.src);
-  }
-
-  function prevImage() {
-    if (!images.length) return;
-    selectedIndex = (selectedIndex - 1 + images.length) % images.length;
-    selectedImage = images[selectedIndex];
-  }
-
-  function nextImage() {
-    if (!images.length) return;
-    selectedIndex = (selectedIndex + 1) % images.length;
-    selectedImage = images[selectedIndex];
-  }
-
-  function closeLightbox() {
-    selectedImage = null;
-  }
-
-  function handleKeydown(e) {
-    if (!selectedImage) return;
-    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-      prevImage();
-      e.preventDefault();
-    } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-      nextImage();
-      e.preventDefault();
-    } else if (e.key === 'Escape') {
-      closeLightbox();
-      e.preventDefault();
-    }
+    lightboxInitialIndex = allImages.findIndex((img) => img.src === image.src);
+    showLightbox = true;
   }
 
   const aspectOf = (item) =>
     item.width && item.height ? item.width / item.height : 1;
 </script>
 
-<svelte:window onkeydown={handleKeydown} />
+<div class="gallery-wrapper">
+  {#if namedSections.length > 0}
+    <nav class="subcategory-nav" aria-label="Subcategory navigation">
+      {#each namedSections as section, i}
+        {#if i > 0}<span class="nav-pipe" aria-hidden="true">|</span>{/if}
+        <button class="nav-link" onclick={() => scrollToSection(section.name)}>
+          {section.name}
+        </button>
+      {/each}
+    </nav>
+  {/if}
 
-<section class="gallery">
-  <Masonry
-    items={images}
-    getKey={(item) => item.src}
-    aspectRatio={aspectOf}
-    {minColumnWidth}
-    {gap}
-    footerEstimate={0}
-    animate
-  >
-    {#snippet children(item)}
-      <button
-        class="gallery-item"
-        onclick={() => selectImage(item)}
-        aria-label={item.title || 'Open image'}
-      >
-        <img
-          src={item.src}
-          alt={item.title || 'Gallery'}
-          loading="lazy"
-          class:loaded={loaded.has(item.src)}
-          onload={() => markLoaded(item.src)}
-          oncontextmenu={(e) => e.preventDefault()}
-        />
-      </button>
-    {/snippet}
-  </Masonry>
-</section>
+  {#each displaySections as section}
+    <div
+      id={section.name ? `subcategory-${slugify(section.name)}` : null}
+      class:section-anchor={!!section.name}
+    >
+      {#if section.name}
+        <SubcategoryDivider name={section.name} description={section.description} />
+      {/if}
 
-{#if selectedImage}
-  <div
-    class="lightbox"
-    role="dialog"
-    aria-modal="true"
-    tabindex="-1"
-    onclick={closeLightbox}
-  >
-    <div class="lightbox-navigation">
-      <button
-        class="nav-button prev"
-        onclick={(e) => {
-          e.stopPropagation();
-          prevImage();
-        }}
-        aria-label="Previous image"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="15 18 9 12 15 6"></polyline>
-        </svg>
-      </button>
-
-      <img
-        src={selectedImage.src}
-        alt={selectedImage.title || 'Gallery'}
-        onclick={(e) => e.stopPropagation()}
-        oncontextmenu={(e) => e.preventDefault()}
-      />
-
-      <button
-        class="nav-button next"
-        onclick={(e) => {
-          e.stopPropagation();
-          nextImage();
-        }}
-        aria-label="Next image"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-      </button>
+      <section class="gallery-section">
+        <Masonry
+          items={section.photos}
+          getKey={(item) => item.src}
+          aspectRatio={aspectOf}
+          {minColumnWidth}
+          {gap}
+          footerEstimate={0}
+          animate
+        >
+          {#snippet children(item)}
+            <button
+              class="gallery-item"
+              onclick={() => selectImage(item)}
+              aria-label={item.title || 'Open image'}
+            >
+              <img
+                src={item.src}
+                alt={item.title || 'Gallery'}
+                loading="lazy"
+                class:loaded={loaded.has(item.src)}
+                onload={() => markLoaded(item.src)}
+                oncontextmenu={(e) => e.preventDefault()}
+              />
+            </button>
+          {/snippet}
+        </Masonry>
+      </section>
     </div>
+  {/each}
+</div>
 
-    <button class="close-button" onclick={closeLightbox} aria-label="Close lightbox">✕</button>
-
-    {#if selectedImage.location}
-      <div class="image-title">{selectedImage.title}</div>
-    {:else if selectedImage.title}
-      <div class="image-title no-underline">{selectedImage.title}</div>
-    {/if}
-  </div>
+{#if showLightbox}
+  <Lightbox images={allImages} initialIndex={lightboxInitialIndex} onClose={() => showLightbox = false} />
 {/if}
 
 <style>
-  .gallery {
+  .gallery-wrapper {
     padding: 20px;
   }
+
+  /* ── Subcategory jump-nav ── */
+
+  .subcategory-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px 0;
+    padding: 0px 0 20px;
+  }
+
+  .nav-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #999;
+    padding: 4px 10px;
+    transition: color 0.25s ease;
+  }
+
+  .nav-link:hover {
+    color: #555;
+  }
+
+  .nav-pipe {
+    font-family: 'Georgia', serif;
+    font-size: 0.72rem;
+    color: rgba(0, 0, 0, 0.15);
+    user-select: none;
+    line-height: 1;
+  }
+
+  /* ── Scroll anchor offset for fixed header ── */
+
+  .section-anchor {
+    scroll-margin-top: 100px;
+  }
+
+  /* ── Gallery items ── */
 
   .gallery-item {
     display: block;
@@ -167,117 +178,15 @@
     transform: scale(1.02);
   }
 
-  .lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    border: none;
-  }
-
-  .lightbox-navigation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  .nav-button {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 1010;
-  }
-
-  .nav-button:hover {
-    background: rgba(0, 0, 0, 0.7);
-  }
-
-  .nav-button.prev {
-    left: 20px;
-  }
-
-  .nav-button.next {
-    right: 20px;
-  }
-
-  .close-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.4);
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    color: white;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 1010;
-  }
-
-  .close-button:hover {
-    background: rgba(0, 0, 0, 0.7);
-  }
-
-  .lightbox img {
-    max-width: 90%;
-    max-height: 85%;
-    object-fit: contain;
-  }
-
-  .image-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: white;
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 1.2rem;
-    letter-spacing: 0.7px;
-    font-weight: 100;
-    font-family: 'georgia', serif;
-  }
-
-  .no-underline:hover {
-    text-decoration: none !important;
-    cursor: default !important;
-    opacity: 1;
-  }
-
-  @media (max-width: 768px) {
-    .nav-button {
-      width: 40px;
-      height: 40px;
+  @media (max-width: 600px) {
+    .nav-link {
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      padding: 4px 8px;
     }
 
-    .nav-button.prev {
-      left: 10px;
-    }
-
-    .nav-button.next {
-      right: 10px;
+    .nav-pipe {
+      font-size: 0.65rem;
     }
   }
 </style>

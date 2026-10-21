@@ -1,5 +1,5 @@
 <footer>
-    &copy; 2025 Ariel Raizman
+    &copy; 2026 Ariel Raizman
 </footer>
 
 <style>

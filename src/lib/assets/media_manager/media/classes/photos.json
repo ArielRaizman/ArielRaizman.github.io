@@ -5,6 +5,11 @@
       "removable": true,
       "defaultValue": ""
     },
+    "caption": {
+      "type": "string",
+      "removable": true,
+      "defaultValue": ""
+    },
     "active": {
       "type": "boolean",
       "removable": true,
@@ -29,6 +34,17 @@
       "type": "record",
       "removable": true,
       "recordType": "galleries",
+      "linkedField": "photos"
+    },
+    "ecoregion": {
+      "type": "record",
+      "removable": true,
+      "recordType": "ecoregions"
+    },
+    "subcategory": {
+      "type": "record",
+      "removable": true,
+      "recordType": "subcategories",
       "linkedField": "photos"
     }
   },
@@ -739,7 +755,7 @@
     },
     "58fe9cdf-6c6f-4351-ad5d-a5c00b2277b8": {
       "id": "58fe9cdf-6c6f-4351-ad5d-a5c00b2277b8",
-      "last_modified": "2026-07-02T05:45:24.109Z",
+      "last_modified": "2026-09-27T06:07:33.457Z",
       "width": 2048,
       "height": 1366,
       "title": "East Pacific Red Octopus",
@@ -747,11 +763,14 @@
       "best": true,
       "link": "central-coast-tidepooling",
       "image_location": "California Coast",
-      "gallery": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2",
+      "caption": null,
+      "ecoregion": null
     },
     "f886581e-0afc-44e8-9c0b-6a21162c1678": {
       "id": "f886581e-0afc-44e8-9c0b-6a21162c1678",
-      "last_modified": "2026-07-02T05:45:24.104Z",
+      "last_modified": "2026-09-27T06:07:41.829Z",
       "width": 2048,
       "height": 1366,
       "title": "Opalescent Nudibranch",
@@ -759,11 +778,14 @@
       "best": false,
       "link": "central-coast-tidepooling",
       "image_location": "California Coast",
-      "gallery": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2",
+      "caption": null,
+      "ecoregion": null
     },
     "83daa270-bc6a-4f27-a971-8a6040120629": {
       "id": "83daa270-bc6a-4f27-a971-8a6040120629",
-      "last_modified": "2026-07-02T05:45:23.840Z",
+      "last_modified": "2026-09-27T06:11:36.123Z",
       "width": 1536,
       "height": 2048,
       "title": "Spotted Dorid",
@@ -771,11 +793,14 @@
       "best": false,
       "link": "central-coast-tidepooling",
       "image_location": "California Coast",
-      "gallery": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "ce1b151a-366d-47c7-9cd5-3bc83de17202": {
       "id": "ce1b151a-366d-47c7-9cd5-3bc83de17202",
-      "last_modified": "2026-07-02T05:45:23.838Z",
+      "last_modified": "2026-09-27T06:12:18.554Z",
       "width": 1638,
       "height": 2048,
       "title": "Hilton's Aeolid",
@@ -783,11 +808,14 @@
       "best": false,
       "link": "central-coast-tidepooling",
       "image_location": "California Coast",
-      "gallery": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "99dec9a5-cac8-44cb-a267-3d192454ab45": {
       "id": "99dec9a5-cac8-44cb-a267-3d192454ab45",
-      "last_modified": "2026-07-02T05:45:23.847Z",
+      "last_modified": "2026-09-27T06:11:15.071Z",
       "width": 1536,
       "height": 2048,
       "title": "Sandalwood Dorid",
@@ -795,11 +823,14 @@
       "best": false,
       "link": "central-coast-tidepooling",
       "image_location": "California Coast",
-      "gallery": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "7d8b6dec-58c3-475a-a611-fac7c3809022": {
       "id": "7d8b6dec-58c3-475a-a611-fac7c3809022",
-      "last_modified": "2026-07-02T05:45:24.102Z",
+      "last_modified": "2026-09-27T06:07:38.505Z",
       "width": 2048,
       "height": 1366,
       "title": "Hilton's Aeolid",
@@ -807,11 +838,14 @@
       "best": false,
       "link": "central-coast-tidepooling",
       "image_location": "California Coast",
-      "gallery": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2",
+      "caption": null,
+      "ecoregion": null
     },
     "bd767c9a-66bb-4f30-a874-f29667a943ef": {
       "id": "bd767c9a-66bb-4f30-a874-f29667a943ef",
-      "last_modified": "2026-07-02T05:45:23.843Z",
+      "last_modified": "2026-09-27T06:11:44.383Z",
       "width": 1536,
       "height": 2048,
       "title": "East Pacific Red Octopus",
@@ -819,35 +853,29 @@
       "best": false,
       "link": "central-coast-tidepooling",
       "image_location": "California Coast",
-      "gallery": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "9484eff5-4b0b-49a0-8e35-c88c80fc1f3b": {
       "id": "9484eff5-4b0b-49a0-8e35-c88c80fc1f3b",
-      "last_modified": "2026-07-02T05:45:23.846Z",
+      "last_modified": "2026-09-27T06:11:54.375Z",
       "width": 2048,
       "height": 1536,
       "title": "Clown Dorid",
-      "active": true,
+      "active": false,
       "best": false,
       "link": "central-coast-tidepooling",
       "image_location": "California Coast",
-      "gallery": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7"
-    },
-    "6288de1d-a334-4464-b56e-3689f1cba3c4": {
-      "id": "6288de1d-a334-4464-b56e-3689f1cba3c4",
-      "last_modified": "2026-07-02T05:45:23.848Z",
-      "width": 1536,
-      "height": 2048,
-      "title": "Sandalwood Dorid",
-      "active": true,
-      "best": false,
-      "link": "central-coast-tidepooling",
-      "image_location": "California Coast",
-      "gallery": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "1a151ccf-d3b8-41b5-aa80-47c7a5b46046": {
       "id": "1a151ccf-d3b8-41b5-aa80-47c7a5b46046",
-      "last_modified": "2026-07-02T05:45:23.837Z",
+      "last_modified": "2026-09-27T06:12:24.156Z",
       "width": 1536,
       "height": 2048,
       "title": "Shrimp (Heptacarpus sp.)",
@@ -855,23 +883,14 @@
       "best": false,
       "link": "central-coast-tidepooling",
       "image_location": "California Coast",
-      "gallery": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7"
-    },
-    "a6f6b617-c909-43f7-ab56-f5a40776ce46": {
-      "id": "a6f6b617-c909-43f7-ab56-f5a40776ce46",
-      "last_modified": "2026-07-02T05:45:23.845Z",
-      "width": 2048,
-      "height": 1536,
-      "title": "Noble Dorid",
-      "active": true,
-      "best": false,
-      "link": "central-coast-tidepooling",
-      "image_location": "California Coast",
-      "gallery": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "d98b90b4-784a-431b-b51e-18e3f0766cd2": {
       "id": "d98b90b4-784a-431b-b51e-18e3f0766cd2",
-      "last_modified": "2026-07-02T05:45:23.841Z",
+      "last_modified": "2026-09-27T06:12:13.430Z",
       "width": 1536,
       "height": 2048,
       "title": "Spotted Dorid",
@@ -879,11 +898,14 @@
       "best": false,
       "link": "central-coast-tidepooling",
       "image_location": "California Coast",
-      "gallery": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "cebff2cd-36dd-4789-887a-01eae98fada1": {
       "id": "cebff2cd-36dd-4789-887a-01eae98fada1",
-      "last_modified": "2026-07-02T05:45:23.839Z",
+      "last_modified": "2026-09-27T06:11:29.980Z",
       "width": 2048,
       "height": 1536,
       "title": "Fluffy Sculpin",
@@ -891,7 +913,10 @@
       "best": false,
       "link": "central-coast-tidepooling",
       "image_location": "California Coast",
-      "gallery": "f4a9230d-15eb-41bc-afb0-d15b33e4dfd7"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "b76d6ead-acee-425f-80d4-7f06ed7427e4": {
       "id": "b76d6ead-acee-425f-80d4-7f06ed7427e4",
@@ -1363,7 +1388,7 @@
     },
     "51eacfd5-8b2b-45fd-b057-d248a7cdb834": {
       "id": "51eacfd5-8b2b-45fd-b057-d248a7cdb834",
-      "last_modified": "2026-07-02T05:45:24.052Z",
+      "last_modified": "2026-09-27T06:07:04.220Z",
       "width": 2048,
       "height": 1366,
       "title": "Southern Sea Otter",
@@ -1371,11 +1396,14 @@
       "best": true,
       "link": "monterey",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "04ed8f93-d5e6-4655-9eb2-168e3e96f334": {
       "id": "04ed8f93-d5e6-4655-9eb2-168e3e96f334",
-      "last_modified": "2026-07-02T05:45:24.085Z",
+      "last_modified": "2026-09-27T06:06:16.389Z",
       "width": 2048,
       "height": 1366,
       "title": "Great Blue Heron",
@@ -1383,11 +1411,14 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "44308e80-3c35-4051-b461-88f92ef045fe": {
       "id": "44308e80-3c35-4051-b461-88f92ef045fe",
-      "last_modified": "2026-07-02T05:45:24.047Z",
+      "last_modified": "2026-09-27T06:09:46.379Z",
       "width": 1373,
       "height": 2048,
       "title": "Monterey Coast",
@@ -1395,7 +1426,10 @@
       "best": false,
       "link": "monterey",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "9e0e3aef-acc1-4cbe-b41f-6390ff190fed": {
       "id": "9e0e3aef-acc1-4cbe-b41f-6390ff190fed",
@@ -1445,21 +1479,9 @@
       "image_location": "",
       "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
     },
-    "043f7cf9-d84a-4408-b065-0ddf80bf104f": {
-      "id": "043f7cf9-d84a-4408-b065-0ddf80bf104f",
-      "last_modified": "2026-07-02T05:45:24.018Z",
-      "width": 2048,
-      "height": 1366,
-      "title": "Ensatina",
-      "active": false,
-      "best": false,
-      "link": "ucsc",
-      "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
-    },
     "ff2bd8d3-4ce2-4ac2-aa75-6f6f20e715f4": {
       "id": "ff2bd8d3-4ce2-4ac2-aa75-6f6f20e715f4",
-      "last_modified": "2026-07-02T05:45:23.853Z",
+      "last_modified": "2026-09-27T06:17:18.095Z",
       "width": 2048,
       "height": 1366,
       "title": "Slender Banana Slug",
@@ -1467,11 +1489,14 @@
       "best": false,
       "link": "ucsc",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "9e1e5cac-b8fd-4f7a-bf1f-dae075ce03b7"
     },
     "1b494dde-e81d-4d67-92ab-a7fe5bc42e28": {
       "id": "1b494dde-e81d-4d67-92ab-a7fe5bc42e28",
-      "last_modified": "2026-07-02T05:45:23.854Z",
+      "last_modified": "2026-09-27T06:17:12.938Z",
       "width": 2048,
       "height": 1366,
       "title": "Slender Banana Slug",
@@ -1479,11 +1504,14 @@
       "best": false,
       "link": "ucsc",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "9e1e5cac-b8fd-4f7a-bf1f-dae075ce03b7"
     },
     "f512ac24-7b8a-47b8-9106-58b482da028e": {
       "id": "f512ac24-7b8a-47b8-9106-58b482da028e",
-      "last_modified": "2026-07-02T05:45:24.076Z",
+      "last_modified": "2026-09-27T06:16:59.538Z",
       "width": 2048,
       "height": 1366,
       "title": "Slender Banana Slug",
@@ -1491,11 +1519,14 @@
       "best": true,
       "link": "ucsc",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "9e1e5cac-b8fd-4f7a-bf1f-dae075ce03b7"
     },
     "09c4ca24-9b83-4e4a-8782-c129797c5c83": {
       "id": "09c4ca24-9b83-4e4a-8782-c129797c5c83",
-      "last_modified": "2026-07-02T05:45:23.849Z",
+      "last_modified": "2026-09-27T06:19:29.712Z",
       "width": 2048,
       "height": 1366,
       "title": "Great Horned Owl",
@@ -1503,11 +1534,14 @@
       "best": false,
       "link": "ucsc",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "9e1e5cac-b8fd-4f7a-bf1f-dae075ce03b7"
     },
     "c86aebf8-3b3f-4b86-8c22-92e76e3e1e86": {
       "id": "c86aebf8-3b3f-4b86-8c22-92e76e3e1e86",
-      "last_modified": "2026-07-02T05:45:24.050Z",
+      "last_modified": "2026-09-27T06:09:42.601Z",
       "width": 2048,
       "height": 1366,
       "title": "Young Elephant Seal",
@@ -1515,11 +1549,14 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "988121bd-60b2-4710-9b9b-7018ddd1ab12": {
       "id": "988121bd-60b2-4710-9b9b-7018ddd1ab12",
-      "last_modified": "2026-07-02T05:45:24.066Z",
+      "last_modified": "2026-09-27T06:06:30.584Z",
       "width": 1366,
       "height": 2048,
       "title": "Cellophane Bee on a Seaside Daisy",
@@ -1527,7 +1564,10 @@
       "best": false,
       "link": "monterey",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "95c7e574-8785-4a0d-a561-949aeef07dd2": {
       "id": "95c7e574-8785-4a0d-a561-949aeef07dd2",
@@ -1543,7 +1583,7 @@
     },
     "4f3bf31b-aa97-4ed4-8704-aa032fa0dc97": {
       "id": "4f3bf31b-aa97-4ed4-8704-aa032fa0dc97",
-      "last_modified": "2026-07-02T05:45:23.844Z",
+      "last_modified": "2026-09-27T06:17:22.245Z",
       "width": 2048,
       "height": 1536,
       "title": "Rough Skinned Newt",
@@ -1551,11 +1591,14 @@
       "best": false,
       "link": "ucsc",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "9e1e5cac-b8fd-4f7a-bf1f-dae075ce03b7"
     },
     "9aee8d87-0735-42da-9b4e-ea76a8971d87": {
       "id": "9aee8d87-0735-42da-9b4e-ea76a8971d87",
-      "last_modified": "2026-07-02T05:45:23.959Z",
+      "last_modified": "2026-09-27T06:17:09.621Z",
       "width": 2048,
       "height": 1366,
       "title": "Ensatina",
@@ -1563,23 +1606,14 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
-    },
-    "005ade39-2913-4c6b-86c8-cdc09c882a2a": {
-      "id": "005ade39-2913-4c6b-86c8-cdc09c882a2a",
-      "last_modified": "2026-07-02T05:45:24.058Z",
-      "width": 2048,
-      "height": 1366,
-      "title": "Southern Sea Otter",
-      "active": false,
-      "best": false,
-      "link": "",
-      "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "9e1e5cac-b8fd-4f7a-bf1f-dae075ce03b7"
     },
     "407e8142-9068-4d16-b6ec-fec0c7e2b97e": {
       "id": "407e8142-9068-4d16-b6ec-fec0c7e2b97e",
-      "last_modified": "2026-07-02T05:45:24.075Z",
+      "last_modified": "2026-09-27T06:19:35.814Z",
       "width": 2048,
       "height": 1366,
       "title": "Slender Banana Slug",
@@ -1587,7 +1621,10 @@
       "best": false,
       "link": "ucsc",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "9e1e5cac-b8fd-4f7a-bf1f-dae075ce03b7"
     },
     "f2e4eaab-95cc-493a-957b-d11f9433846d": {
       "id": "f2e4eaab-95cc-493a-957b-d11f9433846d",
@@ -1615,7 +1652,7 @@
     },
     "0b5d13d3-166e-4623-a099-4c57636bd7b4": {
       "id": "0b5d13d3-166e-4623-a099-4c57636bd7b4",
-      "last_modified": "2026-07-02T05:45:24.056Z",
+      "last_modified": "2026-09-27T06:06:51.095Z",
       "width": 2048,
       "height": 1366,
       "title": "Southern Sea Otter",
@@ -1623,11 +1660,14 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "6a8eb311-b596-4ed5-89d6-6df500bda284": {
       "id": "6a8eb311-b596-4ed5-89d6-6df500bda284",
-      "last_modified": "2026-07-02T05:45:24.058Z",
+      "last_modified": "2026-09-27T06:09:38.956Z",
       "width": 2048,
       "height": 1366,
       "title": "Southern Sea Otter",
@@ -1635,11 +1675,14 @@
       "best": false,
       "link": "monterey",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "eca7f16d-d754-4e55-885f-0e1312db53be": {
       "id": "eca7f16d-d754-4e55-885f-0e1312db53be",
-      "last_modified": "2026-07-02T05:45:23.873Z",
+      "last_modified": "2026-09-27T06:09:23.650Z",
       "width": 1366,
       "height": 2048,
       "title": "Harbor Seal",
@@ -1647,11 +1690,14 @@
       "best": false,
       "link": "monterey",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "77f5a999-8434-4d24-a7ac-75046a1c559e": {
       "id": "77f5a999-8434-4d24-a7ac-75046a1c559e",
-      "last_modified": "2026-07-02T05:45:24.053Z",
+      "last_modified": "2026-09-27T06:02:31.951Z",
       "width": 2048,
       "height": 1366,
       "title": "Southern Sea Otter",
@@ -1659,11 +1705,14 @@
       "best": false,
       "link": "monterey",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": "Sea otters (<i>Enhydra lutris</i>) wrap themselves in kelp to anchor themselves in place and protect from currents to sleep and groom. ",
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "631c8dfd-85a1-4d85-a11a-cfa967d35526": {
       "id": "631c8dfd-85a1-4d85-a11a-cfa967d35526",
-      "last_modified": "2026-07-02T05:45:24.061Z",
+      "last_modified": "2026-09-27T06:07:08.541Z",
       "width": 2048,
       "height": 1366,
       "title": "Black Oystercatcher",
@@ -1671,7 +1720,10 @@
       "best": false,
       "link": "monterey",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "215cdff0-b9f1-4ae3-a048-8936102a1500": {
       "id": "215cdff0-b9f1-4ae3-a048-8936102a1500",
@@ -1711,7 +1763,7 @@
     },
     "9a126810-7f25-4825-89ed-7f82daf714a7": {
       "id": "9a126810-7f25-4825-89ed-7f82daf714a7",
-      "last_modified": "2026-07-02T05:45:24.074Z",
+      "last_modified": "2026-09-27T06:19:22.044Z",
       "width": 2048,
       "height": 1366,
       "title": "Northern Rubber Boa",
@@ -1719,11 +1771,14 @@
       "best": false,
       "link": "ucsc",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "9e1e5cac-b8fd-4f7a-bf1f-dae075ce03b7"
     },
     "82ddd0e2-d13b-429a-9fe5-b4a71ea6f26f": {
       "id": "82ddd0e2-d13b-429a-9fe5-b4a71ea6f26f",
-      "last_modified": "2026-07-02T05:45:24.046Z",
+      "last_modified": "2026-09-27T06:07:12.883Z",
       "width": 2048,
       "height": 1366,
       "title": "Male Elephant Seal",
@@ -1731,11 +1786,14 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "6c90feb3-2634-49a7-9147-6d2fec708b94": {
       "id": "6c90feb3-2634-49a7-9147-6d2fec708b94",
-      "last_modified": "2026-07-02T05:45:24.054Z",
+      "last_modified": "2026-09-27T06:06:58.595Z",
       "width": 2048,
       "height": 742,
       "title": "Morro Bay",
@@ -1743,11 +1801,14 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "1471a327-91ce-4bdf-8180-e0e5a291fa76": {
       "id": "1471a327-91ce-4bdf-8180-e0e5a291fa76",
-      "last_modified": "2026-07-02T05:45:24.077Z",
+      "last_modified": "2026-09-27T06:06:21.484Z",
       "width": 2048,
       "height": 1366,
       "title": "Elephant Seal Family",
@@ -1755,7 +1816,10 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "d4b7252c-2a3d-43bf-8397-9ca3910baa0e": {
       "id": "d4b7252c-2a3d-43bf-8397-9ca3910baa0e",
@@ -1771,7 +1835,7 @@
     },
     "bcd3cbc7-b395-46e3-99e8-d8e68e30654d": {
       "id": "bcd3cbc7-b395-46e3-99e8-d8e68e30654d",
-      "last_modified": "2026-07-02T05:45:24.064Z",
+      "last_modified": "2026-09-27T06:06:26.499Z",
       "width": 2048,
       "height": 1024,
       "title": "Cellophane Bee on a Seaside Daisy",
@@ -1779,7 +1843,10 @@
       "best": false,
       "link": "monterey",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "5f2d16c0-ff02-4f84-adc0-fc900b898406": {
       "id": "5f2d16c0-ff02-4f84-adc0-fc900b898406",
@@ -1807,7 +1874,7 @@
     },
     "66d3ac0e-31a9-429e-b58f-584a68ed2690": {
       "id": "66d3ac0e-31a9-429e-b58f-584a68ed2690",
-      "last_modified": "2026-07-02T05:45:24.060Z",
+      "last_modified": "2026-09-27T06:06:54.796Z",
       "width": 2048,
       "height": 1366,
       "title": "Southern Sea Otter",
@@ -1815,7 +1882,10 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "48fae8df-4254-463b-b40a-07daf43ce932": {
       "id": "48fae8df-4254-463b-b40a-07daf43ce932",
@@ -1843,7 +1913,7 @@
     },
     "57dc37a7-21bf-4098-be6f-527ae93d8472": {
       "id": "57dc37a7-21bf-4098-be6f-527ae93d8472",
-      "last_modified": "2026-07-02T05:45:24.089Z",
+      "last_modified": "2026-09-27T06:03:01.473Z",
       "width": 1536,
       "height": 2048,
       "title": "",
@@ -1851,7 +1921,8 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": ""
+      "gallery": "",
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "1ce1a828-74de-4140-9d8a-8b1a5ec1d4ff": {
       "id": "1ce1a828-74de-4140-9d8a-8b1a5ec1d4ff",
@@ -1867,7 +1938,7 @@
     },
     "0e94ad0d-c690-4470-a5db-679a3d9ba771": {
       "id": "0e94ad0d-c690-4470-a5db-679a3d9ba771",
-      "last_modified": "2026-07-02T05:45:23.951Z",
+      "last_modified": "2026-09-27T06:09:54.383Z",
       "width": 1638,
       "height": 2048,
       "title": "Milky Way Over Panther Beach",
@@ -1875,11 +1946,14 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "438449ab-ba2c-4fb2-85e0-e7c09d642818": {
       "id": "438449ab-ba2c-4fb2-85e0-e7c09d642818",
-      "last_modified": "2025-10-01T07:45:28.434Z",
+      "last_modified": "2026-09-27T06:09:27.607Z",
       "width": 1365,
       "height": 2048,
       "title": "Night Sky Over Davenport Beach",
@@ -1887,11 +1961,14 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "caption": null,
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     },
     "8a92bafa-e79b-403c-81c4-d17cd914e880": {
       "id": "8a92bafa-e79b-403c-81c4-d17cd914e880",
-      "last_modified": "2026-07-02T05:45:23.851Z",
+      "last_modified": "2026-09-29T07:03:59.186Z",
       "width": 1366,
       "height": 2048,
       "title": "Plate Billed Mountain Toucan in the Rain",
@@ -1899,11 +1976,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "fac357d8-5379-478e-936c-1631ab756ae3": {
       "id": "fac357d8-5379-478e-936c-1631ab756ae3",
-      "last_modified": "2026-07-02T05:45:23.855Z",
+      "last_modified": "2026-09-29T07:03:55.817Z",
       "width": 1366,
       "height": 2048,
       "title": "Olinguito",
@@ -1911,11 +1989,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "ad22e4a1-9dba-4a99-88c4-82d2faa4329f": {
       "id": "ad22e4a1-9dba-4a99-88c4-82d2faa4329f",
-      "last_modified": "2026-07-02T05:45:23.858Z",
+      "last_modified": "2026-09-29T07:03:54.030Z",
       "width": 2048,
       "height": 1366,
       "title": "Crimson Rumped Toucanet",
@@ -1923,11 +2002,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "26e74c31-edee-434c-af04-3fa1680ba6a9": {
       "id": "26e74c31-edee-434c-af04-3fa1680ba6a9",
-      "last_modified": "2026-07-02T05:45:23.862Z",
+      "last_modified": "2026-09-29T07:03:53.304Z",
       "width": 2048,
       "height": 1639,
       "title": "Andean Bear Cub Eating Bromeliad Hearts",
@@ -1935,11 +2015,12 @@
       "best": true,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "d12b1bed-78da-47e1-90c5-cc1097376edc": {
       "id": "d12b1bed-78da-47e1-90c5-cc1097376edc",
-      "last_modified": "2025-10-01T07:46:54.838Z",
+      "last_modified": "2026-09-29T07:00:39.275Z",
       "width": 1365,
       "height": 2048,
       "title": "Klebba's Snail Eater",
@@ -1947,11 +2028,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "026c6c84-ad6c-4f8a-932f-f3716af0ecc9": {
       "id": "026c6c84-ad6c-4f8a-932f-f3716af0ecc9",
-      "last_modified": "2025-10-01T07:46:58.360Z",
+      "last_modified": "2026-09-29T07:00:39.773Z",
       "width": 2048,
       "height": 1536,
       "title": "Cinnamon Flycatcher",
@@ -1959,11 +2041,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "01b1072e-397e-4f9a-b2de-9cf6cad78cc9": {
       "id": "01b1072e-397e-4f9a-b2de-9cf6cad78cc9",
-      "last_modified": "2026-07-02T05:45:23.867Z",
+      "last_modified": "2026-09-29T07:03:52.746Z",
       "width": 2048,
       "height": 1366,
       "title": "Green Jay",
@@ -1971,11 +2054,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "24be8aeb-bf77-41c2-8516-423663e6e2c9": {
       "id": "24be8aeb-bf77-41c2-8516-423663e6e2c9",
-      "last_modified": "2026-07-02T05:45:23.869Z",
+      "last_modified": "2026-09-29T07:03:57.237Z",
       "width": 2048,
       "height": 1366,
       "title": "Collared Forest Falcon",
@@ -1983,11 +2067,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "a8ec5c52-5ef6-4cbe-963e-a09b3a23fb3e": {
       "id": "a8ec5c52-5ef6-4cbe-963e-a09b3a23fb3e",
-      "last_modified": "2025-10-01T07:47:06.153Z",
+      "last_modified": "2026-09-29T07:00:38.531Z",
       "width": 2048,
       "height": 1366,
       "title": "Bronzy Inca",
@@ -1995,11 +2080,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "67941f7b-9e25-471b-9859-328c01affa14": {
       "id": "67941f7b-9e25-471b-9859-328c01affa14",
-      "last_modified": "2026-07-02T05:45:23.892Z",
+      "last_modified": "2026-09-29T07:00:33.154Z",
       "width": 2048,
       "height": 1366,
       "title": "Andean Cock of the Rock",
@@ -2007,11 +2093,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "5183b350-6585-45da-a7f6-1a888bd2abee": {
       "id": "5183b350-6585-45da-a7f6-1a888bd2abee",
-      "last_modified": "2026-07-02T05:45:23.899Z",
+      "last_modified": "2026-09-29T07:00:32.281Z",
       "width": 1366,
       "height": 2048,
       "title": "Collared Trogon",
@@ -2019,11 +2106,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "69a98473-424c-4c6d-84ac-5c882f15f2a6": {
       "id": "69a98473-424c-4c6d-84ac-5c882f15f2a6",
-      "last_modified": "2025-09-30T06:49:23.365Z",
+      "last_modified": "2026-09-29T07:02:01.495Z",
       "width": 2048,
       "height": 1366,
       "title": "Young Leaf Katydid",
@@ -2031,11 +2119,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "2a71c387-9a93-4999-9a4d-d39e975df35d": {
       "id": "2a71c387-9a93-4999-9a4d-d39e975df35d",
-      "last_modified": "2026-07-02T05:45:23.920Z",
+      "last_modified": "2026-09-29T07:00:30.441Z",
       "width": 2048,
       "height": 1366,
       "title": "Glass Frog",
@@ -2043,7 +2132,8 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "1d548a26-05cf-425a-91ac-5b8ad7e426bd": {
       "id": "1d548a26-05cf-425a-91ac-5b8ad7e426bd",
@@ -2071,7 +2161,7 @@
     },
     "82d802c6-52cc-4ca8-8c4c-bcdaf0e3992d": {
       "id": "82d802c6-52cc-4ca8-8c4c-bcdaf0e3992d",
-      "last_modified": "2026-07-02T05:45:23.943Z",
+      "last_modified": "2026-09-29T07:02:22.834Z",
       "width": 1366,
       "height": 2048,
       "title": "Rio Bigal in Fog",
@@ -2079,11 +2169,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "a374b1c7-3ada-4129-aa12-59637443c26a": {
       "id": "a374b1c7-3ada-4129-aa12-59637443c26a",
-      "last_modified": "2026-07-02T05:45:23.957Z",
+      "last_modified": "2026-09-29T07:03:24.417Z",
       "width": 2048,
       "height": 1366,
       "title": "South American Bushmaster",
@@ -2091,11 +2182,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "558943ec-ee72-4071-b4ff-c87ca94347ff": {
       "id": "558943ec-ee72-4071-b4ff-c87ca94347ff",
-      "last_modified": "2026-07-02T05:45:23.958Z",
+      "last_modified": "2026-09-29T07:03:23.675Z",
       "width": 1638,
       "height": 2048,
       "title": "Dead Leaf Katydid",
@@ -2103,11 +2195,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "08ef1468-2e8d-4b07-871f-0da4bfc8890f": {
       "id": "08ef1468-2e8d-4b07-871f-0da4bfc8890f",
-      "last_modified": "2026-07-02T05:45:23.966Z",
+      "last_modified": "2026-09-29T07:02:17.768Z",
       "width": 1366,
       "height": 2048,
       "title": "Timputini River",
@@ -2115,11 +2208,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "68fdae7a-a11d-4bd4-b9cd-ed52506a6bc2": {
       "id": "68fdae7a-a11d-4bd4-b9cd-ed52506a6bc2",
-      "last_modified": "2026-07-02T05:45:23.970Z",
+      "last_modified": "2026-09-29T07:02:18.161Z",
       "width": 2048,
       "height": 1366,
       "title": "Reticulated Poison Frog",
@@ -2127,11 +2221,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "820a6697-3e06-4b0e-8623-ab6196f8c261": {
       "id": "820a6697-3e06-4b0e-8623-ab6196f8c261",
-      "last_modified": "2026-07-02T05:45:23.974Z",
+      "last_modified": "2026-09-29T07:02:18.992Z",
       "width": 1366,
       "height": 2048,
       "title": "White Throated Toucan",
@@ -2139,7 +2234,8 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "fc8556a2-232c-4e82-bea6-7c9349399dd2": {
       "id": "fc8556a2-232c-4e82-bea6-7c9349399dd2",
@@ -2167,7 +2263,7 @@
     },
     "6ac04715-63ef-4f68-9b1f-abb38ffb4d8d": {
       "id": "6ac04715-63ef-4f68-9b1f-abb38ffb4d8d",
-      "last_modified": "2026-07-02T05:45:23.987Z",
+      "last_modified": "2026-09-29T07:03:15.938Z",
       "width": 1366,
       "height": 2048,
       "title": "Clearwing Butterfly Sleeping",
@@ -2175,11 +2271,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "0605f89a-a73a-42c8-9dd7-a35c406577d4": {
       "id": "0605f89a-a73a-42c8-9dd7-a35c406577d4",
-      "last_modified": "2026-07-02T05:45:23.988Z",
+      "last_modified": "2026-09-29T07:03:15.461Z",
       "width": 1366,
       "height": 2048,
       "title": "Molting Katydid",
@@ -2187,7 +2284,8 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "7ba1d368-b259-4531-ba0a-bd8390d4e864": {
       "id": "7ba1d368-b259-4531-ba0a-bd8390d4e864",
@@ -2203,7 +2301,7 @@
     },
     "2320e40c-da8d-48ba-a7f3-4181ca1df374": {
       "id": "2320e40c-da8d-48ba-a7f3-4181ca1df374",
-      "last_modified": "2025-09-30T06:50:42.677Z",
+      "last_modified": "2026-09-29T07:02:02.314Z",
       "width": 1366,
       "height": 2048,
       "title": "Garden Boa",
@@ -2211,11 +2309,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "beed8458-c738-4236-a6d3-3bad3c7d6a0e": {
       "id": "beed8458-c738-4236-a6d3-3bad3c7d6a0e",
-      "last_modified": "2025-09-30T06:50:39.586Z",
+      "last_modified": "2026-09-29T07:02:01.824Z",
       "width": 2048,
       "height": 1365,
       "title": "Squirrel Monkeys",
@@ -2223,11 +2322,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "906e03de-9551-435d-855a-5e4c961221ba": {
       "id": "906e03de-9551-435d-855a-5e4c961221ba",
-      "last_modified": "2025-10-01T07:45:33.570Z",
+      "last_modified": "2026-09-29T07:02:37.059Z",
       "width": 2048,
       "height": 1366,
       "title": "Squirrel Monkey",
@@ -2235,11 +2335,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "63080fe7-f27b-4325-95db-d4e2081c074a": {
       "id": "63080fe7-f27b-4325-95db-d4e2081c074a",
-      "last_modified": "2026-07-02T05:45:24.003Z",
+      "last_modified": "2026-09-29T07:03:11.558Z",
       "width": 2048,
       "height": 1366,
       "title": "Saki Monkey",
@@ -2247,11 +2348,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "79286062-dd6c-4ac4-b4c2-70635b2245da": {
       "id": "79286062-dd6c-4ac4-b4c2-70635b2245da",
-      "last_modified": "2026-07-02T05:45:24.005Z",
+      "last_modified": "2026-09-29T07:03:11.195Z",
       "width": 1365,
       "height": 2048,
       "title": "Proboscis Bat",
@@ -2259,11 +2361,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "dc2c1a8e-c376-41b8-ab68-9101326dec84": {
       "id": "dc2c1a8e-c376-41b8-ab68-9101326dec84",
-      "last_modified": "2026-07-02T05:45:24.006Z",
+      "last_modified": "2026-09-29T07:03:10.771Z",
       "width": 2048,
       "height": 1366,
       "title": "Cocoi Heron",
@@ -2271,11 +2374,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "3eb6930d-d0ba-4bda-925c-92b6a8397ee6": {
       "id": "3eb6930d-d0ba-4bda-925c-92b6a8397ee6",
-      "last_modified": "2026-07-02T05:45:24.008Z",
+      "last_modified": "2026-09-29T07:03:12.405Z",
       "width": 1366,
       "height": 2048,
       "title": "Blue and Yellow Macaw",
@@ -2283,11 +2387,12 @@
       "best": true,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "c380f8af-ceea-42f4-a22e-b835b27f8ded": {
       "id": "c380f8af-ceea-42f4-a22e-b835b27f8ded",
-      "last_modified": "2026-07-02T05:45:24.010Z",
+      "last_modified": "2026-09-29T07:00:57.573Z",
       "width": 2048,
       "height": 1366,
       "title": "Chocó Andino de Pichincha",
@@ -2295,11 +2400,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "aeadde36-b21f-4915-b1d7-d45b1dad53ea": {
       "id": "aeadde36-b21f-4915-b1d7-d45b1dad53ea",
-      "last_modified": "2026-07-02T05:45:24.015Z",
+      "last_modified": "2026-09-29T07:03:07.580Z",
       "width": 2048,
       "height": 1366,
       "title": "Young Black Caiman",
@@ -2307,11 +2413,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "20a59256-7f67-4d75-a72a-407bb68437fe": {
       "id": "20a59256-7f67-4d75-a72a-407bb68437fe",
-      "last_modified": "2026-07-02T05:45:24.017Z",
+      "last_modified": "2026-09-29T07:03:06.094Z",
       "width": 1366,
       "height": 2048,
       "title": "Cuyabeno Sunset",
@@ -2319,11 +2426,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "0c809369-cdb7-4ce5-9d09-ee73559784b3": {
       "id": "0c809369-cdb7-4ce5-9d09-ee73559784b3",
-      "last_modified": "2026-07-02T05:45:24.020Z",
+      "last_modified": "2026-09-29T07:03:04.609Z",
       "width": 2048,
       "height": 1366,
       "title": "Howler Monkeys",
@@ -2331,11 +2439,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "63f7fabd-9671-4151-8cba-3ce6294b112b": {
       "id": "63f7fabd-9671-4151-8cba-3ce6294b112b",
-      "last_modified": "2026-07-02T05:45:24.021Z",
+      "last_modified": "2026-09-29T07:03:05.049Z",
       "width": 2048,
       "height": 1366,
       "title": "Black Caiman",
@@ -2343,11 +2452,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "8ad40b2d-3b70-4eaa-9658-375b5f986bd8": {
       "id": "8ad40b2d-3b70-4eaa-9658-375b5f986bd8",
-      "last_modified": "2026-07-02T05:45:24.023Z",
+      "last_modified": "2026-09-29T07:01:21.269Z",
       "width": 2048,
       "height": 1366,
       "title": "Andean Bear",
@@ -2355,11 +2465,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "ac1a98e1-bfbb-4dfc-bcf7-d88bab927f32": {
       "id": "ac1a98e1-bfbb-4dfc-bcf7-d88bab927f32",
-      "last_modified": "2026-07-02T05:45:24.024Z",
+      "last_modified": "2026-09-29T07:03:05.545Z",
       "width": 2048,
       "height": 1024,
       "title": "Laguna Canangueno",
@@ -2367,11 +2478,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
     },
     "c70ba13e-1750-4735-bc87-5d536f0c9564": {
       "id": "c70ba13e-1750-4735-bc87-5d536f0c9564",
-      "last_modified": "2025-10-01T07:48:30.960Z",
+      "last_modified": "2026-09-29T07:04:01.628Z",
       "width": 2048,
       "height": 1366,
       "title": "Chocó Andino de Pichincha",
@@ -2379,11 +2491,12 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "309acd19-55cc-4f7f-88d3-a0b8fe48cf7e": {
       "id": "309acd19-55cc-4f7f-88d3-a0b8fe48cf7e",
-      "last_modified": "2026-07-02T05:45:24.084Z",
+      "last_modified": "2026-09-29T07:01:25.499Z",
       "width": 1365,
       "height": 2048,
       "title": "White Necked Jacobin",
@@ -2391,7 +2504,8 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "ff3b328f-4e05-47ab-b12a-09ec8cb86851": {
       "id": "ff3b328f-4e05-47ab-b12a-09ec8cb86851",
@@ -2407,7 +2521,7 @@
     },
     "27d8c2f6-376a-4f3c-87c5-5e024daf131c": {
       "id": "27d8c2f6-376a-4f3c-87c5-5e024daf131c",
-      "last_modified": "2026-07-02T05:45:24.034Z",
+      "last_modified": "2026-09-29T07:01:18.815Z",
       "width": 2048,
       "height": 1366,
       "title": "Rufous Motmot",
@@ -2415,7 +2529,8 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": "c8a60c42-908d-4127-b22c-f15b168bfea0"
     },
     "1a51c07c-afad-4c2c-95c2-f5ca60ab4dab": {
       "id": "1a51c07c-afad-4c2c-95c2-f5ca60ab4dab",
@@ -2479,7 +2594,7 @@
     },
     "7a84a966-a353-4e55-90b4-d9b84571b639": {
       "id": "7a84a966-a353-4e55-90b4-d9b84571b639",
-      "last_modified": "2025-09-30T06:59:01.715Z",
+      "last_modified": "2026-09-29T07:02:10.212Z",
       "width": 2048,
       "height": 1365,
       "title": "Macaws in the Canopy",
@@ -2487,7 +2602,8 @@
       "best": false,
       "link": "",
       "image_location": "",
-      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05"
+      "gallery": "a0fa018e-8889-4768-a23b-fe0e32989c05",
+      "subcategory": ""
     },
     "c52ba588-0d8e-4a8c-85f3-55bce851169d": {
       "id": "c52ba588-0d8e-4a8c-85f3-55bce851169d",
@@ -2728,6 +2844,414 @@
       "link": "",
       "image_location": "",
       "gallery": ""
+    },
+    "246ede71-9959-4c3f-a2dd-0290c8f34995": {
+      "id": "246ede71-9959-4c3f-a2dd-0290c8f34995",
+      "last_modified": "2026-09-29T06:59:51.995Z",
+      "title": "Kelp Rockfish",
+      "caption": "A kelp rockfish (<i>Sebastes atrovirens</i>) under the canopy. As their name suggests, they are often found resting on kelp blades. They lie motionless perpendicular to the stalk, hoping to be mistaken as one. ",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "cb2614e9-7215-43ac-9a1e-55db433bc81d"
+    },
+    "21d7ae9c-d77c-4da0-a464-0c9b23b36fa9": {
+      "id": "21d7ae9c-d77c-4da0-a464-0c9b23b36fa9",
+      "last_modified": "2026-09-27T06:02:31.228Z",
+      "title": "Snowy Plover",
+      "caption": "Snowy plovers  (<i>Charadrius nivosus</i>) prefer large sandy beaches. It allows them to easily watch for predators. ",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "ecoregion": null,
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
+    },
+    "5353a5a6-7ea1-40b1-b9f8-2c4b3bafbe65": {
+      "id": "5353a5a6-7ea1-40b1-b9f8-2c4b3bafbe65",
+      "last_modified": "2026-09-11T19:37:09.800Z",
+      "title": "Brazil nut husk",
+      "caption": "Brazil nut husks on the forest floor. Piles are created by Castañeros, concession managers and harvesters of Brazil nut concessions. ",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": ""
+    },
+    "32d53fb6-66bd-4eaf-bd8c-91e46cc22538": {
+      "id": "32d53fb6-66bd-4eaf-bd8c-91e46cc22538",
+      "last_modified": "2026-09-29T07:02:59.339Z",
+      "title": "Orchid Bee",
+      "caption": "Orchid bees get their name because males collect scents from different flowers to attract mates. Due to their size, they are the only pollinators able to pry through Brazil nut flowers, becoming essential parts of the Brazil nut life cycle.",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "",
+      "subcategory": "7d30193c-7696-478c-ac07-42b3f02bf07e"
+    },
+    "ae30698f-bb22-4c3d-ab94-3a34e61ba4ff": {
+      "id": "ae30698f-bb22-4c3d-ab94-3a34e61ba4ff",
+      "last_modified": "2026-09-11T08:48:37.308Z",
+      "title": "Brown Agouti",
+      "caption": "A brown agouti searches through the understory for food.",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": ""
+    },
+    "1ec07376-173f-4125-b9a7-1cded1eb182c": {
+      "id": "1ec07376-173f-4125-b9a7-1cded1eb182c",
+      "last_modified": "2026-09-11T19:36:16.664Z",
+      "title": "Tree Frog",
+      "caption": "Frogs like <i>Ostecephalus castaneicola</i> breed and lay their eggs in empty Brazil nut husks filled with water. ",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": ""
+    },
+    "86388861-6ec6-4c22-97a9-ceb2da9b2429": {
+      "id": "86388861-6ec6-4c22-97a9-ceb2da9b2429",
+      "last_modified": "2026-09-27T06:15:59.521Z",
+      "title": "Redwood Forest",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "9e1e5cac-b8fd-4f7a-bf1f-dae075ce03b7"
+    },
+    "da3b015a-8783-4aeb-ac63-30b182b2d231": {
+      "id": "da3b015a-8783-4aeb-ac63-30b182b2d231",
+      "last_modified": "2026-09-27T06:15:55.660Z",
+      "title": "Juvenile California Giant Salamander",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "9e1e5cac-b8fd-4f7a-bf1f-dae075ce03b7"
+    },
+    "0150f438-bcce-48ae-a619-5bc3b1ee5255": {
+      "id": "0150f438-bcce-48ae-a619-5bc3b1ee5255",
+      "last_modified": "2026-09-27T06:15:58.286Z",
+      "title": "Pacific Newt",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "9e1e5cac-b8fd-4f7a-bf1f-dae075ce03b7"
+    },
+    "5c2380ad-5f06-4ecc-b0f0-a35a4aba060c": {
+      "id": "5c2380ad-5f06-4ecc-b0f0-a35a4aba060c",
+      "last_modified": "2026-09-27T06:15:57.767Z",
+      "title": "California Giant Salamander",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "9e1e5cac-b8fd-4f7a-bf1f-dae075ce03b7"
+    },
+    "fbf458de-0f4d-4f07-b8c0-37dbd7a59e55": {
+      "id": "fbf458de-0f4d-4f07-b8c0-37dbd7a59e55",
+      "last_modified": "2026-09-27T06:15:54.731Z",
+      "title": "Pacific Newt",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "9e1e5cac-b8fd-4f7a-bf1f-dae075ce03b7"
+    },
+    "370f3f9f-2a0b-40eb-9805-0e66a04ff96e": {
+      "id": "370f3f9f-2a0b-40eb-9805-0e66a04ff96e",
+      "last_modified": "2026-09-11T07:48:39.820Z",
+      "title": "Hoh Rainforest",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "35549355-fbbe-48ae-9483-66b2097f16a0"
+    },
+    "69a5dfe3-89ae-4aa6-b19a-1ea861e137a3": {
+      "id": "69a5dfe3-89ae-4aa6-b19a-1ea861e137a3",
+      "last_modified": "2026-09-11T07:49:00.177Z",
+      "title": "Hoh Rainforest",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "35549355-fbbe-48ae-9483-66b2097f16a0"
+    },
+    "7616f4bf-db32-4344-abb5-96ba1d9a0e95": {
+      "id": "7616f4bf-db32-4344-abb5-96ba1d9a0e95",
+      "last_modified": "2026-09-11T07:52:58.740Z",
+      "title": "Pronghorn",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "f45b9dc1-f14c-4ab7-884b-f289f2d05a57"
+    },
+    "69bca758-f7f6-4d5c-99a1-dc8c68069f38": {
+      "id": "69bca758-f7f6-4d5c-99a1-dc8c68069f38",
+      "last_modified": "2026-09-11T07:53:15.183Z",
+      "title": "Pronghorn",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "f45b9dc1-f14c-4ab7-884b-f289f2d05a57"
+    },
+    "82d1fb9c-3bb3-47c1-9f2d-2a9da91eabbb": {
+      "id": "82d1fb9c-3bb3-47c1-9f2d-2a9da91eabbb",
+      "last_modified": "2026-09-11T07:53:31.021Z",
+      "title": "Wood Duck",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c"
+    },
+    "75417627-6a4c-4da2-bae6-00decbf8ebf0": {
+      "id": "75417627-6a4c-4da2-bae6-00decbf8ebf0",
+      "last_modified": "2026-09-27T06:02:46.782Z",
+      "title": "Elephant Seal",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
+    },
+    "5b62c51f-4b18-4a19-8829-1dbc2b4f43d1": {
+      "id": "5b62c51f-4b18-4a19-8829-1dbc2b4f43d1",
+      "last_modified": "2026-09-29T06:59:46.681Z",
+      "title": "Blue Rockfish",
+      "caption": "Blue rockfish (<i>Sebastes mystinus</i>) schooling under the kelp forest. Due to winter storms, the canopy is open, allowing sunlight to peek through.",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "ecoregion": null,
+      "subcategory": "cb2614e9-7215-43ac-9a1e-55db433bc81d"
+    },
+    "0c01b6ed-d55e-477f-be75-350d2a790d68": {
+      "id": "0c01b6ed-d55e-477f-be75-350d2a790d68",
+      "last_modified": "2026-09-27T06:02:45.769Z",
+      "title": "Forster's Tern",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
+    },
+    "74076f67-bcf9-4d33-95a8-24fd66532423": {
+      "id": "74076f67-bcf9-4d33-95a8-24fd66532423",
+      "last_modified": "2026-09-27T06:02:43.269Z",
+      "title": "Monkeyfaced Prickleback",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
+    },
+    "7792f1c2-b021-4fc6-b935-795297cd96b2": {
+      "id": "7792f1c2-b021-4fc6-b935-795297cd96b2",
+      "last_modified": "2026-09-27T06:02:42.269Z",
+      "title": "Rock Eel",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
+    },
+    "f83457a3-c7b1-48e4-81f6-06c4b3a316c4": {
+      "id": "f83457a3-c7b1-48e4-81f6-06c4b3a316c4",
+      "last_modified": "2026-09-27T06:02:41.235Z",
+      "title": "Snowy Egret and Surfer",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
+    },
+    "16bee39e-1c16-450d-bc09-ea320c972278": {
+      "id": "16bee39e-1c16-450d-bc09-ea320c972278",
+      "last_modified": "2026-09-27T06:02:38.608Z",
+      "title": "Snowy Egret with Kelpfish",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
+    },
+    "fcdf4e50-54e9-4ea5-92df-a2f6e6efe7ba": {
+      "id": "fcdf4e50-54e9-4ea5-92df-a2f6e6efe7ba",
+      "last_modified": "2026-09-11T08:07:19.068Z",
+      "title": "Porcupine on Road",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "f45b9dc1-f14c-4ab7-884b-f289f2d05a57"
+    },
+    "5f4b3a17-177d-4893-988e-ae3a7733af21": {
+      "id": "5f4b3a17-177d-4893-988e-ae3a7733af21",
+      "last_modified": "2026-09-11T08:06:54.430Z",
+      "title": "Bighorn Rams and Ewe",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "f45b9dc1-f14c-4ab7-884b-f289f2d05a57"
+    },
+    "20a58540-7bac-43b1-955d-10b15aed992b": {
+      "id": "20a58540-7bac-43b1-955d-10b15aed992b",
+      "last_modified": "2026-09-11T08:07:14.250Z",
+      "title": "Moose",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "f45b9dc1-f14c-4ab7-884b-f289f2d05a57"
+    },
+    "fad4add5-59ee-4ca9-8b24-16d9acefb5b7": {
+      "id": "fad4add5-59ee-4ca9-8b24-16d9acefb5b7",
+      "last_modified": "2026-09-11T08:07:39.449Z",
+      "title": "Moose",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "f45b9dc1-f14c-4ab7-884b-f289f2d05a57"
+    },
+    "7595df67-8bbf-4af4-a530-989a6771112c": {
+      "id": "7595df67-8bbf-4af4-a530-989a6771112c",
+      "last_modified": "2026-09-11T08:08:11.890Z",
+      "title": "Young Moose in Snowstorm",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "f45b9dc1-f14c-4ab7-884b-f289f2d05a57"
+    },
+    "ee4b5792-45d8-49bf-a48c-19c0a6a22443": {
+      "id": "ee4b5792-45d8-49bf-a48c-19c0a6a22443",
+      "last_modified": "2026-09-11T08:12:32.589Z",
+      "title": "Bison",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "f45b9dc1-f14c-4ab7-884b-f289f2d05a57"
+    },
+    "69fea24a-11bc-48f0-9e2e-66a3e3add788": {
+      "id": "69fea24a-11bc-48f0-9e2e-66a3e3add788",
+      "last_modified": "2026-09-11T08:12:56.432Z",
+      "title": "Bison",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "f45b9dc1-f14c-4ab7-884b-f289f2d05a57"
+    },
+    "997e326f-3371-4784-a09c-83e342f921e9": {
+      "id": "997e326f-3371-4784-a09c-83e342f921e9",
+      "last_modified": "2026-09-11T08:13:21.517Z",
+      "title": "Bison",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "f45b9dc1-f14c-4ab7-884b-f289f2d05a57"
+    },
+    "a6c111ad-d1aa-409d-8450-95768cb70801": {
+      "id": "a6c111ad-d1aa-409d-8450-95768cb70801",
+      "last_modified": "2026-09-11T08:41:46.829Z",
+      "title": "",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": ""
+    },
+    "1d7d1baf-57cb-4242-b64d-1171f4681bd5": {
+      "id": "1d7d1baf-57cb-4242-b64d-1171f4681bd5",
+      "last_modified": "2026-09-27T06:02:23.834Z",
+      "title": "Brandt's Cormorant",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "ecoregion": "",
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
+    },
+    "3e088211-d93f-4e2c-8b91-8b8d33c18b1d": {
+      "id": "3e088211-d93f-4e2c-8b91-8b8d33c18b1d",
+      "last_modified": "2026-09-29T06:34:29.151Z",
+      "title": "Long Billed Curlew",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "ecoregion": "",
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
+    },
+    "77f3e581-4ae6-43a0-9653-02ab150fb869": {
+      "id": "77f3e581-4ae6-43a0-9653-02ab150fb869",
+      "last_modified": "2026-09-29T06:34:46.125Z",
+      "title": "Forster's Tern",
+      "caption": "",
+      "active": true,
+      "best": false,
+      "link": "",
+      "image_location": "",
+      "gallery": "cf36bee6-54a5-4acf-b768-efb18fabee9c",
+      "ecoregion": "",
+      "subcategory": "e7d56f54-8bfe-4a7b-97ca-42fbc74730c2"
     }
   }
 }
