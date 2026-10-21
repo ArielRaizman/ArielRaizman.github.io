@@ -108,7 +108,7 @@ export function getGallerySlugs() {
     .filter(Boolean);
 }
 
-// Fisher-Yates shuffle — randomises subcategory section order per build so
+// Fisher-Yates shuffle — randomises subcategory section order in the server loader so
 // galleries feel fresh without requiring manual sort fields.
 function shuffle(arr) {
   const a = [...arr];
