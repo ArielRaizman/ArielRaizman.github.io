@@ -38,11 +38,15 @@ const membersOf = (galleryId) => photos().filter((p) => p.field('gallery') === g
 // mirroring nicb.at. Empty/unset → null (that gallery is then off the index).
 const coverSrcOf = (gallery) => gallery.file('cover_photo')?.src ?? null;
 
+// Prefer a WebP capped at 2,048 pixels wide for page images; originals remain available to the lightbox.
+const previewSrcOf = (photo) => photo?.variant('web') ?? photo?.src ?? '';
+
 // Shape every gallery/grid photo the way ImageGallery expects:
-// { src, width, height, title, location, link }. `width`/`height` let the
+// { src, previewSrc, width, height, title, location, link }. `width`/`height` let the
 // masonry balance columns by aspect ratio; `location` is the caption-location.
 const toImage = (p) => ({
   src: p.src,
+  previewSrc: previewSrcOf(p),
   width: p.width,
   height: p.height,
   title: p.field('title') ?? '',
@@ -64,7 +68,7 @@ export function getSiteAssets() {
     heroDesktop: g?.file('hero_desktop')?.src ?? '',
     heroMobile: g?.file('hero_mobile')?.src ?? '',
     pageHeader: g?.file('page_header')?.src ?? '',
-    profile: g?.file('profile_photo')?.src ?? '',
+    profile: previewSrcOf(g?.file('profile_photo')),
     story1Photos: (g?.files?.('story_1_photos') || []).map(getFullPhoto).map(toImage),
     story2Photos: (g?.files?.('story_2_photos') || []).map(getFullPhoto).map(toImage),
     childPhoto: g?.file('child_photo') ? toImage(getFullPhoto(g.file('child_photo'))) : null
@@ -95,7 +99,7 @@ export function getGalleryTiles() {
     .map((g) => ({
       name: g.field('name') ?? '',
       slug: g.field('html_route') ?? '',
-      src: coverSrcOf(g)
+      src: previewSrcOf(g.file('cover_photo'))
     }))
     .filter((tile) => tile.src && tile.slug);
 }

@@ -82,7 +82,7 @@
               aria-label={item.title || 'Open image'}
             >
               <img
-                src={item.src}
+                src={item.previewSrc || item.src}
                 alt={item.title || 'Gallery'}
                 width={item.width || undefined}
                 height={item.height || undefined}
