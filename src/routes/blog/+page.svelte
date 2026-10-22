@@ -2,19 +2,23 @@
   import Header from '../../lib/components/Header.svelte';
   import Footer from '../../lib/components/Footer.svelte';
   import Banner from '../../lib/components/Banner.svelte';
-  import { getSiteAssets } from '$lib/data.js';
-  const { pageHeader: headerUrl } = getSiteAssets();
+  export let data;
+  $: headerUrl = data.pageHeader;
   let pageName = "Blog";
 </script>
+
+<svelte:head>
+  <title>{pageName} — Ariel Raizman</title>
+</svelte:head>
 
 <Header />
 <Banner {pageName} {headerUrl} />
 <section>
   <div>
-    <p class="link underline" on:click={() => window.location.href = `/blog/central-coast-tidepooling`}>Tidepooling in California's Central Coast</p>
+    <p><a class="link underline" href="/blog/central-coast-tidepooling">Tidepooling in California's Central Coast</a></p>
   </div>
   <div>
-    <p class="link underline" on:click={() => window.location.href = `/blog/public-lands-day`}>Happy National Public Lands Day!</p>
+    <p><a class="link underline" href="/blog/public-lands-day">Happy National Public Lands Day!</a></p>
   </div>
 </section>
 <Footer />

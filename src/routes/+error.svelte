@@ -2,10 +2,14 @@
     import Header from '../lib/components/Header.svelte';
     import Footer from '../lib/components/Footer.svelte';
     import Banner from '../lib/components/Banner.svelte';
-    import { getSiteAssets } from '$lib/data.js';
-    const { pageHeader: headerUrl } = getSiteAssets();
+    import { page } from '$app/stores';
+    $: headerUrl = $page.data.pageHeader ?? '';
     let pageName = "404 - Page Not Found";
   </script>
+
+<svelte:head>
+  <title>{$page.status} — Ariel Raizman</title>
+</svelte:head>
   
   <Header />
   <Banner {pageName} {headerUrl} />

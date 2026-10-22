@@ -1,4 +1,21 @@
 <script>
+  import { onMount } from "svelte";
+
+  let dialog;
+
+  onMount(() => {
+    const previousFocus = document.activeElement;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    dialog.focus();
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      if (previousFocus instanceof HTMLElement && previousFocus.isConnected) {
+        previousFocus.focus({ preventScroll: true });
+      }
+    };
+  });
   let { 
     images = [], 
     initialIndex = 0, 
@@ -19,7 +36,20 @@
   }
 
   function handleKeydown(e) {
-    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+    if (e.key === 'Tab') {
+      const controls = [...dialog.querySelectorAll('button, a[href], [tabindex="0"]')];
+      const first = controls[0];
+      const last = controls[controls.length - 1];
+      if (!first) {
+        e.preventDefault();
+      } else if (e.shiftKey && (document.activeElement === first || document.activeElement === dialog)) {
+        last.focus();
+        e.preventDefault();
+      } else if (!e.shiftKey && (document.activeElement === last || document.activeElement === dialog)) {
+        first.focus();
+        e.preventDefault();
+      }
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
       prevImage();
       e.preventDefault();
     } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
@@ -35,7 +65,9 @@
 <svelte:window onkeydown={handleKeydown} />
 
 <div
+  bind:this={dialog}
   class="lightbox"
+  aria-label="Photo viewer"
   role="dialog"
   aria-modal="true"
   tabindex="-1"

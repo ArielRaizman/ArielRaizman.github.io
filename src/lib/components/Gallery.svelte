@@ -1,7 +1,7 @@
 <script>
   import ImageGallery from './ImageGallery.svelte';
 
-  // A resolved gallery from `$lib/data.js`:
+  // A resolved gallery from `$lib/server/data.js`:
   // { name, slug, quote, quote_author, description, banner, photos, prev, next }.
   export let gallery;
 </script>

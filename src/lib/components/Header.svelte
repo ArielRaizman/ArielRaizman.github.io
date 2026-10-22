@@ -2,26 +2,36 @@
   import instagram from '../assets/icons/Instagram_Glyph_White.svg';
   let links = ["About", "Galleries", "Blog", "Contact"];
   let isMenuOpen = false;
+  let menuToggle;
+
+  function closeMenu(restoreFocus = false) {
+    isMenuOpen = false;
+    if (restoreFocus) menuToggle?.focus();
+  }
 
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
   }
 </script>
 
+<svelte:window on:keydown={(event) => {
+  if (event.key === "Escape" && isMenuOpen) closeMenu(true);
+}} />
+
 <header class="nav-list">
   <div class="logo"><a href="/">Ariel Raizman</a></div>
-  <button class="menu-toggle" on:click={toggleMenu} aria-label="Toggle Menu">
+  <button class="menu-toggle" bind:this={menuToggle} on:click={toggleMenu} aria-label="Toggle Menu" aria-expanded={isMenuOpen} aria-controls="site-navigation">
     {#if isMenuOpen}
       ✕ <!-- Close icon -->
     {:else}
       ☰ <!-- Hamburger icon -->
     {/if}
   </button>
-  <nav class:is-open={isMenuOpen}>
-    <button class="menu-close" on:click={toggleMenu} aria-label="Close Menu">✕</button>
+  <nav id="site-navigation" class:is-open={isMenuOpen}>
+    <button class="menu-close" on:click={() => closeMenu(true)} aria-label="Close Menu">✕</button>
     <ul>
       {#each links as link}
-        <li><a href={`/${link.toLowerCase()}`}>{link}</a></li>
+        <li><a href={`/${link.toLowerCase()}`} on:click={() => closeMenu()}>{link}</a></li>
       {/each}
       <li class="instagram-link">
         <a href="https://www.instagram.com/arl.takes.pics/" target="_blank">

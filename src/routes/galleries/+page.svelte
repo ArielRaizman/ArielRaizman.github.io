@@ -2,14 +2,18 @@
   import Header from '../../lib/components/Header.svelte';
   import Footer from '../../lib/components/Footer.svelte';
   import Banner from '../../lib/components/Banner.svelte';
-  import { getGalleryTiles, getSiteAssets } from '$lib/data.js';
+  export let data;
 
   let pageName = "Galleries";
 
   // Gallery tiles (name + banner + slug) + the shared page header, from the workspace.
-  const galleries = getGalleryTiles();
-  const { pageHeader: headerUrl } = getSiteAssets();
+  $: galleries = data.galleries;
+  $: headerUrl = data.pageHeader;
 </script>
+
+<svelte:head>
+  <title>{pageName} — Ariel Raizman</title>
+</svelte:head>
 
 <Header />
 <Banner {pageName} {headerUrl} />

@@ -2,21 +2,25 @@
   import Header from '../../../lib/components/Header.svelte';
   import Footer from '../../../lib/components/Footer.svelte';
   import Banner from '../../../lib/components/Banner.svelte';
-  import { getPhotoSrc } from '$lib/data.js';
+  export let data;
 
   // Images pulled from the media-manager workspace by filename.
-  const headerUrl = getPhotoSrc('_DSC8955.jpg');
-  const photo1 = getPhotoSrc('_DSC8955.jpg');
-  const photo2 = getPhotoSrc('_DSC9948.jpg');
-  const photo3 = getPhotoSrc('_DSC0498.jpg');
-  const photo4 = getPhotoSrc('_DSC1926.jpg');
-  const photo5 = getPhotoSrc('_DSC1857.jpg');
-  const photo6 = getPhotoSrc('_DSC2598-Enhanced-NR.jpg');
-  const photo7 = getPhotoSrc('_DSC1691-2.jpg');
-  const photo8 = getPhotoSrc('_DSC8303-Enhanced-NR.jpg');
+  $: headerUrl = data.headerUrl;
+  $: photo1 = data.photo1;
+  $: photo2 = data.photo2;
+  $: photo3 = data.photo3;
+  $: photo4 = data.photo4;
+  $: photo5 = data.photo5;
+  $: photo6 = data.photo6;
+  $: photo7 = data.photo7;
+  $: photo8 = data.photo8;
 
   let pageName = "Happy National Public Lands Day!";
 </script>
+
+<svelte:head>
+  <title>{pageName} — Ariel Raizman</title>
+</svelte:head>
 
 <Header />
 <Banner {pageName} {headerUrl} />

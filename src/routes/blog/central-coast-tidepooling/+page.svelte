@@ -2,18 +2,22 @@
   import Header from '../../../lib/components/Header.svelte';
   import Footer from '../../../lib/components/Footer.svelte';
   import Banner from '../../../lib/components/Banner.svelte';
-  import { getPhotoSrc } from '$lib/data.js';
+  export let data;
 
   // Images pulled from the media-manager workspace by filename.
-  const headerUrl = getPhotoSrc('tide.jpg');
-  const sculpin = getPhotoSrc('PA200032.jpg');
-  const shrimp = getPhotoSrc('PA190488.jpg');
-  const spotted = getPhotoSrc('PA200090.jpg');
-  const aeolid = getPhotoSrc('aeolid.jpg');
-  const opalescent = getPhotoSrc('sonyopalescent.jpg');
-  const sandalwood = getPhotoSrc('PB170683.jpg');
+  $: headerUrl = data.headerUrl;
+  $: sculpin = data.sculpin;
+  $: shrimp = data.shrimp;
+  $: spotted = data.spotted;
+  $: aeolid = data.aeolid;
+  $: opalescent = data.opalescent;
+  $: sandalwood = data.sandalwood;
   let pageName = "Tidepooling in California's Central Coast";
 </script>
+
+<svelte:head>
+  <title>{pageName} — Ariel Raizman</title>
+</svelte:head>
   
   <Header />
   <Banner {pageName} {headerUrl} />
@@ -71,7 +75,7 @@
         </div>
         <p>The second is using an underwater camera. While professional housings work, compact point and shoots like my Olympus tg-5 are more convenient to reach into smaller tide pools (a phone would work as well). Shooting underwater allows you to achieve the coveted eye-level perspective cherished by wildlife photographers, creating intimate images from the subject’s viewpoint.This technique requires a lot more care-your movements must be deliberate and gentle, as any sudden movement may send your subject scurrying for cover. Although natural light can suffice, because many subjects will be on a macro level, a flash will make it much easier, and the water will diffuse the light. </p>
         <p><b>A critical  note on using flash:</b> While most intertidal wildlife aren’t disturbed by flash photography, always remain attentive to your subjects’ reactions.  If an animal looks visibly stressed and has no escape route, it's best to give it space. Octopus eyes are very similar to humans, so although they are much more sensitive than most intertidal creatures, it does not blind or permanently harm them. Treat them as if you are using a flash on a human subject. However, if an octopus is injured, disturbed by the light, or turns white (a sign of stress), cease photography and move away. Seahorses, although absent from California’s central coast, deserve special mention- current research suggests flash photography may potentially harm them. Never risk harming an animal for the sake of capturing an image.         </p>
-        <p>You can view more of my tide pool photos <b class="link" on:click={() => window.location.href = `/galleries/low-tide`}>here</b>.</p>
+        <p>You can view more of my tide pool photos <a class="link" href="/galleries/low-tide"><b>here</b></a>.</p>
     </section>
   
   <Footer />

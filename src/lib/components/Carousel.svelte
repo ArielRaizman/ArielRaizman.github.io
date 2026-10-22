@@ -116,7 +116,14 @@
           >
             {#if image.src}
               <button class="image-button" onclick={() => openLightbox(image)}>
-                <img src={image.previewSrc || image.src} alt={image.title} />
+                <img
+                  src={image.previewSrc || image.src}
+                  alt={image.title}
+                  width={image.width || undefined}
+                  height={image.height || undefined}
+                  loading="lazy"
+                  decoding="async"
+                />
               </button>
             {/if}
             {#if image.caption || image.title}
