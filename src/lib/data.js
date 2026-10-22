@@ -3,21 +3,26 @@
 // The site's photos + galleries live in `src/lib/assets/media_manager/` (edited
 // with `npx media-manager`) and are read here through the reader package — the
 // same pattern nicb.at uses. `import.meta.glob` bundles the workspace at build
-// time: one glob for the JSON, one for the asset files (`?url`, so Vite hashes
-// and serves them). The reader joins them once; we query it below.
+// time: one glob for the JSON. Blobs are NOT globbed — the workspace is in
+// static-assets mode (config `assets: { dir: './static/media', baseUrl: '/media' }`),
+// so the reader synthesizes each blob's URL from the manifest as
+// `/media/<file_name>` and the binaries are served straight from `static/media/`
+// instead of being bundled. The `!**/google.json` exclusion keeps the Google Photos
+// OAuth secret out of the client bundle. The reader joins it all once; we query it below.
 import { MediaManager } from 'media-manager/reader/vite';
 
-const mm = MediaManager.load({
-  data: import.meta.glob('$lib/assets/media_manager/**/*.json', {
-    eager: true,
-    import: 'default'
-  }),
-  files: import.meta.glob('$lib/assets/media_manager/media/files/*', {
-    eager: true,
-    query: '?url',
-    import: 'default'
-  })
-});
+const mm = MediaManager.load(
+  {
+    data: import.meta.glob(['$lib/assets/media_manager/**/*.json', '!**/google.json'], {
+      eager: true,
+      import: 'default'
+    })
+  },
+  {
+    // Static-assets mode: blobs served from /media/<file>, not bundled (see static/media/).
+    assets: { baseUrl: '/media' }
+  }
+);
 
 // Read photos through the `photos` CLASS view: that's where the per-photo
 // metadata (title/active/best/link/gallery) lives. Following a
@@ -33,11 +38,15 @@ const membersOf = (galleryId) => photos().filter((p) => p.field('gallery') === g
 // mirroring nicb.at. Empty/unset → null (that gallery is then off the index).
 const coverSrcOf = (gallery) => gallery.file('cover_photo')?.src ?? null;
 
+// Prefer a WebP capped at 2,048 pixels wide for page images; originals remain available to the lightbox.
+const previewSrcOf = (photo) => photo?.variant('web') ?? photo?.src ?? '';
+
 // Shape every gallery/grid photo the way ImageGallery expects:
-// { src, width, height, title, location, link }. `width`/`height` let the
+// { src, previewSrc, width, height, title, location, link }. `width`/`height` let the
 // masonry balance columns by aspect ratio; `location` is the caption-location.
 const toImage = (p) => ({
   src: p.src,
+  previewSrc: previewSrcOf(p),
   width: p.width,
   height: p.height,
   title: p.field('title') ?? '',
@@ -59,7 +68,7 @@ export function getSiteAssets() {
     heroDesktop: g?.file('hero_desktop')?.src ?? '',
     heroMobile: g?.file('hero_mobile')?.src ?? '',
     pageHeader: g?.file('page_header')?.src ?? '',
-    profile: g?.file('profile_photo')?.src ?? '',
+    profile: previewSrcOf(g?.file('profile_photo')),
     story1Photos: (g?.files?.('story_1_photos') || []).map(getFullPhoto).map(toImage),
     story2Photos: (g?.files?.('story_2_photos') || []).map(getFullPhoto).map(toImage),
     childPhoto: g?.file('child_photo') ? toImage(getFullPhoto(g.file('child_photo'))) : null
@@ -90,7 +99,7 @@ export function getGalleryTiles() {
     .map((g) => ({
       name: g.field('name') ?? '',
       slug: g.field('html_route') ?? '',
-      src: coverSrcOf(g)
+      src: previewSrcOf(g.file('cover_photo'))
     }))
     .filter((tile) => tile.src && tile.slug);
 }
@@ -103,7 +112,7 @@ export function getGallerySlugs() {
     .filter(Boolean);
 }
 
-// Fisher-Yates shuffle — randomises subcategory section order per build so
+// Fisher-Yates shuffle — randomises subcategory section order in the server loader so
 // galleries feel fresh without requiring manual sort fields.
 function shuffle(arr) {
   const a = [...arr];
